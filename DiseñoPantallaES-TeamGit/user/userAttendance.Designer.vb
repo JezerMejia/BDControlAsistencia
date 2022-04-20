@@ -29,13 +29,15 @@ Partial Class asistencia
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.timeNow = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'timeSystem
         '
         Me.timeSystem.AutoSize = True
         Me.timeSystem.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.timeSystem.Location = New System.Drawing.Point(132, 39)
+        Me.timeSystem.Location = New System.Drawing.Point(117, 123)
         Me.timeSystem.Name = "timeSystem"
         Me.timeSystem.Size = New System.Drawing.Size(32, 13)
         Me.timeSystem.TabIndex = 0
@@ -44,7 +46,7 @@ Partial Class asistencia
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(105, 81)
+        Me.Label2.Location = New System.Drawing.Point(100, 146)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(136, 13)
         Me.Label2.TabIndex = 1
@@ -52,7 +54,7 @@ Partial Class asistencia
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(10, 121)
+        Me.Button1.Location = New System.Drawing.Point(10, 176)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(110, 35)
         Me.Button1.TabIndex = 2
@@ -61,7 +63,7 @@ Partial Class asistencia
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(204, 121)
+        Me.Button2.Location = New System.Drawing.Point(206, 176)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(110, 35)
         Me.Button2.TabIndex = 3
@@ -70,7 +72,7 @@ Partial Class asistencia
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(10, 178)
+        Me.Button3.Location = New System.Drawing.Point(10, 243)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(64, 23)
         Me.Button3.TabIndex = 4
@@ -80,12 +82,23 @@ Partial Class asistencia
         'timeNow
         '
         Me.timeNow.Enabled = True
+        Me.timeNow.Interval = 1000
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.PictureBox1.Location = New System.Drawing.Point(103, 20)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 100)
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
         'asistencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(328, 206)
+        Me.ClientSize = New System.Drawing.Size(328, 278)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -94,6 +107,7 @@ Partial Class asistencia
         Me.Name = "asistencia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Asistencia"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,4 +119,5 @@ Partial Class asistencia
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents timeNow As Timer
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

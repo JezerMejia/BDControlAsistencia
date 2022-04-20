@@ -107,6 +107,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="user\Clock.vb" />
     <Compile Include="user\userLogin.Designer.vb">
       <DependentUpon>userLogin.vb</DependentUpon>
     </Compile>

@@ -14,3 +14,19 @@ C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantalla
 C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.login.resources
 C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.asistencia.resources
 C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.userLogin.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe.config
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbprojAssemblyReference.cache
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.adminLogin.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.controlCenter.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.login.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.Resources.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.userLogin.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.asistencia.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.GenerateResource.cache
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CoreCompileInputs.cache
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.pdb

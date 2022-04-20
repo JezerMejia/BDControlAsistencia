@@ -1,6 +1,9 @@
 ﻿
 
 Public Class asistencia
+
+    Dim myClock As New Clock
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
         userLogin.Show()
@@ -13,6 +16,7 @@ Public Class asistencia
 
     Private Sub timeNow_Tick(sender As Object, e As EventArgs) Handles timeNow.Tick
         timeSystem.Text = DateTime.Now.ToString("HH:mm:ss")
+        myClock.BuildAnalogClock(Me.PictureBox1)
 
     End Sub
 
