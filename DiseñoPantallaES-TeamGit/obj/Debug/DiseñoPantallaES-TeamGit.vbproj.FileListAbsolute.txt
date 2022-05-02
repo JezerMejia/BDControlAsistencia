@@ -14,19 +14,85 @@ C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantalla
 C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.login.resources
 C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.asistencia.resources
 C:\Users\Gimena Navarrete\source\repos\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.userLogin.resources
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe.config
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.pdb
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.xml
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbprojAssemblyReference.cache
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.adminLogin.resources
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.controlCenter.resources
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.login.resources
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.Resources.resources
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.userLogin.resources
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.asistencia.resources
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.GenerateResource.cache
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CoreCompileInputs.cache
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.exe
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.xml
-C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\ProyecyoClase\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe.config
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbprojAssemblyReference.cache
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.adminLogin.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.controlCenter.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.login.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.Resources.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.userLogin.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.asistencia.resources
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.GenerateResource.cache
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CoreCompileInputs.cache
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\Gimena Navarrete\Downloads\Nueva carpeta\DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe.config
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.dll
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.xml
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.AssemblyReference.cache
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.SuggestedBindingRedirects.cache
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.adminLogin.resources
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.controlCenter.resources
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.login.resources
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.Resources.resources
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.userLogin.resources
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.asistencia.resources
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.GenerateResource.cache
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CoreCompileInputs.cache
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CopyComplete
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\AXGOEL\Desktop\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe.config
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.dll
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.xml
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.AssemblyReference.cache
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.SuggestedBindingRedirects.cache
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.adminLogin.resources
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.controlCenter.resources
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.Resources.resources
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.userLogin.resources
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.asistencia.resources
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.GenerateResource.cache
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CoreCompileInputs.cache
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CopyComplete
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\scrip\Source\Repos\Dise-o-de-pantalla-de-E-S\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.MainWindow.resources
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe.config
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.pdb
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.dll
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.xml
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.AssemblyReference.cache
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.SuggestedBindingRedirects.cache
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.adminLogin.resources
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.controlCenter.resources
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.MainWindow.resources
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.Resources.resources
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.UserLogin.resources
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES_TeamGit.UserAttendance.resources
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.GenerateResource.cache
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CoreCompileInputs.cache
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.vbproj.CopyComplete
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.exe
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.xml
+C:\Users\scrip\source\repos\BDControlAsistencia\DiseñoPantallaES-TeamGit\obj\Debug\DiseñoPantallaES-TeamGit.pdb
