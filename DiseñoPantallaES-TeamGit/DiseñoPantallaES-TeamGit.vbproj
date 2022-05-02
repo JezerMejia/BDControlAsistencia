@@ -48,10 +48,19 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -73,23 +82,68 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador\adminLogin.Designer.vb">
+    <Compile Include="AdminForms\adminLogin.Designer.vb">
       <DependentUpon>adminLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\adminLogin.vb">
+    <Compile Include="AdminForms\adminLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\controlCenter.Designer.vb">
+    <Compile Include="AdminForms\controlCenter.Designer.vb">
       <DependentUpon>controlCenter.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\controlCenter.vb">
+    <Compile Include="AdminForms\controlCenter.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.vb">
+    <Compile Include="BDSistemaEySDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Administraciones.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Asistencia.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
+    <Compile Include="Conexion\Cargo.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\ConexionSEyS.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionSEyS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\ConexionSEyS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\ConexionSEyS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Departamento.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Empleado.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Grupos.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Horario.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\SolVacaciones.vb">
+      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.vb">
+      <DependentUpon>MainWindow.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -107,29 +161,29 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="user\Clock.vb" />
-    <Compile Include="user\userLogin.Designer.vb">
-      <DependentUpon>userLogin.vb</DependentUpon>
+    <Compile Include="Utils\clock.vb" />
+    <Compile Include="UserForms\UserLogin.Designer.vb">
+      <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\userLogin.vb">
+    <Compile Include="UserForms\UserLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user\userAttendance.Designer.vb">
-      <DependentUpon>userAttendance.vb</DependentUpon>
+    <Compile Include="UserForms\UserAttendance.Designer.vb">
+      <DependentUpon>UserAttendance.vb</DependentUpon>
     </Compile>
-    <Compile Include="user\userAttendance.vb">
+    <Compile Include="UserForms\UserAttendance.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Administrador\adminLogin.resx">
+    <EmbeddedResource Include="AdminForms\adminLogin.resx">
       <DependentUpon>adminLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\controlCenter.resx">
+    <EmbeddedResource Include="AdminForms\controlCenter.resx">
       <DependentUpon>controlCenter.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.vb</DependentUpon>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -137,14 +191,39 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\userLogin.resx">
-      <DependentUpon>userLogin.vb</DependentUpon>
+    <EmbeddedResource Include="Reportes\RptAdministrador.rdlc" />
+    <EmbeddedResource Include="Reportes\RptAsistencia.rdlc" />
+    <EmbeddedResource Include="Reportes\RptCargos.rdlc" />
+    <EmbeddedResource Include="Reportes\RptDepartamento.rdlc" />
+    <EmbeddedResource Include="Reportes\RptEmpleado.rdlc" />
+    <EmbeddedResource Include="Reportes\RptHorariosrdlc.rdlc" />
+    <EmbeddedResource Include="Reportes\RptVacaciones.rdlc" />
+    <EmbeddedResource Include="UserForms\UserLogin.resx">
+      <DependentUpon>UserLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user\userAttendance.resx">
-      <DependentUpon>userAttendance.vb</DependentUpon>
+    <EmbeddedResource Include="UserForms\UserAttendance.resx">
+      <DependentUpon>UserAttendance.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="Conexion\ConexionSEyS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ConexionSEyS.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BDSistemaEySDataSet.xsc">
+      <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDSistemaEySDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDSistemaEySDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDSistemaEySDataSet.xss">
+      <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Conexion\ConexionSEyS.edmx.diagram">
+      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -155,6 +234,22 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Conexion\ConexionSEyS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ConexionSEyS.Context.vb</LastGenOutput>
+      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
+    </Content>
+    <Content Include="Conexion\ConexionSEyS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
+      <LastGenOutput>ConexionSEyS.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
