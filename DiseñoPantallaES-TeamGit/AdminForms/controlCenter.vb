@@ -25,4 +25,12 @@
     Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
         timeNow.Text = DateTime.Now.ToString("HH:mm:ss")
     End Sub
+
+    Private Sub HorariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HorariosToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
+
+    End Sub
 End Class

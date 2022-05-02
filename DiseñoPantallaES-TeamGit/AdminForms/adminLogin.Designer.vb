@@ -35,59 +35,66 @@ Partial Class adminLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(57, 45)
+        Me.Label1.Location = New System.Drawing.Point(76, 55)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(24, 13)
+        Me.Label1.Size = New System.Drawing.Size(26, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID: "
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(57, 86)
+        Me.Label2.Location = New System.Drawing.Point(76, 106)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 13)
+        Me.Label2.Size = New System.Drawing.Size(79, 16)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(57, 125)
+        Me.Label3.Location = New System.Drawing.Point(76, 154)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(26, 13)
+        Me.Label3.Size = New System.Drawing.Size(31, 16)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Rol:"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(135, 38)
+        Me.TextBox1.Location = New System.Drawing.Point(180, 47)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(132, 22)
         Me.TextBox1.TabIndex = 3
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(135, 83)
+        Me.TextBox2.Location = New System.Drawing.Point(180, 102)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(132, 22)
         Me.TextBox2.TabIndex = 4
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(135, 170)
+        Me.Button1.Location = New System.Drawing.Point(180, 209)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'salir4
         '
-        Me.salir4.Location = New System.Drawing.Point(2, 193)
+        Me.salir4.Location = New System.Drawing.Point(3, 238)
+        Me.salir4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.salir4.Name = "salir4"
-        Me.salir4.Size = New System.Drawing.Size(45, 23)
+        Me.salir4.Size = New System.Drawing.Size(60, 28)
         Me.salir4.TabIndex = 7
         Me.salir4.Text = "salir"
         Me.salir4.UseVisualStyleBackColor = True
@@ -96,16 +103,17 @@ Partial Class adminLogin
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"RRHH", "TI", "GG"})
-        Me.ComboBox1.Location = New System.Drawing.Point(135, 122)
+        Me.ComboBox1.Location = New System.Drawing.Point(180, 150)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(132, 24)
         Me.ComboBox1.TabIndex = 8
         '
         'adminLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(291, 217)
+        Me.ClientSize = New System.Drawing.Size(413, 267)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.salir4)
         Me.Controls.Add(Me.Button1)
@@ -114,6 +122,7 @@ Partial Class adminLogin
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "adminLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
