@@ -2,34 +2,20 @@
 Imports System.Windows.Forms
 
 Public Class controlCenter
-    Private Sub ArchviosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ArchviosToolStripMenuItem.Click
-
+    Public Sub CloseAll()
+        Me.Hide()
+        AdminLogin.Show()
     End Sub
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub HorasExtraToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HorasExtraToolStripMenuItem1.Click
-
-    End Sub
-
-
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Me.Hide()
-        adminLogin.Show()
+        Me.CloseAll()
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-        timeNow.Text = DateTime.Now.ToString("HH:mm:ss")
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lbDateTime.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
     End Sub
 
-    Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
-        timeNow.Text = DateTime.Now.ToString("HH:mm:ss")
-    End Sub
-
-    Private Sub HorariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HorariosToolStripMenuItem.Click
+    Private Sub HorariosToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -38,7 +24,6 @@ Public Class controlCenter
         Dim ls As New TabPage
 
         TabControl1.Controls.Add(t)
-
     End Sub
 
     Public Sub New()
@@ -52,7 +37,7 @@ Public Class controlCenter
             Dim tabPage = Me.TabControl1.TabPages(e.Index)
             Dim tabRect = Me.TabControl1.GetTabRect(e.Index)
             tabRect.Inflate(-2, -2)
-            'Se invo'
+
             Dim closeImage = New Bitmap(Application.StartupPath.Replace("bin\Debug", "") & "\Resources\borrar.png")
             e.Graphics.DrawImage(closeImage, Convert.ToInt32((tabRect.Right - closeImage.Width)), Convert.ToInt32(tabRect.Top + (tabRect.Height - closeImage.Height) / 2))
             TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font, tabRect, tabPage.ForeColor, TextFormatFlags.Left)
@@ -70,5 +55,8 @@ Public Class controlCenter
         End If
     End Sub
 
-
+    Private Sub ControlCenter_Closed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.Hide()
+        MainWindow.Close()
+    End Sub
 End Class
