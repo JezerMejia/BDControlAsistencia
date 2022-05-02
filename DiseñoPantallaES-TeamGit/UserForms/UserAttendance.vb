@@ -2,7 +2,7 @@
 
 Public Class UserAttendance
 
-    Dim myClock As New clock
+    Dim myClock As New Clock
 
     Public Sub CloseAll()
         Me.Hide()
@@ -29,5 +29,9 @@ Public Class UserAttendance
 
     Private Sub UserAttendance_Closed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Me.CloseAll()
+    End Sub
+
+    Private Sub UserAttendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

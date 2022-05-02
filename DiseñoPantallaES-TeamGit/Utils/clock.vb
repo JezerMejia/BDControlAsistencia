@@ -2,7 +2,7 @@
 Imports System.Drawing.Drawing2D
 Imports System.Drawing.Graphics
 
-Public Class clock
+Public Class Clock
     Public Function BuildAnalogClock(ByVal mypbx As PictureBox) As Integer
 
         mypbx.Refresh()

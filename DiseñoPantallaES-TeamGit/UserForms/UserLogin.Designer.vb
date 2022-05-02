@@ -52,13 +52,13 @@ Partial Class UserLogin
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.45455!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(339, 210)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(344, 211)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'btnExit
         '
         Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnExit.Location = New System.Drawing.Point(3, 184)
+        Me.btnExit.Location = New System.Drawing.Point(3, 185)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 7
@@ -70,15 +70,16 @@ Partial Class UserLogin
         Me.TableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnEnter, 0, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 1)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 0, 1)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(5, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(333, 161)
         Me.TableLayoutPanel2.TabIndex = 8
         '
@@ -90,10 +91,11 @@ Partial Class UserLogin
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.5!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.txtPassword, 1, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(66, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(66, 53)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(200, 44)
         Me.TableLayoutPanel3.TabIndex = 9
         '
@@ -135,12 +137,12 @@ Partial Class UserLogin
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.5!))
         Me.TableLayoutPanel4.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.txtUser, 1, 0)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(66, 53)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(66, 3)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(200, 44)
-        Me.TableLayoutPanel4.TabIndex = 8
+        Me.TableLayoutPanel4.TabIndex = 9
         '
         'Label1
         '
@@ -165,7 +167,7 @@ Partial Class UserLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 230)
+        Me.ClientSize = New System.Drawing.Size(364, 231)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(330, 235)
         Me.Name = "UserLogin"
@@ -188,8 +190,8 @@ Partial Class UserLogin
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPassword As TextBox
+    Friend WithEvents btnEnter As Button
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents txtUser As TextBox
-    Friend WithEvents btnEnter As Button
 End Class
