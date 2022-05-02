@@ -1,21 +1,16 @@
-﻿Public Class adminLogin
-    Private Sub salir4_Click(sender As Object, e As EventArgs) Handles salir4.Click
+﻿Public Class AdminLogin
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Hide()
         MainWindow.Show()
-
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         Me.Hide()
         controlCenter.Show()
-
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
+    Private Sub AdminLogin_Closed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.Hide()
+        MainWindow.Close()
     End Sub
 End Class
