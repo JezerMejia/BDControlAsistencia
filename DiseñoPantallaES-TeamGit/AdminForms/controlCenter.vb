@@ -59,4 +59,8 @@ Public Class controlCenter
         Me.Hide()
         MainWindow.Close()
     End Sub
+
+    Private Sub EntradaSalidaToolStripMenuItem1_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

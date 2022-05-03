@@ -33,15 +33,6 @@ Partial Class controlCenter
         Me.HorariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntradaSalidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SolicitudDeVacacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EntradaSalidaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AtrasosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HorasTrabajadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HorasExtraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HorasSuplementariasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HorasExtraToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NovedadesAsistenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -49,6 +40,10 @@ Partial Class controlCenter
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.lbDateTime = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AsistenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NovedadesAsistenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -66,8 +61,8 @@ Partial Class controlCenter
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchviosToolStripMenuItem, Me.TablasToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(634, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(845, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -75,128 +70,74 @@ Partial Class controlCenter
         '
         Me.ArchviosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PerfilToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.ArchviosToolStripMenuItem.Name = "ArchviosToolStripMenuItem"
-        Me.ArchviosToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.ArchviosToolStripMenuItem.Size = New System.Drawing.Size(79, 24)
         Me.ArchviosToolStripMenuItem.Text = "Archivos"
         '
         'PerfilToolStripMenuItem
         '
         Me.PerfilToolStripMenuItem.Name = "PerfilToolStripMenuItem"
-        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
         Me.PerfilToolStripMenuItem.Text = "Perfil"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'TablasToolStripMenuItem
         '
         Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.HorariosToolStripMenuItem, Me.EntradaSalidaToolStripMenuItem, Me.SolicitudDeVacacionesToolStripMenuItem})
         Me.TablasToolStripMenuItem.Name = "TablasToolStripMenuItem"
-        Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
+        Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
         Me.TablasToolStripMenuItem.Text = "Tablas"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(248, 26)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'HorariosToolStripMenuItem
         '
         Me.HorariosToolStripMenuItem.Name = "HorariosToolStripMenuItem"
-        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(248, 26)
         Me.HorariosToolStripMenuItem.Text = "Horarios"
         '
         'EntradaSalidaToolStripMenuItem
         '
         Me.EntradaSalidaToolStripMenuItem.Name = "EntradaSalidaToolStripMenuItem"
-        Me.EntradaSalidaToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.EntradaSalidaToolStripMenuItem.Size = New System.Drawing.Size(248, 26)
         Me.EntradaSalidaToolStripMenuItem.Text = "Entrada/Salida"
         '
         'SolicitudDeVacacionesToolStripMenuItem
         '
         Me.SolicitudDeVacacionesToolStripMenuItem.Name = "SolicitudDeVacacionesToolStripMenuItem"
-        Me.SolicitudDeVacacionesToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.SolicitudDeVacacionesToolStripMenuItem.Size = New System.Drawing.Size(248, 26)
         Me.SolicitudDeVacacionesToolStripMenuItem.Text = "Solicitud de Vacaciones"
-        '
-        'ReportesToolStripMenuItem
-        '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EntradaSalidaToolStripMenuItem1, Me.AtrasosToolStripMenuItem, Me.HorasTrabajadasToolStripMenuItem, Me.HorasExtraToolStripMenuItem, Me.HorasSuplementariasToolStripMenuItem, Me.HorasExtraToolStripMenuItem1, Me.NovedadesAsistenciaToolStripMenuItem, Me.PermisosToolStripMenuItem})
-        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.ReportesToolStripMenuItem.Text = "Reportes"
-        '
-        'EntradaSalidaToolStripMenuItem1
-        '
-        Me.EntradaSalidaToolStripMenuItem1.Name = "EntradaSalidaToolStripMenuItem1"
-        Me.EntradaSalidaToolStripMenuItem1.Size = New System.Drawing.Size(188, 22)
-        Me.EntradaSalidaToolStripMenuItem1.Text = "Entrada/Salida"
-        '
-        'AtrasosToolStripMenuItem
-        '
-        Me.AtrasosToolStripMenuItem.Name = "AtrasosToolStripMenuItem"
-        Me.AtrasosToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.AtrasosToolStripMenuItem.Text = "Atrasos"
-        '
-        'HorasTrabajadasToolStripMenuItem
-        '
-        Me.HorasTrabajadasToolStripMenuItem.Name = "HorasTrabajadasToolStripMenuItem"
-        Me.HorasTrabajadasToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.HorasTrabajadasToolStripMenuItem.Text = "Horas trabajadas"
-        '
-        'HorasExtraToolStripMenuItem
-        '
-        Me.HorasExtraToolStripMenuItem.Name = "HorasExtraToolStripMenuItem"
-        Me.HorasExtraToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.HorasExtraToolStripMenuItem.Text = "Horas extra"
-        '
-        'HorasSuplementariasToolStripMenuItem
-        '
-        Me.HorasSuplementariasToolStripMenuItem.Name = "HorasSuplementariasToolStripMenuItem"
-        Me.HorasSuplementariasToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.HorasSuplementariasToolStripMenuItem.Text = "Horas suplementarias"
-        '
-        'HorasExtraToolStripMenuItem1
-        '
-        Me.HorasExtraToolStripMenuItem1.Name = "HorasExtraToolStripMenuItem1"
-        Me.HorasExtraToolStripMenuItem1.Size = New System.Drawing.Size(188, 22)
-        Me.HorasExtraToolStripMenuItem1.Text = "Ausencias"
-        '
-        'NovedadesAsistenciaToolStripMenuItem
-        '
-        Me.NovedadesAsistenciaToolStripMenuItem.Name = "NovedadesAsistenciaToolStripMenuItem"
-        Me.NovedadesAsistenciaToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.NovedadesAsistenciaToolStripMenuItem.Text = "Novedades asistencia"
-        '
-        'PermisosToolStripMenuItem
-        '
-        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.PermisosToolStripMenuItem.Text = "Permisos"
         '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManualDeUsuarioToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'ManualDeUsuarioToolStripMenuItem
         '
         Me.ManualDeUsuarioToolStripMenuItem.Name = "ManualDeUsuarioToolStripMenuItem"
-        Me.ManualDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.ManualDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
         Me.ManualDeUsuarioToolStripMenuItem.Text = "Manual de usuario"
         '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.TableLayoutPanel1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(626, 311)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Size = New System.Drawing.Size(837, 387)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inicio"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -207,11 +148,12 @@ Partial Class controlCenter
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(620, 305)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(829, 379)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -220,21 +162,23 @@ Partial Class controlCenter
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.lbDateTime, 0, 1)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(210, 102)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(281, 128)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(200, 100)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(267, 123)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'lbDateTime
         '
         Me.lbDateTime.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbDateTime.AutoSize = True
-        Me.lbDateTime.Location = New System.Drawing.Point(69, 68)
+        Me.lbDateTime.Location = New System.Drawing.Point(95, 84)
+        Me.lbDateTime.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbDateTime.Name = "lbDateTime"
-        Me.lbDateTime.Size = New System.Drawing.Size(62, 13)
+        Me.lbDateTime.Size = New System.Drawing.Size(76, 16)
         Me.lbDateTime.TabIndex = 0
         Me.lbDateTime.Text = "DATETIME"
         Me.lbDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -243,19 +187,46 @@ Partial Class controlCenter
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 24)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 28)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(634, 337)
+        Me.TabControl1.Size = New System.Drawing.Size(845, 416)
         Me.TabControl1.TabIndex = 2
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AsistenciaToolStripMenuItem, Me.NovedadesAsistenciaToolStripMenuItem, Me.PermisosToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'AsistenciaToolStripMenuItem
+        '
+        Me.AsistenciaToolStripMenuItem.Name = "AsistenciaToolStripMenuItem"
+        Me.AsistenciaToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
+        Me.AsistenciaToolStripMenuItem.Text = "Asistencia"
+        '
+        'NovedadesAsistenciaToolStripMenuItem
+        '
+        Me.NovedadesAsistenciaToolStripMenuItem.Name = "NovedadesAsistenciaToolStripMenuItem"
+        Me.NovedadesAsistenciaToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
+        Me.NovedadesAsistenciaToolStripMenuItem.Text = "Novedades Asistencia"
+        '
+        'PermisosToolStripMenuItem
+        '
+        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
+        Me.PermisosToolStripMenuItem.Text = "Permisos"
         '
         'controlCenter
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(634, 361)
+        Me.ClientSize = New System.Drawing.Size(845, 444)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "controlCenter"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Centro de Control"
@@ -279,15 +250,6 @@ Partial Class controlCenter
     Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HorariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EntradaSalidaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EntradaSalidaToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents AtrasosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HorasTrabajadasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HorasExtraToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HorasSuplementariasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HorasExtraToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents NovedadesAsistenciaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManualDeUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TabPage1 As TabPage
@@ -296,4 +258,8 @@ Partial Class controlCenter
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents lbDateTime As Label
+    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AsistenciaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NovedadesAsistenciaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
 End Class
