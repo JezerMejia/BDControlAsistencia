@@ -81,12 +81,13 @@ Partial Class controlCenter
         'PerfilToolStripMenuItem
         '
         Me.PerfilToolStripMenuItem.Name = "PerfilToolStripMenuItem"
-        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
+        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PerfilToolStripMenuItem.Text = "Perfil"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
