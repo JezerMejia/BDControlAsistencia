@@ -20,10 +20,13 @@ Public Class controlCenter
     End Sub
 
     Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
-        Dim t As New TabPage("Empleado")
-        Dim ls As New TabPage
+        Dim page = New TabPage("Empleados")
+        Dim empForm = New EmpleadoForm With {.TopMost = False, .TopLevel = False, .FormBorderStyle = FormBorderStyle.None, .Dock = DockStyle.Fill}
 
-        TabControl1.Controls.Add(t)
+        empForm.Show()
+        page.Controls.Add(empForm)
+
+        TabControl1.TabPages.Add(page)
     End Sub
 
     Public Sub New()
@@ -38,8 +41,10 @@ Public Class controlCenter
             Dim tabRect = Me.TabControl1.GetTabRect(e.Index)
             tabRect.Inflate(-2, -2)
 
-            Dim closeImage = New Bitmap(Application.StartupPath.Replace("bin\Debug", "") & "\Resources\borrar.png")
-            e.Graphics.DrawImage(closeImage, Convert.ToInt32((tabRect.Right - closeImage.Width)), Convert.ToInt32(tabRect.Top + (tabRect.Height - closeImage.Height) / 2))
+            If (e.Index <> 0) Then
+                Dim closeImage = New Bitmap(Application.StartupPath.Replace("bin\Debug", "") & "\Resources\borrar.png")
+                e.Graphics.DrawImage(closeImage, Convert.ToInt32((tabRect.Right - closeImage.Width)), Convert.ToInt32(tabRect.Top + (tabRect.Height - closeImage.Height) / 2))
+            End If
             TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font, tabRect, tabPage.ForeColor, TextFormatFlags.Left)
         Catch ex As Exception
             Throw New Exception(ex.Message)
@@ -62,5 +67,35 @@ Public Class controlCenter
 
     Private Sub EntradaSalidaToolStripMenuItem1_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub HorariosToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles HorariosToolStripMenuItem.Click
+        Dim page = New TabPage("Horarios")
+        Dim horarioForm = New HorarioForm With {.TopMost = False, .TopLevel = False, .FormBorderStyle = FormBorderStyle.None, .Dock = DockStyle.Fill}
+
+        horarioForm.Show()
+        page.Controls.Add(horarioForm)
+
+        TabControl1.TabPages.Add(page)
+    End Sub
+
+    Private Sub EntradaSalidaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EntradaSalidaToolStripMenuItem.Click
+        Dim page = New TabPage("Entrada Salida")
+        Dim EntraySal = New EntradaSalida With {.TopMost = False, .TopLevel = False, .FormBorderStyle = FormBorderStyle.None, .Dock = DockStyle.Fill}
+
+        EntraySal.Show()
+        page.Controls.Add(EntraySal)
+
+        TabControl1.TabPages.Add(page)
+    End Sub
+
+    Private Sub SolicitudDeVacacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SolicitudDeVacacionesToolStripMenuItem.Click
+        Dim page = New TabPage("Solicitd de vacaciones")
+        Dim solVac = New SolVacacionesForm With {.TopMost = False, .TopLevel = False, .FormBorderStyle = FormBorderStyle.None, .Dock = DockStyle.Fill}
+
+        solVac.Show()
+        page.Controls.Add(solVac)
+
+        TabControl1.TabPages.Add(page)
     End Sub
 End Class
