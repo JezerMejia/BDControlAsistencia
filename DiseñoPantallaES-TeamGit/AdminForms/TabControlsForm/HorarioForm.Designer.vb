@@ -22,6 +22,7 @@ Partial Class HorarioForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
@@ -31,9 +32,29 @@ Partial Class HorarioForm
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
+        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HorarioTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.HorarioTableAdapter()
+        Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LunesInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LunesSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MartesInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MartesSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MiercolesInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MiercolesSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.JuevesInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.JuevesSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViernesInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViernesSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SabadoInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SabadoSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DomingoInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DomingoSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -51,7 +72,10 @@ Partial Class HorarioForm
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdHorarioDataGridViewTextBoxColumn, Me.LunesInicioDataGridViewTextBoxColumn, Me.LunesSalidaDataGridViewTextBoxColumn, Me.MartesInicioDataGridViewTextBoxColumn, Me.MartesSalidaDataGridViewTextBoxColumn, Me.MiercolesInicioDataGridViewTextBoxColumn, Me.MiercolesSalidaDataGridViewTextBoxColumn, Me.JuevesInicioDataGridViewTextBoxColumn, Me.JuevesSalidaDataGridViewTextBoxColumn, Me.ViernesInicioDataGridViewTextBoxColumn, Me.ViernesSalidaDataGridViewTextBoxColumn, Me.SabadoInicioDataGridViewTextBoxColumn, Me.SabadoSalidaDataGridViewTextBoxColumn, Me.DomingoInicioDataGridViewTextBoxColumn, Me.DomingoSalidaDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.HorarioBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(15, 15)
         Me.DataGridView1.Name = "DataGridView1"
@@ -146,8 +170,110 @@ Partial Class HorarioForm
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(784, 15)
         Me.TableLayoutPanel3.TabIndex = 2
         '
-        'AdministracionesTableAdapter1
+        'BDSistemaEySDataSet
         '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'HorarioBindingSource
+        '
+        Me.HorarioBindingSource.DataMember = "Horario"
+        Me.HorarioBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'HorarioTableAdapter
+        '
+        Me.HorarioTableAdapter.ClearBeforeFill = True
+        '
+        'IdHorarioDataGridViewTextBoxColumn
+        '
+        Me.IdHorarioDataGridViewTextBoxColumn.DataPropertyName = "idHorario"
+        Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "idHorario"
+        Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
+        Me.IdHorarioDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LunesInicioDataGridViewTextBoxColumn
+        '
+        Me.LunesInicioDataGridViewTextBoxColumn.DataPropertyName = "lunesInicio"
+        Me.LunesInicioDataGridViewTextBoxColumn.HeaderText = "lunesInicio"
+        Me.LunesInicioDataGridViewTextBoxColumn.Name = "LunesInicioDataGridViewTextBoxColumn"
+        '
+        'LunesSalidaDataGridViewTextBoxColumn
+        '
+        Me.LunesSalidaDataGridViewTextBoxColumn.DataPropertyName = "lunesSalida"
+        Me.LunesSalidaDataGridViewTextBoxColumn.HeaderText = "lunesSalida"
+        Me.LunesSalidaDataGridViewTextBoxColumn.Name = "LunesSalidaDataGridViewTextBoxColumn"
+        '
+        'MartesInicioDataGridViewTextBoxColumn
+        '
+        Me.MartesInicioDataGridViewTextBoxColumn.DataPropertyName = "martesInicio"
+        Me.MartesInicioDataGridViewTextBoxColumn.HeaderText = "martesInicio"
+        Me.MartesInicioDataGridViewTextBoxColumn.Name = "MartesInicioDataGridViewTextBoxColumn"
+        '
+        'MartesSalidaDataGridViewTextBoxColumn
+        '
+        Me.MartesSalidaDataGridViewTextBoxColumn.DataPropertyName = "martesSalida"
+        Me.MartesSalidaDataGridViewTextBoxColumn.HeaderText = "martesSalida"
+        Me.MartesSalidaDataGridViewTextBoxColumn.Name = "MartesSalidaDataGridViewTextBoxColumn"
+        '
+        'MiercolesInicioDataGridViewTextBoxColumn
+        '
+        Me.MiercolesInicioDataGridViewTextBoxColumn.DataPropertyName = "miercolesInicio"
+        Me.MiercolesInicioDataGridViewTextBoxColumn.HeaderText = "miercolesInicio"
+        Me.MiercolesInicioDataGridViewTextBoxColumn.Name = "MiercolesInicioDataGridViewTextBoxColumn"
+        '
+        'MiercolesSalidaDataGridViewTextBoxColumn
+        '
+        Me.MiercolesSalidaDataGridViewTextBoxColumn.DataPropertyName = "miercolesSalida"
+        Me.MiercolesSalidaDataGridViewTextBoxColumn.HeaderText = "miercolesSalida"
+        Me.MiercolesSalidaDataGridViewTextBoxColumn.Name = "MiercolesSalidaDataGridViewTextBoxColumn"
+        '
+        'JuevesInicioDataGridViewTextBoxColumn
+        '
+        Me.JuevesInicioDataGridViewTextBoxColumn.DataPropertyName = "juevesInicio"
+        Me.JuevesInicioDataGridViewTextBoxColumn.HeaderText = "juevesInicio"
+        Me.JuevesInicioDataGridViewTextBoxColumn.Name = "JuevesInicioDataGridViewTextBoxColumn"
+        '
+        'JuevesSalidaDataGridViewTextBoxColumn
+        '
+        Me.JuevesSalidaDataGridViewTextBoxColumn.DataPropertyName = "juevesSalida"
+        Me.JuevesSalidaDataGridViewTextBoxColumn.HeaderText = "juevesSalida"
+        Me.JuevesSalidaDataGridViewTextBoxColumn.Name = "JuevesSalidaDataGridViewTextBoxColumn"
+        '
+        'ViernesInicioDataGridViewTextBoxColumn
+        '
+        Me.ViernesInicioDataGridViewTextBoxColumn.DataPropertyName = "viernesInicio"
+        Me.ViernesInicioDataGridViewTextBoxColumn.HeaderText = "viernesInicio"
+        Me.ViernesInicioDataGridViewTextBoxColumn.Name = "ViernesInicioDataGridViewTextBoxColumn"
+        '
+        'ViernesSalidaDataGridViewTextBoxColumn
+        '
+        Me.ViernesSalidaDataGridViewTextBoxColumn.DataPropertyName = "viernesSalida"
+        Me.ViernesSalidaDataGridViewTextBoxColumn.HeaderText = "viernesSalida"
+        Me.ViernesSalidaDataGridViewTextBoxColumn.Name = "ViernesSalidaDataGridViewTextBoxColumn"
+        '
+        'SabadoInicioDataGridViewTextBoxColumn
+        '
+        Me.SabadoInicioDataGridViewTextBoxColumn.DataPropertyName = "sabadoInicio"
+        Me.SabadoInicioDataGridViewTextBoxColumn.HeaderText = "sabadoInicio"
+        Me.SabadoInicioDataGridViewTextBoxColumn.Name = "SabadoInicioDataGridViewTextBoxColumn"
+        '
+        'SabadoSalidaDataGridViewTextBoxColumn
+        '
+        Me.SabadoSalidaDataGridViewTextBoxColumn.DataPropertyName = "sabadoSalida"
+        Me.SabadoSalidaDataGridViewTextBoxColumn.HeaderText = "sabadoSalida"
+        Me.SabadoSalidaDataGridViewTextBoxColumn.Name = "SabadoSalidaDataGridViewTextBoxColumn"
+        '
+        'DomingoInicioDataGridViewTextBoxColumn
+        '
+        Me.DomingoInicioDataGridViewTextBoxColumn.DataPropertyName = "domingoInicio"
+        Me.DomingoInicioDataGridViewTextBoxColumn.HeaderText = "domingoInicio"
+        Me.DomingoInicioDataGridViewTextBoxColumn.Name = "DomingoInicioDataGridViewTextBoxColumn"
+        '
+        'DomingoSalidaDataGridViewTextBoxColumn
+        '
+        Me.DomingoSalidaDataGridViewTextBoxColumn.DataPropertyName = "domingoSalida"
+        Me.DomingoSalidaDataGridViewTextBoxColumn.HeaderText = "domingoSalida"
+        Me.DomingoSalidaDataGridViewTextBoxColumn.Name = "DomingoSalidaDataGridViewTextBoxColumn"
         '
         'HorarioForm
         '
@@ -160,6 +286,8 @@ Partial Class HorarioForm
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -173,4 +301,22 @@ Partial Class HorarioForm
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
+    Friend WithEvents HorarioBindingSource As BindingSource
+    Friend WithEvents HorarioTableAdapter As BDSistemaEySDataSetTableAdapters.HorarioTableAdapter
+    Friend WithEvents IdHorarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LunesInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LunesSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MartesInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MartesSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MiercolesInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MiercolesSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents JuevesInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents JuevesSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ViernesInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ViernesSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SabadoInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SabadoSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DomingoInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DomingoSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
