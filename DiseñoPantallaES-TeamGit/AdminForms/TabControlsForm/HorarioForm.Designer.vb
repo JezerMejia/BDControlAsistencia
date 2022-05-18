@@ -31,7 +31,6 @@ Partial Class HorarioForm
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.AdministracionesTableAdapter1 = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.AdministracionesTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -149,7 +148,6 @@ Partial Class HorarioForm
         '
         'AdministracionesTableAdapter1
         '
-        Me.AdministracionesTableAdapter1.ClearBeforeFill = True
         '
         'HorarioForm
         '
@@ -167,7 +165,6 @@ Partial Class HorarioForm
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents AdministracionesTableAdapter1 As BDSistemaEySDataSetTableAdapters.AdministracionesTableAdapter
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel

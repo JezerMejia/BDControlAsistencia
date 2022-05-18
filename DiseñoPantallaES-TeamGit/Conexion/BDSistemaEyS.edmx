@@ -5,25 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="BDSistemaEySModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Administraciones">
-          <Key>
-            <PropertyRef Name="idAdministrador" />
-          </Key>
-          <Property Name="idAdministrador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="primerNombre" Type="nvarchar" MaxLength="25" Nullable="false" />
-          <Property Name="segundoNombre" Type="nvarchar" MaxLength="25" Nullable="false" />
-          <Property Name="primerApellido" Type="nvarchar" MaxLength="25" Nullable="false" />
-          <Property Name="segundoApellido" Type="nvarchar" MaxLength="25" Nullable="false" />
-          <Property Name="rolAdministrador" Type="nvarchar" MaxLength="50" Nullable="false" />
-        </EntityType>
         <EntityType Name="Asistencia">
           <Key>
             <PropertyRef Name="idAsistencia" />
           </Key>
           <Property Name="idAsistencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fechaHoraSalida" Type="datetime" Nullable="false" />
-          <Property Name="fechaHoraEntrada" Type="datetime" Nullable="false" />
-          <Property Name="idEmpleado" Type="int" Nullable="false" />
+          <Property Name="fechaAsistencia" Type="date" />
+          <Property Name="HoraEntrada" Type="time" Precision="7" Nullable="false" />
+          <Property Name="HoraSalida" Type="time" Precision="7" Nullable="false" />
+          <Property Name="idEmpleado" Type="int" />
         </EntityType>
         <EntityType Name="Cargo">
           <Key>
@@ -38,9 +28,9 @@
             <PropertyRef Name="idDepartamento" />
           </Key>
           <Property Name="idDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombreDepartamento" Type="nvarchar" MaxLength="25" />
-          <Property Name="descripcionDepartamento" Type="nvarchar" MaxLength="100" />
-          <Property Name="extensionDepartamento" Type="nvarchar" MaxLength="50" />
+          <Property Name="nombreDepartamento" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="descripcionDepartamento" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="extensionDepartamento" Type="nvarchar" MaxLength="5" Nullable="false" />
         </EntityType>
         <EntityType Name="Empleado">
           <Key>
@@ -52,11 +42,12 @@
           <Property Name="primerApellido" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="segundoApellido" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="fechaIngreso" Type="datetime" />
-          <Property Name="cedulaEmpleado" Type="float" />
-          <Property Name="idCargo" Type="int" Nullable="false" />
-          <Property Name="idDepartamento" Type="int" Nullable="false" />
-          <Property Name="idHorario" Type="int" Nullable="false" />
-          <Property Name="idGrupo" Type="int" Nullable="false" />
+          <Property Name="cedulaEmpleado" Type="varchar" MaxLength="14" />
+          <Property Name="password" Type="varchar" MaxLength="30" />
+          <Property Name="idCargo" Type="int" />
+          <Property Name="idDepartamento" Type="int" />
+          <Property Name="idHorario" Type="int" />
+          <Property Name="idGrupo" Type="int" />
         </EntityType>
         <EntityType Name="Grupos">
           <Key>
@@ -71,20 +62,20 @@
             <PropertyRef Name="idHorario" />
           </Key>
           <Property Name="idHorario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="lunesInicio" Type="datetime" Nullable="false" />
-          <Property Name="lunesSalida" Type="datetime" />
-          <Property Name="martesInicio" Type="datetime" />
-          <Property Name="MartesSalida" Type="datetime" />
-          <Property Name="miercolesInicio" Type="datetime" />
-          <Property Name="miercolesSalida" Type="datetime" />
-          <Property Name="juevesInicio" Type="datetime" />
-          <Property Name="juevesSalida" Type="datetime" />
-          <Property Name="viernesInicio" Type="datetime" />
-          <Property Name="viernesSalida" Type="datetime" />
-          <Property Name="sabadoInicio" Type="datetime" />
-          <Property Name="sabadoFin" Type="datetime" />
-          <Property Name="domingoFin" Type="datetime" />
-          <Property Name="domingoInicio" Type="datetime" />
+          <Property Name="lunesInicio" Type="time" Precision="7" />
+          <Property Name="lunesSalida" Type="time" Precision="7" />
+          <Property Name="martesInicio" Type="time" Precision="7" />
+          <Property Name="martesSalida" Type="time" Precision="7" />
+          <Property Name="miercolesInicio" Type="time" Precision="7" />
+          <Property Name="miercolesSalida" Type="time" Precision="7" />
+          <Property Name="juevesInicio" Type="time" Precision="7" />
+          <Property Name="juevesSalida" Type="time" Precision="7" />
+          <Property Name="viernesInicio" Type="time" Precision="7" />
+          <Property Name="viernesSalida" Type="time" Precision="7" />
+          <Property Name="sabadoInicio" Type="time" Precision="7" />
+          <Property Name="sabadoSalida" Type="time" Precision="7" />
+          <Property Name="domingoInicio" Type="time" Precision="7" />
+          <Property Name="domingoSalida" Type="time" Precision="7" />
         </EntityType>
         <EntityType Name="SolVacaciones">
           <Key>
@@ -93,10 +84,12 @@
           <Property Name="idSolVacaciones" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fechaSol" Type="datetime" />
           <Property Name="descripcionSol" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="idEmpleado" Type="int" Nullable="false" />
+          <Property Name="fechaHoraInicio" Type="datetime" />
+          <Property Name="fechaHoraFin" Type="datetime" />
+          <Property Name="idEmpleado" Type="int" />
         </EntityType>
         <Association Name="RefCargo3">
-          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Cargo">
@@ -108,7 +101,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefDepartamento4">
-          <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+          <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Departamento">
@@ -120,7 +113,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefEmpleado5">
-          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Empleado">
@@ -132,7 +125,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefEmpleado8">
-          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="SolVacaciones" Type="Self.SolVacaciones" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Empleado">
@@ -144,7 +137,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefGrupos7">
-          <End Role="Grupos" Type="Self.Grupos" Multiplicity="1" />
+          <End Role="Grupos" Type="Self.Grupos" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grupos">
@@ -156,7 +149,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefHorario6">
-          <End Role="Horario" Type="Self.Horario" Multiplicity="1" />
+          <End Role="Horario" Type="Self.Horario" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Horario">
@@ -168,7 +161,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="BDSistemaEySModelStoreContainer">
-          <EntitySet Name="Administraciones" EntityType="Self.Administraciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Asistencia" EntityType="Self.Asistencia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
@@ -206,25 +198,15 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BDSistemaEySModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Administraciones">
-          <Key>
-            <PropertyRef Name="idAdministrador" />
-          </Key>
-          <Property Name="idAdministrador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="primerNombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="segundoNombre" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="primerApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="segundoApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="rolAdministrador" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="Asistencia">
           <Key>
             <PropertyRef Name="idAsistencia" />
           </Key>
           <Property Name="idAsistencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fechaHoraSalida" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="fechaHoraEntrada" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="idEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="fechaAsistencia" Type="DateTime" Precision="0" />
+          <Property Name="HoraEntrada" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="HoraSalida" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="idEmpleado" Type="Int32" />
           <NavigationProperty Name="Empleado" Relationship="Self.RefEmpleado5" FromRole="Asistencia" ToRole="Empleado" />
         </EntityType>
         <EntityType Name="Cargo">
@@ -241,9 +223,9 @@
             <PropertyRef Name="idDepartamento" />
           </Key>
           <Property Name="idDepartamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombreDepartamento" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="descripcionDepartamento" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="extensionDepartamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nombreDepartamento" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="descripcionDepartamento" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="extensionDepartamento" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Empleado" Relationship="Self.RefDepartamento4" FromRole="Departamento" ToRole="Empleado" />
         </EntityType>
         <EntityType Name="Empleado">
@@ -256,11 +238,12 @@
           <Property Name="primerApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="segundoApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="fechaIngreso" Type="DateTime" Precision="3" />
-          <Property Name="cedulaEmpleado" Type="Double" />
-          <Property Name="idCargo" Type="Int32" Nullable="false" />
-          <Property Name="idDepartamento" Type="Int32" Nullable="false" />
-          <Property Name="idHorario" Type="Int32" Nullable="false" />
-          <Property Name="idGrupo" Type="Int32" Nullable="false" />
+          <Property Name="cedulaEmpleado" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="idCargo" Type="Int32" />
+          <Property Name="idDepartamento" Type="Int32" />
+          <Property Name="idHorario" Type="Int32" />
+          <Property Name="idGrupo" Type="Int32" />
           <NavigationProperty Name="Asistencia" Relationship="Self.RefEmpleado5" FromRole="Empleado" ToRole="Asistencia" />
           <NavigationProperty Name="Cargo" Relationship="Self.RefCargo3" FromRole="Empleado" ToRole="Cargo" />
           <NavigationProperty Name="Departamento" Relationship="Self.RefDepartamento4" FromRole="Empleado" ToRole="Departamento" />
@@ -282,20 +265,20 @@
             <PropertyRef Name="idHorario" />
           </Key>
           <Property Name="idHorario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="lunesInicio" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="lunesSalida" Type="DateTime" Precision="3" />
-          <Property Name="martesInicio" Type="DateTime" Precision="3" />
-          <Property Name="MartesSalida" Type="DateTime" Precision="3" />
-          <Property Name="miercolesInicio" Type="DateTime" Precision="3" />
-          <Property Name="miercolesSalida" Type="DateTime" Precision="3" />
-          <Property Name="juevesInicio" Type="DateTime" Precision="3" />
-          <Property Name="juevesSalida" Type="DateTime" Precision="3" />
-          <Property Name="viernesInicio" Type="DateTime" Precision="3" />
-          <Property Name="viernesSalida" Type="DateTime" Precision="3" />
-          <Property Name="sabadoInicio" Type="DateTime" Precision="3" />
-          <Property Name="sabadoFin" Type="DateTime" Precision="3" />
-          <Property Name="domingoFin" Type="DateTime" Precision="3" />
-          <Property Name="domingoInicio" Type="DateTime" Precision="3" />
+          <Property Name="lunesInicio" Type="Time" Precision="7" />
+          <Property Name="lunesSalida" Type="Time" Precision="7" />
+          <Property Name="martesInicio" Type="Time" Precision="7" />
+          <Property Name="martesSalida" Type="Time" Precision="7" />
+          <Property Name="miercolesInicio" Type="Time" Precision="7" />
+          <Property Name="miercolesSalida" Type="Time" Precision="7" />
+          <Property Name="juevesInicio" Type="Time" Precision="7" />
+          <Property Name="juevesSalida" Type="Time" Precision="7" />
+          <Property Name="viernesInicio" Type="Time" Precision="7" />
+          <Property Name="viernesSalida" Type="Time" Precision="7" />
+          <Property Name="sabadoInicio" Type="Time" Precision="7" />
+          <Property Name="sabadoSalida" Type="Time" Precision="7" />
+          <Property Name="domingoInicio" Type="Time" Precision="7" />
+          <Property Name="domingoSalida" Type="Time" Precision="7" />
           <NavigationProperty Name="Empleado" Relationship="Self.RefHorario6" FromRole="Horario" ToRole="Empleado" />
         </EntityType>
         <EntityType Name="SolVacaciones">
@@ -305,11 +288,13 @@
           <Property Name="idSolVacaciones" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="fechaSol" Type="DateTime" Precision="3" />
           <Property Name="descripcionSol" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="idEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="fechaHoraInicio" Type="DateTime" Precision="3" />
+          <Property Name="fechaHoraFin" Type="DateTime" Precision="3" />
+          <Property Name="idEmpleado" Type="Int32" />
           <NavigationProperty Name="Empleado" Relationship="Self.RefEmpleado8" FromRole="SolVacaciones" ToRole="Empleado" />
         </EntityType>
         <Association Name="RefEmpleado5">
-          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Empleado">
@@ -321,7 +306,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefCargo3">
-          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Cargo">
@@ -333,7 +318,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefDepartamento4">
-          <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+          <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Departamento">
@@ -345,7 +330,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefEmpleado8">
-          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="SolVacaciones" Type="Self.SolVacaciones" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Empleado">
@@ -357,7 +342,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefGrupos7">
-          <End Role="Grupos" Type="Self.Grupos" Multiplicity="1" />
+          <End Role="Grupos" Type="Self.Grupos" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grupos">
@@ -369,7 +354,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="RefHorario6">
-          <End Role="Horario" Type="Self.Horario" Multiplicity="1" />
+          <End Role="Horario" Type="Self.Horario" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Horario">
@@ -380,8 +365,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BDSistemaEySEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Administraciones" EntityType="Self.Administraciones" />
+        <EntityContainer Name="BDSistemaEySEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Asistencia" EntityType="Self.Asistencia" />
           <EntitySet Name="Cargo" EntityType="Self.Cargo" />
           <EntitySet Name="Departamento" EntityType="Self.Departamento" />
@@ -419,25 +403,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BDSistemaEySModelStoreContainer" CdmEntityContainer="BDSistemaEySEntities">
-          <EntitySetMapping Name="Administraciones">
-            <EntityTypeMapping TypeName="BDSistemaEySModel.Administraciones">
-              <MappingFragment StoreEntitySet="Administraciones">
-                <ScalarProperty Name="idAdministrador" ColumnName="idAdministrador" />
-                <ScalarProperty Name="primerNombre" ColumnName="primerNombre" />
-                <ScalarProperty Name="segundoNombre" ColumnName="segundoNombre" />
-                <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
-                <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
-                <ScalarProperty Name="rolAdministrador" ColumnName="rolAdministrador" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="BDSistemaEySModelStoreContainer" CdmEntityContainer="BDSistemaEySEntities1">
           <EntitySetMapping Name="Asistencia">
             <EntityTypeMapping TypeName="BDSistemaEySModel.Asistencia">
               <MappingFragment StoreEntitySet="Asistencia">
                 <ScalarProperty Name="idAsistencia" ColumnName="idAsistencia" />
-                <ScalarProperty Name="fechaHoraSalida" ColumnName="fechaHoraSalida" />
-                <ScalarProperty Name="fechaHoraEntrada" ColumnName="fechaHoraEntrada" />
+                <ScalarProperty Name="fechaAsistencia" ColumnName="fechaAsistencia" />
+                <ScalarProperty Name="HoraEntrada" ColumnName="HoraEntrada" />
+                <ScalarProperty Name="HoraSalida" ColumnName="HoraSalida" />
                 <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -471,6 +444,7 @@
                 <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
                 <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
                 <ScalarProperty Name="cedulaEmpleado" ColumnName="cedulaEmpleado" />
+                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="idCargo" ColumnName="idCargo" />
                 <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
                 <ScalarProperty Name="idHorario" ColumnName="idHorario" />
@@ -494,7 +468,7 @@
                 <ScalarProperty Name="lunesInicio" ColumnName="lunesInicio" />
                 <ScalarProperty Name="lunesSalida" ColumnName="lunesSalida" />
                 <ScalarProperty Name="martesInicio" ColumnName="martesInicio" />
-                <ScalarProperty Name="MartesSalida" ColumnName="MartesSalida" />
+                <ScalarProperty Name="martesSalida" ColumnName="martesSalida" />
                 <ScalarProperty Name="miercolesInicio" ColumnName="miercolesInicio" />
                 <ScalarProperty Name="miercolesSalida" ColumnName="miercolesSalida" />
                 <ScalarProperty Name="juevesInicio" ColumnName="juevesInicio" />
@@ -502,9 +476,9 @@
                 <ScalarProperty Name="viernesInicio" ColumnName="viernesInicio" />
                 <ScalarProperty Name="viernesSalida" ColumnName="viernesSalida" />
                 <ScalarProperty Name="sabadoInicio" ColumnName="sabadoInicio" />
-                <ScalarProperty Name="sabadoFin" ColumnName="sabadoFin" />
-                <ScalarProperty Name="domingoFin" ColumnName="domingoFin" />
+                <ScalarProperty Name="sabadoSalida" ColumnName="sabadoSalida" />
                 <ScalarProperty Name="domingoInicio" ColumnName="domingoInicio" />
+                <ScalarProperty Name="domingoSalida" ColumnName="domingoSalida" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -514,6 +488,8 @@
                 <ScalarProperty Name="idSolVacaciones" ColumnName="idSolVacaciones" />
                 <ScalarProperty Name="fechaSol" ColumnName="fechaSol" />
                 <ScalarProperty Name="descripcionSol" ColumnName="descripcionSol" />
+                <ScalarProperty Name="fechaHoraInicio" ColumnName="fechaHoraInicio" />
+                <ScalarProperty Name="fechaHoraFin" ColumnName="fechaHoraFin" />
                 <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -535,7 +511,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

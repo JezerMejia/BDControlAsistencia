@@ -123,45 +123,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Conexion\Administraciones.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
-    </Compile>
     <Compile Include="Conexion\Asistencia.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
-      <SubType>Form</SubType>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\BDSistemaEyS.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSistemaEyS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\BDSistemaEyS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\BDSistemaEyS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Cargo.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\ConexionSEyS.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConexionSEyS.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\ConexionSEyS.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\ConexionSEyS.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Departamento.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Empleado.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Grupos.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Horario.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\SolVacaciones.vb">
-      <DependentUpon>ConexionSEyS.tt</DependentUpon>
+      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.vb">
       <SubType>Form</SubType>
@@ -242,10 +238,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Conexion\ConexionSEyS.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ConexionSEyS.Designer.vb</LastGenOutput>
-    </EntityDeploy>
     <None Include="BDSistemaEySDataSet.xsc">
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
     </None>
@@ -257,8 +249,12 @@
     <None Include="BDSistemaEySDataSet.xss">
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Conexion\ConexionSEyS.edmx.diagram">
-      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
+    <EntityDeploy Include="Conexion\BDSistemaEyS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDSistemaEyS.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Conexion\BDSistemaEyS.edmx.diagram">
+      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -273,22 +269,22 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Conexion\ConexionSEyS.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ConexionSEyS.Context.vb</LastGenOutput>
-      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
-    </Content>
-    <Content Include="Conexion\ConexionSEyS.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ConexionSEyS.edmx</DependentUpon>
-      <LastGenOutput>ConexionSEyS.vb</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Conexion\BDSistemaEyS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
+      <LastGenOutput>BDSistemaEyS.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Conexion\BDSistemaEyS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
+      <LastGenOutput>BDSistemaEyS.vb</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

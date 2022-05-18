@@ -22,16 +22,35 @@ Partial Class EmpleadoForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrimerNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SegundoNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrimerApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SegundoApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaIngresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdGrupoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
+        Me.EmpleadoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter()
+        Me.EmpleadoBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -53,6 +72,15 @@ Partial Class EmpleadoForm
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(784, 50)
         Me.TableLayoutPanel1.TabIndex = 0
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(519, 21)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Añadir"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(608, 21)
@@ -70,15 +98,6 @@ Partial Class EmpleadoForm
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(519, 21)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Añadir"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel2
         '
@@ -118,12 +137,101 @@ Partial Class EmpleadoForm
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpleadoDataGridViewTextBoxColumn, Me.PrimerNombreDataGridViewTextBoxColumn, Me.SegundoNombreDataGridViewTextBoxColumn, Me.PrimerApellidoDataGridViewTextBoxColumn, Me.SegundoApellidoDataGridViewTextBoxColumn, Me.FechaIngresoDataGridViewTextBoxColumn, Me.CedulaEmpleadoDataGridViewTextBoxColumn, Me.IdCargoDataGridViewTextBoxColumn, Me.IdDepartamentoDataGridViewTextBoxColumn, Me.IdHorarioDataGridViewTextBoxColumn, Me.IdGrupoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.EmpleadoBindingSource1
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(15, 15)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(754, 396)
         Me.DataGridView1.TabIndex = 4
+        '
+        'IdEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PrimerNombreDataGridViewTextBoxColumn
+        '
+        Me.PrimerNombreDataGridViewTextBoxColumn.DataPropertyName = "primerNombre"
+        Me.PrimerNombreDataGridViewTextBoxColumn.HeaderText = "primerNombre"
+        Me.PrimerNombreDataGridViewTextBoxColumn.Name = "PrimerNombreDataGridViewTextBoxColumn"
+        '
+        'SegundoNombreDataGridViewTextBoxColumn
+        '
+        Me.SegundoNombreDataGridViewTextBoxColumn.DataPropertyName = "segundoNombre"
+        Me.SegundoNombreDataGridViewTextBoxColumn.HeaderText = "segundoNombre"
+        Me.SegundoNombreDataGridViewTextBoxColumn.Name = "SegundoNombreDataGridViewTextBoxColumn"
+        '
+        'PrimerApellidoDataGridViewTextBoxColumn
+        '
+        Me.PrimerApellidoDataGridViewTextBoxColumn.DataPropertyName = "primerApellido"
+        Me.PrimerApellidoDataGridViewTextBoxColumn.HeaderText = "primerApellido"
+        Me.PrimerApellidoDataGridViewTextBoxColumn.Name = "PrimerApellidoDataGridViewTextBoxColumn"
+        '
+        'SegundoApellidoDataGridViewTextBoxColumn
+        '
+        Me.SegundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "segundoApellido"
+        Me.SegundoApellidoDataGridViewTextBoxColumn.HeaderText = "segundoApellido"
+        Me.SegundoApellidoDataGridViewTextBoxColumn.Name = "SegundoApellidoDataGridViewTextBoxColumn"
+        '
+        'FechaIngresoDataGridViewTextBoxColumn
+        '
+        Me.FechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "fechaIngreso"
+        Me.FechaIngresoDataGridViewTextBoxColumn.HeaderText = "fechaIngreso"
+        Me.FechaIngresoDataGridViewTextBoxColumn.Name = "FechaIngresoDataGridViewTextBoxColumn"
+        '
+        'CedulaEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.CedulaEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "cedulaEmpleado"
+        Me.CedulaEmpleadoDataGridViewTextBoxColumn.HeaderText = "cedulaEmpleado"
+        Me.CedulaEmpleadoDataGridViewTextBoxColumn.Name = "CedulaEmpleadoDataGridViewTextBoxColumn"
+        '
+        'IdCargoDataGridViewTextBoxColumn
+        '
+        Me.IdCargoDataGridViewTextBoxColumn.DataPropertyName = "idCargo"
+        Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "idCargo"
+        Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
+        '
+        'IdDepartamentoDataGridViewTextBoxColumn
+        '
+        Me.IdDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "idDepartamento"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "idDepartamento"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.Name = "IdDepartamentoDataGridViewTextBoxColumn"
+        '
+        'IdHorarioDataGridViewTextBoxColumn
+        '
+        Me.IdHorarioDataGridViewTextBoxColumn.DataPropertyName = "idHorario"
+        Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "idHorario"
+        Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
+        '
+        'IdGrupoDataGridViewTextBoxColumn
+        '
+        Me.IdGrupoDataGridViewTextBoxColumn.DataPropertyName = "idGrupo"
+        Me.IdGrupoDataGridViewTextBoxColumn.HeaderText = "idGrupo"
+        Me.IdGrupoDataGridViewTextBoxColumn.Name = "IdGrupoDataGridViewTextBoxColumn"
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'EmpleadoBindingSource1
+        '
+        Me.EmpleadoBindingSource1.DataMember = "Empleado"
+        Me.EmpleadoBindingSource1.DataSource = Me.BDSistemaEySDataSet
         '
         'EmpleadoForm
         '
@@ -139,6 +247,9 @@ Partial Class EmpleadoForm
         Me.Text = "EmpleadoForm"
         Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -151,4 +262,19 @@ Partial Class EmpleadoForm
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
+    Friend WithEvents EmpleadoBindingSource As BindingSource
+    Friend WithEvents EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
+    Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrimerNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SegundoNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrimerApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SegundoApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaIngresoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CedulaEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdHorarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdGrupoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmpleadoBindingSource1 As BindingSource
 End Class
