@@ -94,6 +94,30 @@
     <Compile Include="AdminForms\controlCenter.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminForms\TabControlsForm\EmpleadoForm.Designer.vb">
+      <DependentUpon>EmpleadoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\TabControlsForm\EmpleadoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\TabControlsForm\EntradaSalida.Designer.vb">
+      <DependentUpon>EntradaSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\TabControlsForm\EntradaSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\TabControlsForm\HorarioForm.Designer.vb">
+      <DependentUpon>HorarioForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\TabControlsForm\HorarioForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\TabControlsForm\SolVacacionesForm.Designer.vb">
+      <DependentUpon>SolVacacionesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\TabControlsForm\SolVacacionesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BDSistemaEySDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -181,6 +205,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\controlCenter.resx">
       <DependentUpon>controlCenter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\TabControlsForm\EmpleadoForm.resx">
+      <DependentUpon>EmpleadoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\TabControlsForm\EntradaSalida.resx">
+      <DependentUpon>EntradaSalida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\TabControlsForm\HorarioForm.resx">
+      <DependentUpon>HorarioForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\TabControlsForm\SolVacacionesForm.resx">
+      <DependentUpon>SolVacacionesForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.vb</DependentUpon>
