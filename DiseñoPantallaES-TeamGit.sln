@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29926.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DiseñoPantallaES-TeamGit", "DiseñoPantallaES-TeamGit\DiseñoPantallaES-TeamGit.vbproj", "{A6DF1B66-804C-4D94-8291-88E8B40E6AA7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{1C6FB482-177A-4F09-A9F7-D2872CCB91C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

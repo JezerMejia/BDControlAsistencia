@@ -22,148 +22,156 @@ Partial Class MainWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnEmpleado = New System.Windows.Forms.Button()
-        Me.btnAdministrador = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainWindow))
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnEmpleado = New System.Windows.Forms.Button()
+        Me.btnAdmin = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Californian FB", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label1.Location = New System.Drawing.Point(4, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(433, 60)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Bienvenido al Sistema de Entrada y Salida"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnExit, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(10, 10)
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 0, 1)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.46154!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.46154!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.07693!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(384, 212)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.ColumnCount = 4
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.btnEmpleado, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnAdministrador, 2, 0)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 84)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 1
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(378, 75)
-        Me.TableLayoutPanel3.TabIndex = 2
-        '
-        'btnEmpleado
-        '
-        Me.btnEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnEmpleado.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnEmpleado.Location = New System.Drawing.Point(97, 20)
-        Me.btnEmpleado.Name = "btnEmpleado"
-        Me.btnEmpleado.Size = New System.Drawing.Size(88, 35)
-        Me.btnEmpleado.TabIndex = 0
-        Me.btnEmpleado.Text = "Empleado"
-        Me.btnEmpleado.UseVisualStyleBackColor = True
-        '
-        'btnAdministrador
-        '
-        Me.btnAdministrador.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAdministrador.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnAdministrador.Location = New System.Drawing.Point(191, 20)
-        Me.btnAdministrador.Name = "btnAdministrador"
-        Me.btnAdministrador.Size = New System.Drawing.Size(88, 35)
-        Me.btnAdministrador.TabIndex = 1
-        Me.btnAdministrador.Text = "Administrador"
-        Me.btnAdministrador.UseVisualStyleBackColor = True
-        '
-        'btnExit
-        '
-        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnExit.Location = New System.Drawing.Point(3, 186)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 3
-        Me.btnExit.Text = "Salir"
-        Me.btnExit.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(61, 3)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(261, 75)
-        Me.TableLayoutPanel2.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(245, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Bienvenido al sistema de Entrada y Salida"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.37984!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.62016!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(441, 347)
+        Me.TableLayoutPanel1.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 37)
+        Me.Label2.Font = New System.Drawing.Font("Californian FB", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(140, 309)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(212, 13)
+        Me.Label2.Size = New System.Drawing.Size(160, 27)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Seleccione el método de entrada al sistema"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label2.Text = "Inicio de Sesión"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.Logotipo_GIT_
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 64)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(433, 241)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.15106!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.84894!))
+        Me.TableLayoutPanel2.Controls.Add(Me.btnEmpleado, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnAdmin, 1, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(5, 341)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(441, 85)
+        Me.TableLayoutPanel2.TabIndex = 5
+        '
+        'btnEmpleado
+        '
+        Me.btnEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnEmpleado.Font = New System.Drawing.Font("Californian FB", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEmpleado.Image = CType(resources.GetObject("btnEmpleado.Image"), System.Drawing.Image)
+        Me.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.btnEmpleado.Location = New System.Drawing.Point(31, 11)
+        Me.btnEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEmpleado.Name = "btnEmpleado"
+        Me.btnEmpleado.Size = New System.Drawing.Size(159, 62)
+        Me.btnEmpleado.TabIndex = 1
+        Me.btnEmpleado.Text = "Empleado"
+        Me.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEmpleado.UseVisualStyleBackColor = True
+        '
+        'btnAdmin
+        '
+        Me.btnAdmin.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnAdmin.Font = New System.Drawing.Font("Californian FB", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdmin.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.administrador_web
+        Me.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.btnAdmin.Location = New System.Drawing.Point(233, 11)
+        Me.btnAdmin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAdmin.Name = "btnAdmin"
+        Me.btnAdmin.Size = New System.Drawing.Size(195, 62)
+        Me.btnAdmin.TabIndex = 4
+        Me.btnAdmin.Text = "Administrador"
+        Me.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAdmin.UseVisualStyleBackColor = True
         '
         'MainWindow
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(404, 232)
+        Me.BackColor = System.Drawing.SystemColors.Window
+        Me.ClientSize = New System.Drawing.Size(451, 457)
+        Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.MinimumSize = New System.Drawing.Size(300, 200)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MinimumSize = New System.Drawing.Size(394, 235)
         Me.Name = "MainWindow"
-        Me.Padding = New System.Windows.Forms.Padding(10)
+        Me.Padding = New System.Windows.Forms.Padding(13, 12, 13, 12)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Control de Asistencias"
+        Me.Text = "Login"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnEmpleado As Button
-    Friend WithEvents btnAdministrador As Button
-    Friend WithEvents btnExit As Button
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label1 As Label
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents btnAdmin As Button
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label2 As Label
 End Class

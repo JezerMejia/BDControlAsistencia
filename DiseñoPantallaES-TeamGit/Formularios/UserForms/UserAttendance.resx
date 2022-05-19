@@ -117,44 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="administrador-web" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\administrador-web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="istockphoto-1300845620-170667a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Pictures\istockphoto-1300845620-170667a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="perfil-del-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\perfil-del-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="empleado-del-mes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\empleado-del-mes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logotipo GIT " type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\Logotipo GIT .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO GIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\LOGO GIT.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iniciar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\iniciar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iniciar-sesion(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\iniciar-sesion(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="perfil-del-usuario(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\perfil-del-usuario(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logotipo GIT (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\Logotipo GIT (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iniciar-sesion(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\..\Downloads\iniciar-sesion(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

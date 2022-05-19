@@ -2,6 +2,17 @@
 Imports System.Windows.Forms
 
 Public Class controlCenter
+    Dim asist As New BDSistemaEySDataSetTableAdapters.AsistenciaTableAdapter
+    Dim carg As New BDSistemaEySDataSetTableAdapters.CargoTableAdapter
+    Dim emp As New BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
+    Dim dep As New BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter
+    Dim vac As New BDSistemaEySDataSetTableAdapters.SolVacacionesTableAdapter
+
+    Dim tblasist As New BDSistemaEySDataSet.AsistenciaDataTable
+    Dim tblcarg As New BDSistemaEySDataSet.CargoDataTable
+    Dim tblemp As New BDSistemaEySDataSet.EmpleadoDataTable
+    Dim tbldep As New BDSistemaEySDataSet.DepartamentoDataTable
+    Dim tblvac As New BDSistemaEySDataSet.SolVacacionesDataTable
     Public Sub CloseAll()
         Me.Hide()
         AdminLogin.Show()
@@ -97,5 +108,34 @@ Public Class controlCenter
         page.Controls.Add(solVac)
 
         TabControl1.TabPages.Add(page)
+    End Sub
+
+    Private Sub AsistenciaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsistenciaToolStripMenuItem.Click
+        asist.Fill(tblasist)
+        VerReporteAsist(tblasist, "DataSetAsistencia", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptAsistenciaEmp.rdlc")
+
+    End Sub
+
+    Private Sub CargoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargoToolStripMenuItem.Click
+        carg.Fill(tblcarg)
+        VerReporteCargo(tblcarg, "DataSetCargos", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptCargos.rdlc")
+
+    End Sub
+
+    Private Sub EmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem.Click
+        emp.Fill(tblemp)
+        VerReporteEmp(tblemp, "DataSetEmp", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptEmpleado.rdlc")
+
+    End Sub
+
+    Private Sub DepartamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartamentoToolStripMenuItem.Click
+        dep.Fill(tbldep)
+        VerReporteDep(tblemp, "DataSetDep", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptDepartamento.rdlc")
+
+    End Sub
+
+    Private Sub VacacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VacacionesToolStripMenuItem.Click
+        vac.Fill(tblvac)
+        VerReporteVacaciones(tblvac, "DataSetSolVac", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptVacaciones.rdlc")
     End Sub
 End Class

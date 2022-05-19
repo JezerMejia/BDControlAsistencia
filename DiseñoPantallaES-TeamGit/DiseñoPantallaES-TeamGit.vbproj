@@ -54,6 +54,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -82,82 +100,76 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForms\AdminLogin.Designer.vb">
+    <Compile Include="Formularios\AdminForms\AdminLogin.Designer.vb">
       <DependentUpon>AdminLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\AdminLogin.vb">
+    <Compile Include="Formularios\AdminForms\AdminLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\controlCenter.Designer.vb">
+    <Compile Include="Formularios\AdminForms\controlCenter.Designer.vb">
       <DependentUpon>controlCenter.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\controlCenter.vb">
+    <Compile Include="Formularios\AdminForms\controlCenter.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\EmpleadoForm.Designer.vb">
+    <Compile Include="Formularios\AdminForms\FrmReporteAsistencia.Designer.vb">
+      <DependentUpon>FrmReporteAsistencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteAsistencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteCargo.Designer.vb">
+      <DependentUpon>FrmReporteCargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteCargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteDepartamento.Designer.vb">
+      <DependentUpon>FrmReporteDepartamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteDepartamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteEmpleado.Designer.vb">
+      <DependentUpon>FrmReporteEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteVacaciones.Designer.vb">
+      <DependentUpon>FrmReporteVacaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\FrmReporteVacaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\EmpleadoForm.Designer.vb">
       <DependentUpon>EmpleadoForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\EmpleadoForm.vb">
+    <Compile Include="Formularios\AdminForms\TabControlsForm\EmpleadoForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\EntradaSalida.Designer.vb">
+    <Compile Include="Formularios\AdminForms\TabControlsForm\EntradaSalida.Designer.vb">
       <DependentUpon>EntradaSalida.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\EntradaSalida.vb">
+    <Compile Include="Formularios\AdminForms\TabControlsForm\EntradaSalida.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\HorarioForm.Designer.vb">
+    <Compile Include="Formularios\AdminForms\TabControlsForm\HorarioForm.Designer.vb">
       <DependentUpon>HorarioForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\HorarioForm.vb">
+    <Compile Include="Formularios\AdminForms\TabControlsForm\HorarioForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\SolVacacionesForm.Designer.vb">
+    <Compile Include="Formularios\AdminForms\TabControlsForm\SolVacacionesForm.Designer.vb">
       <DependentUpon>SolVacacionesForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\TabControlsForm\SolVacacionesForm.vb">
+    <Compile Include="Formularios\AdminForms\TabControlsForm\SolVacacionesForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BDSistemaEySDataSet.Designer.vb">
+    <Compile Include="Conexion\BDSistemaEySDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Asistencia.vb">
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\BDSistemaEyS.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDSistemaEyS.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\BDSistemaEyS.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\BDSistemaEyS.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Cargo.vb">
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Departamento.vb">
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Empleado.vb">
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Grupos.vb">
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Horario.vb">
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\SolVacaciones.vb">
-      <DependentUpon>BDSistemaEyS.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.vb">
       <SubType>Form</SubType>
@@ -166,6 +178,7 @@
       <DependentUpon>MainWindow.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulos\ConfigGlobal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -182,36 +195,51 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Utils\Clock.vb" />
-    <Compile Include="UserForms\UserLogin.Designer.vb">
+    <Compile Include="Formularios\UserForms\UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\UserLogin.vb">
+    <Compile Include="Formularios\UserForms\UserLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForms\UserAttendance.Designer.vb">
+    <Compile Include="Formularios\UserForms\UserAttendance.Designer.vb">
       <DependentUpon>UserAttendance.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\UserAttendance.vb">
+    <Compile Include="Formularios\UserForms\UserAttendance.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AdminForms\AdminLogin.resx">
+    <EmbeddedResource Include="Formularios\AdminForms\AdminLogin.resx">
       <DependentUpon>AdminLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\controlCenter.resx">
+    <EmbeddedResource Include="Formularios\AdminForms\controlCenter.resx">
       <DependentUpon>controlCenter.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\TabControlsForm\EmpleadoForm.resx">
+    <EmbeddedResource Include="Formularios\AdminForms\FrmReporteAsistencia.resx">
+      <DependentUpon>FrmReporteAsistencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\FrmReporteCargo.resx">
+      <DependentUpon>FrmReporteCargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\FrmReporteDepartamento.resx">
+      <DependentUpon>FrmReporteDepartamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\FrmReporteEmpleado.resx">
+      <DependentUpon>FrmReporteEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\FrmReporteVacaciones.resx">
+      <DependentUpon>FrmReporteVacaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\EmpleadoForm.resx">
       <DependentUpon>EmpleadoForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\TabControlsForm\EntradaSalida.resx">
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\EntradaSalida.resx">
       <DependentUpon>EntradaSalida.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\TabControlsForm\HorarioForm.resx">
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\HorarioForm.resx">
       <DependentUpon>HorarioForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\TabControlsForm\SolVacacionesForm.resx">
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\SolVacacionesForm.resx">
       <DependentUpon>SolVacacionesForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
@@ -223,38 +251,29 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\RptAdministrador.rdlc" />
-    <EmbeddedResource Include="Reportes\RptAsistencia.rdlc" />
+    <EmbeddedResource Include="Reportes\RptAsistenciaEmp.rdlc" />
     <EmbeddedResource Include="Reportes\RptCargos.rdlc" />
     <EmbeddedResource Include="Reportes\RptDepartamento.rdlc" />
     <EmbeddedResource Include="Reportes\RptEmpleado.rdlc" />
-    <EmbeddedResource Include="Reportes\RptHorariosrdlc.rdlc" />
     <EmbeddedResource Include="Reportes\RptVacaciones.rdlc" />
-    <EmbeddedResource Include="UserForms\UserLogin.resx">
+    <EmbeddedResource Include="Formularios\UserForms\UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\UserAttendance.resx">
+    <EmbeddedResource Include="Formularios\UserForms\UserAttendance.resx">
       <DependentUpon>UserAttendance.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BDSistemaEySDataSet.xsc">
+    <None Include="Conexion\BDSistemaEySDataSet.xsc">
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BDSistemaEySDataSet.xsd">
+    <None Include="Conexion\BDSistemaEySDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BDSistemaEySDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDSistemaEySDataSet.xss">
+    <None Include="Conexion\BDSistemaEySDataSet.xss">
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
-    </None>
-    <EntityDeploy Include="Conexion\BDSistemaEyS.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BDSistemaEyS.Designer.vb</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Conexion\BDSistemaEyS.edmx.diagram">
-      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -275,15 +294,19 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Conexion\BDSistemaEyS.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
-      <LastGenOutput>BDSistemaEyS.Context.vb</LastGenOutput>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Conexion\BDSistemaEyS.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDSistemaEyS.edmx</DependentUpon>
-      <LastGenOutput>BDSistemaEyS.vb</LastGenOutput>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

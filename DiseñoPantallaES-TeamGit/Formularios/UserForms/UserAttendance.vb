@@ -1,12 +1,13 @@
 ﻿
-
 Public Class UserAttendance
 
-    Dim myClock As New Clock
+    Dim Tiempo As DateTime
+
 
     Public Sub CloseAll()
+        UserLogin.Close()
+        MainWindow.Show()
         Me.Hide()
-        UserLogin.Show()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -27,11 +28,17 @@ Public Class UserAttendance
                         MessageBoxIcon.Information)
     End Sub
 
-    Private Sub UserAttendance_Closed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Me.CloseAll()
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lbFecha.Text = DateTime.Now.ToLongDateString()
+        Tiempo = Now.ToString("HH:mm:ss")
+        lbHora.Text = Tiempo
     End Sub
 
     Private Sub UserAttendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
 
     End Sub
 End Class
