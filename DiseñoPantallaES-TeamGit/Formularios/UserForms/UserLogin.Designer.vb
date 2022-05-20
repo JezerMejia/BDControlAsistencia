@@ -22,6 +22,7 @@ Partial Class UserLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserLogin))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -44,7 +45,7 @@ Partial Class UserLogin
         Me.TableLayoutPanel1.Controls.Add(Me.PictureBox2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 0, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(45, 5)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.55401!))
@@ -54,9 +55,9 @@ Partial Class UserLogin
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.Logotipo_GIT_
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(4, 4)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(160, 112)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -66,9 +67,9 @@ Partial Class UserLogin
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.perfil_del_usuario_1_
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(38, 124)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(239, 138)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -106,7 +107,7 @@ Partial Class UserLogin
         Me.txtID.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.txtID.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.Location = New System.Drawing.Point(82, 31)
-        Me.txtID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(4)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(191, 33)
         Me.txtID.TabIndex = 4
@@ -116,7 +117,7 @@ Partial Class UserLogin
         Me.txtPin.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.txtPin.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPin.Location = New System.Drawing.Point(82, 121)
-        Me.txtPin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPin.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPin.Name = "txtPin"
         Me.txtPin.Size = New System.Drawing.Size(191, 29)
         Me.txtPin.TabIndex = 5
@@ -132,7 +133,7 @@ Partial Class UserLogin
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnIngresar, 1, 2)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(45, 271)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.84615!))
@@ -145,10 +146,9 @@ Partial Class UserLogin
         '
         Me.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.btnIngresar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresar.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.iniciar_sesion
         Me.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.btnIngresar.Location = New System.Drawing.Point(82, 184)
-        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(148, 46)
         Me.btnIngresar.TabIndex = 7
@@ -164,7 +164,7 @@ Partial Class UserLogin
         Me.ClientSize = New System.Drawing.Size(419, 526)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(434, 278)
         Me.Name = "UserLogin"
         Me.Padding = New System.Windows.Forms.Padding(13, 12, 13, 12)

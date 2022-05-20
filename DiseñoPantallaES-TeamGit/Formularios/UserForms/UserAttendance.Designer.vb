@@ -23,6 +23,7 @@ Partial Class UserAttendance
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserAttendance))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnMarkEnter = New System.Windows.Forms.Button()
@@ -77,7 +78,7 @@ Partial Class UserAttendance
         '
         Me.btnMarkEnter.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnMarkEnter.Font = New System.Drawing.Font("Californian FB", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMarkEnter.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.iniciar_sesion_1_
+        Me.btnMarkEnter.Image = CType(resources.GetObject("btnMarkEnter.Image"), System.Drawing.Image)
         Me.btnMarkEnter.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.btnMarkEnter.Location = New System.Drawing.Point(24, 3)
         Me.btnMarkEnter.Name = "btnMarkEnter"
@@ -91,7 +92,7 @@ Partial Class UserAttendance
         '
         Me.btnMarkExit.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnMarkExit.Font = New System.Drawing.Font("Californian FB", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMarkExit.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.cerrar_sesion
+        Me.btnMarkExit.Image = CType(resources.GetObject("btnMarkExit.Image"), System.Drawing.Image)
         Me.btnMarkExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnMarkExit.Location = New System.Drawing.Point(243, 3)
         Me.btnMarkExit.Name = "btnMarkExit"
@@ -104,7 +105,7 @@ Partial Class UserAttendance
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.Logotipo_GIT_
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(56, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(336, 150)
@@ -116,7 +117,7 @@ Partial Class UserAttendance
         '
         Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExit.Font = New System.Drawing.Font("Californian FB", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.salida
+        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
         Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExit.Location = New System.Drawing.Point(346, 431)
         Me.btnExit.Name = "btnExit"

@@ -22,6 +22,7 @@ Partial Class AdminLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminLogin))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnEnter = New System.Windows.Forms.Button()
@@ -90,7 +91,7 @@ Partial Class AdminLogin
         '
         Me.btnEnter.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnEnter.Font = New System.Drawing.Font("Modern No. 20", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnter.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.iniciar_sesion_2_
+        Me.btnEnter.Image = CType(resources.GetObject("btnEnter.Image"), System.Drawing.Image)
         Me.btnEnter.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.btnEnter.Location = New System.Drawing.Point(173, 180)
         Me.btnEnter.Margin = New System.Windows.Forms.Padding(4)
@@ -259,7 +260,7 @@ Partial Class AdminLogin
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.Logotipo_GIT_
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(77, 62)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(395, 216)
@@ -271,7 +272,7 @@ Partial Class AdminLogin
         '
         Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExit.Font = New System.Drawing.Font("Modern No. 20", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.salida
+        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
         Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExit.Location = New System.Drawing.Point(455, 573)
         Me.btnExit.Margin = New System.Windows.Forms.Padding(4)

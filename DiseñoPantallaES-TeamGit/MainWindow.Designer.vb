@@ -67,7 +67,7 @@ Partial Class MainWindow
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 0, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 2)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.37984!))
@@ -91,9 +91,9 @@ Partial Class MainWindow
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.Logotipo_GIT_
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(4, 64)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(433, 241)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -108,7 +108,7 @@ Partial Class MainWindow
         Me.TableLayoutPanel2.Controls.Add(Me.btnEmpleado, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnAdmin, 1, 0)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(5, 341)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -120,9 +120,9 @@ Partial Class MainWindow
         Me.btnEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnEmpleado.Font = New System.Drawing.Font("Californian FB", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEmpleado.Image = CType(resources.GetObject("btnEmpleado.Image"), System.Drawing.Image)
-        Me.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEmpleado.Location = New System.Drawing.Point(31, 11)
-        Me.btnEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEmpleado.Name = "btnEmpleado"
         Me.btnEmpleado.Size = New System.Drawing.Size(159, 62)
         Me.btnEmpleado.TabIndex = 1
@@ -134,10 +134,10 @@ Partial Class MainWindow
         '
         Me.btnAdmin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnAdmin.Font = New System.Drawing.Font("Californian FB", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdmin.Image = Global.DiseñoPantallaES_TeamGit.My.Resources.Resources.administrador_web
-        Me.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.btnAdmin.Image = CType(resources.GetObject("btnAdmin.Image"), System.Drawing.Image)
+        Me.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAdmin.Location = New System.Drawing.Point(233, 11)
-        Me.btnAdmin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAdmin.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAdmin.Name = "btnAdmin"
         Me.btnAdmin.Size = New System.Drawing.Size(195, 62)
         Me.btnAdmin.TabIndex = 4
@@ -153,7 +153,7 @@ Partial Class MainWindow
         Me.ClientSize = New System.Drawing.Size(451, 457)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(394, 235)
         Me.Name = "MainWindow"
         Me.Padding = New System.Windows.Forms.Padding(13, 12, 13, 12)
