@@ -118,6 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+<<<<<<< HEAD
   <data name="Logotipo GIT " type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logotipo GIT .jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,4 +134,33 @@
   <data name="empleado-del-mes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empleado-del-mes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+=======
+  <data name="administrador-web1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\administrador-web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="administrador_web" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\administrador-web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="empleado_del_mes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\empleado-del-mes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iniciar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iniciar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iniciar_sesion_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iniciar-sesion(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logotipo_GIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logotipo GIT .jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perfil_del_usuario_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perfil-del-usuario(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+>>>>>>> dbcb4141ce86dc46de1ecae2a65c05c4dadef9f9
 </root>
