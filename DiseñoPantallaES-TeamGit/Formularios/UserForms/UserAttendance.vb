@@ -5,8 +5,7 @@ Public Class UserAttendance
 
 
     Public Sub CloseAll()
-        UserLogin.Close()
-        MainWindow.Show()
+        UserLogin.Show()
         Me.Hide()
     End Sub
 
@@ -29,9 +28,7 @@ Public Class UserAttendance
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lbFecha.Text = DateTime.Now.ToLongDateString()
-        Tiempo = Now.ToString("HH:mm:ss")
-        lbHora.Text = Tiempo
+        lbFechaHora.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
     End Sub
 
     Private Sub UserAttendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
