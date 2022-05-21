@@ -1,7 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class UpdateDialogHor
-
+    Dim BDHorario As New BDSistemaEySDataSetTableAdapters.HorarioTableAdapter
+    Dim id As Integer
     Public Sub llenarCombo()
 
 
@@ -11,27 +12,15 @@ Public Class UpdateDialogHor
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim conexion As String
-        conexion = "Data Source=localhost;Initial Catalog=BDSistemaEyS;Integrated Security=True"
-        Dim cn As New SqlConnection
-        cn.ConnectionString = conexion
-        Dim IdHor As String
 
-        IdHor = HorarioForm.DataGridView1.CurrentCell.Value.ToString()
-
-
-        Dim adaptador As New SqlCommand("UPDATE Horario SET lunesInicio='" & lunesIni.Text & "', lunesSalida='" & lunesSal.Text & "',
-                                        martesInicio='" & martesIni.Text & "', martesSalida='" & martesSal.Text & "',
-                                        miercolesInicio='" & miercolesIni.Text & "', miercolesSalida='" & miercolesSal.Text & "',
-                                        juevesInicio='" & juevesIni.Text & "', juevesSalida='" & juevesSal.Text & "',
-                                        viernesInicio='" & viernesIni.Text & "', viernesSalida='" & viernesSal.Text & "',
-                                        sabadoInicio='" & sabadoIni.Text & "', sabadoSalida='" & sabadoSal.Text & "',
-                                        domingoInicio='" & domingoIni.Text & "', domingoSalida='" & domingoSal.Text & "'
-                                        WHERE idHorario = " & IdHor & " ", cn)
-        cn.Open()
-        adaptador.ExecuteNonQuery()
-        MsgBox("Registro Correcto")
-        cn.Close()
+        BDHorario.UpdateQuery(lunesIni.Text, lunesSal.Text,
+                              martesIni.Text, martesSal.Text,
+                              miercolesIni.Text, miercolesSal.Text,
+                              juevesIni.Text, juevesSal.Text,
+                              viernesIni.Text, viernesSal.Text,
+                              sabadoIni.Text, sabadoSal.Text,
+                              domingoIni.Text, domingoSal.Text, id)
+        MsgBox("Guardado")
 
     End Sub
 End Class
