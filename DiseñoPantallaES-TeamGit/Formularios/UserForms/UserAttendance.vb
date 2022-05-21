@@ -15,15 +15,15 @@ Public Class UserAttendance
     End Sub
 
     Private Sub btnMarkEnter_Click(sender As Object, e As EventArgs) Handles btnMarkEnter.Click
-        MessageBox.Show("Asistencia exitosa",
-                        "Registro de entrada",
+        MessageBox.Show("Entrada Marcada Exitosamente",
+                        "Registro Entrada",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information)
     End Sub
 
     Private Sub btnMarkExit_Click(sender As Object, e As EventArgs) Handles btnMarkExit.Click
-        MessageBox.Show("Asistencia exitosa",
-                        "Registro de salida",
+        MessageBox.Show("Salida Marcada Exitosamente",
+                        "Registro Salida",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information)
     End Sub
