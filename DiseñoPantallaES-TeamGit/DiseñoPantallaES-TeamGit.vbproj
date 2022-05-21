@@ -100,6 +100,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\BDSistemaEySDataSet.vb">
+      <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\AdminForms\AdminLogin.Designer.vb">
       <DependentUpon>AdminLogin.vb</DependentUpon>
     </Compile>
