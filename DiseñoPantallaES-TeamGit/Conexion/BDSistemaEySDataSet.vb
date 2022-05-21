@@ -2,6 +2,8 @@
 End Class
 
 Namespace BDSistemaEySDataSetTableAdapters
+    Partial Public Class EmpleadoTableAdapter
+    End Class
 
     Partial Public Class HorarioTableAdapter
     End Class
