@@ -1,23 +1,23 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class HorarioForm
+
+    Dim BDHorario As New BDSistemaEySDataSetTableAdapters.HorarioTableAdapter
+
     Private Sub HorarioForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDSistemaEySDataSet.Horario' table. You can move, or remove it, as needed.
         Me.HorarioTableAdapter.Fill(Me.BDSistemaEySDataSet.Horario)
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Public Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         AddDialogHor.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
 
         Dim NumeroDeFilaSeleccionada As Integer
-        Dim conexion As String
-        conexion = "Data Source=localhost;Initial Catalog=BDSistemaEyS;Integrated Security=True"
-        Dim cn As New SqlConnection
-        cn.ConnectionString = conexion
+
 
         If DataGridView1.SelectedRows.Count > 0 Then
             NumeroDeFilaSeleccionada = DataGridView1.CurrentRow.Index
@@ -25,17 +25,19 @@ Public Class HorarioForm
         Else
 
             Dim IdHor As String
+            Dim resp As VariantType
 
-            IdHor = Me.DataGridView1.CurrentCell.Value.ToString()
+            resp = (MsgBox("Desea eliminar el registro?", vbQuestion + vbYesNo, "Eliminar"))
+            If (resp = vbYes) Then
 
-            Dim adaptador As New SqlCommand("DELETE FROM Horario WHERE idHorario = " +
-            $"{IdHor};", cn)
+                IdHor = Me.DataGridView1.CurrentCell.Value.ToString()
 
-            cn.Open()
-            adaptador.ExecuteNonQuery()
-            MsgBox("Registro Correcto")
-            cn.Close()
-            actualizarRegistro()
+                BDHorario.EliminarHor(IdHor)
+
+                MsgBox("Registro Correcto")
+                actualizarRegistro()
+
+            End If
 
         End If
     End Sub
