@@ -1,13 +1,4 @@
 ﻿Public Class MainWindow
-    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        UserLogin.Show()
-    End Sub
-
-    Private Sub btnAdministrador_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        AdminLogin.Show()
-    End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs)
         Me.Close()
@@ -25,20 +16,18 @@
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
     Private Sub TableLayoutPanel1_Paint_1(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
 
     End Sub
 
 
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
+        Me.Hide()
         AdminLogin.Show()
     End Sub
 
-    Private Sub btnEmpleado_Click_1(sender As Object, e As EventArgs) Handles btnEmpleado.Click
+    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) Handles btnEmpleado.Click
+        Me.Hide()
         UserLogin.Show()
     End Sub
 End Class
