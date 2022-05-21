@@ -2,7 +2,7 @@
  * ER/Studio Data Architect SQL Code Generation
  * Project :      SystemaEyS.DM1
  *
- * Date Created : Wednesday, May 18, 2022 13:14:58
+ * Date Created : Saturday, May 21, 2022 16:53:30
  * Target DBMS : Microsoft SQL Server 2017
  */
 
@@ -18,9 +18,9 @@ go
 
 CREATE TABLE Asistencia(
     idAsistencia       int        IDENTITY(1,1),
-    fechaAsistencia    date       NULL,
-    HoraEntrada        time(7)    NOT NULL,
-    HoraSalida         time(7)    NOT NULL,
+    fechaAsistencia    date       NOT NULL,
+    HoraEntrada        time(7)    NULL,
+    HoraSalida         time(7)    NULL,
     idEmpleado         int        NULL,
     CONSTRAINT PK4 PRIMARY KEY NONCLUSTERED (idAsistencia)
 )
@@ -87,11 +87,10 @@ CREATE TABLE Empleado(
     segundoApellido    nvarchar(25)    NOT NULL,
     fechaIngreso       datetime        DEFAULT NULL NULL,
     cedulaEmpleado     varchar(14)     NULL,
-    password           varchar(30)     NULL,
+    pinEmpleado        varchar(30)     NULL,
     idCargo            int             NULL,
     idDepartamento     int             NULL,
     idHorario          int             NULL,
-    idGrupo            int             NULL,
     CONSTRAINT PK1 PRIMARY KEY NONCLUSTERED (idEmpleado)
 )
 go
@@ -102,26 +101,6 @@ IF OBJECT_ID('Empleado') IS NOT NULL
     PRINT '<<< CREATED TABLE Empleado >>>'
 ELSE
     PRINT '<<< FAILED CREATING TABLE Empleado >>>'
-go
-
-/* 
- * TABLE: Grupos 
- */
-
-CREATE TABLE Grupos(
-    idGrupo             int              IDENTITY(1,1),
-    nombreGrupo         nvarchar(25)     NOT NULL,
-    descripcionGrupo    nvarchar(100)    NOT NULL,
-    CONSTRAINT PK6 PRIMARY KEY NONCLUSTERED (idGrupo)
-)
-go
-
-
-
-IF OBJECT_ID('Grupos') IS NOT NULL
-    PRINT '<<< CREATED TABLE Grupos >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Grupos >>>'
 go
 
 /* 
@@ -192,11 +171,6 @@ go
 /* 
  * TABLE: Empleado 
  */
-
-ALTER TABLE Empleado ADD CONSTRAINT RefGrupos7 
-    FOREIGN KEY (idGrupo)
-    REFERENCES Grupos(idGrupo)
-go
 
 ALTER TABLE Empleado ADD CONSTRAINT RefCargo3 
     FOREIGN KEY (idCargo)

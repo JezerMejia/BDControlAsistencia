@@ -8,16 +8,6 @@ VALUES (
 SET IDENTITY_INSERT BDSistemaEyS.dbo.Cargo OFF;
 GO
 
-SET IDENTITY_INSERT BDSistemaEyS.dbo.Grupos ON;
-INSERT INTO BDSistemaEyS.dbo.Grupos (
-idGrupo, nombreGrupo, descripcionGrupo
-)
-VALUES (
-1, 'Grupo A', 'Personas que conozco'
-);
-SET IDENTITY_INSERT BDSistemaEyS.dbo.Grupos OFF;
-GO
-
 SET IDENTITY_INSERT BDSistemaEyS.dbo.Departamento ON;
 INSERT INTO BDSistemaEyS.dbo.Departamento (
 idDepartamento, nombreDepartamento, descripcionDepartamento,
@@ -58,22 +48,23 @@ SET IDENTITY_INSERT BDSistemaEyS.dbo.Empleado ON;
 INSERT INTO BDSistemaEyS.dbo.Empleado (
 idEmpleado, primerNombre, segundoNombre,
 primerApellido, segundoApellido, fechaIngreso,
-password, cedulaEmpleado,
-idCargo, idDepartamento, idHorario, idGrupo
+pinEmpleado, cedulaEmpleado,
+idCargo, idDepartamento, idHorario
 )
 VALUES (
 29812, 'Juan', 'Ezequiel',
 'Pérez', 'Jiménez', '2022-04-29',
 '1212', '0010405021900A',
-1, 1, 1, 1
+1, 1, 1
 );
 SET IDENTITY_INSERT BDSistemaEyS.dbo.Empleado OFF;
 GO
 
-INSERT INTO Asistencia (
+INSERT INTO BDSistemaEyS.dbo.Asistencia (
 fechaAsistencia, HoraEntrada, horaSalida, idEmpleado
 )
 VALUES (
 '2022-04-30', '8:10', '13:45',
 29812
 );
+GO
