@@ -3,7 +3,7 @@ Public Class UserAttendance
 
     Dim AssistanceEnterTable As New BDSistemaEySDataSetTableAdapters.AsistenciaEnterTableAdapter
     Dim AssistanceExitTable As New BDSistemaEySDataSetTableAdapters.AsistenciaExitTableAdapter
-    Dim idEmpleado As Integer = -1
+    Public idEmpleado As Integer = -1
 
     Public Sub CloseAll()
         UserLogin.Show()

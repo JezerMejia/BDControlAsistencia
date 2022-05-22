@@ -40,6 +40,7 @@
             Return
         End If
         Me.Hide()
+        UserAttendance.idEmpleado = Me.txtID.Text
         UserAttendance.Show()
         Me.txtID.Clear()
         Me.txtPin.Clear()
