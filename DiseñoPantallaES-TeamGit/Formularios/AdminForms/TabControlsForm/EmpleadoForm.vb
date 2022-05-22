@@ -3,7 +3,7 @@
     Dim DBEmpleado As New BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
+        AddDialogEmp.Show()
     End Sub
 
     Private Sub EmpleadoForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
