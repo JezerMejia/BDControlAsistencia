@@ -1,8 +1,7 @@
 ﻿
 Public Class UserAttendance
 
-    Dim AssistanceEnterTable As New BDSistemaEySDataSetTableAdapters.AsistenciaEnterTableAdapter
-    Dim AssistanceExitTable As New BDSistemaEySDataSetTableAdapters.AsistenciaExitTableAdapter
+    Dim AssistanceDataSet As New BDSistemaEySDataSetTableAdapters.AsistenciaTableAdapter
     Public idEmpleado As Integer = -1
 
     Public Sub CloseAll()
@@ -15,7 +14,7 @@ Public Class UserAttendance
     End Sub
 
     Private Sub btnMarkEnter_Click(sender As Object, e As EventArgs) Handles btnMarkEnter.Click
-        AssistanceEnterTable.MarkAssistanceEnter(
+        AssistanceDataSet.MarkAssistanceEnter(
             Me.idEmpleado,
             DateTime.Now.ToString("yyyy-MM-dd"),
             DateTime.Now.ToString("HH:mm:ss")
@@ -27,7 +26,7 @@ Public Class UserAttendance
     End Sub
 
     Private Sub btnMarkExit_Click(sender As Object, e As EventArgs) Handles btnMarkExit.Click
-        AssistanceExitTable.MarkAssistanceExit(
+        AssistanceDataSet.MarkAssistanceExit(
             Me.idEmpleado,
             DateTime.Now.ToString("yyyy-MM-dd"),
             DateTime.Now.ToString("HH:mm:ss")
