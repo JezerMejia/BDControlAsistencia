@@ -27,10 +27,10 @@ Partial Class MainWindow
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnEmpleado = New System.Windows.Forms.Button()
         Me.btnAdmin = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -77,17 +77,6 @@ Partial Class MainWindow
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(347, 369)
         Me.TableLayoutPanel1.TabIndex = 3
         '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(101, 238)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 24)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Inicio de Sesión"
-        '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -131,6 +120,17 @@ Partial Class MainWindow
         Me.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAdmin.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(101, 238)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(144, 24)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Inicio de Sesión"
+        '
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -151,7 +151,7 @@ Partial Class MainWindow
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(383, 428)
         Me.Name = "MainWindow"
-        Me.Padding = New System.Windows.Forms.Padding(10, 10, 10, 10)
+        Me.Padding = New System.Windows.Forms.Padding(10)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SistemaEyS"
         Me.TableLayoutPanel1.ResumeLayout(False)

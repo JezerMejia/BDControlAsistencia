@@ -145,6 +145,12 @@
     <Compile Include="Formularios\AdminForms\FrmReporteVacaciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnEmp\AddDialogEmo.Designer.vb">
+      <DependentUpon>AddDialogEmo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnEmp\AddDialogEmo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\AdminForms\TabControlsForm\BtnHor\AddDialogHor.Designer.vb">
       <DependentUpon>AddDialogHor.vb</DependentUpon>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdminForms\FrmReporteVacaciones.resx">
       <DependentUpon>FrmReporteVacaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnEmp\AddDialogEmo.resx">
+      <DependentUpon>AddDialogEmo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnHor\AddDialogHor.resx">
       <DependentUpon>AddDialogHor.vb</DependentUpon>
