@@ -25,7 +25,7 @@
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error)
             Return False
-        ElseIf empleado.Rows.Item(0).Item("password") <> Me.txtPin.Text Then
+        ElseIf empleado.Rows.Item(0).Item("pinEmpleado") <> Me.txtPin.Text Then
             MessageBox.Show("La contraseña es incorrecta",
                         "Ingreso inválido",
                         MessageBoxButtons.OK,

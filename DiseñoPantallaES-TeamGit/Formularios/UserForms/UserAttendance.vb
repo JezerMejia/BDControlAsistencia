@@ -1,8 +1,9 @@
 ﻿
 Public Class UserAttendance
 
-    Dim Tiempo As DateTime
-
+    Dim AssistanceEnterTable As New BDSistemaEySDataSetTableAdapters.AsistenciaEnterTableAdapter
+    Dim AssistanceExitTable As New BDSistemaEySDataSetTableAdapters.AsistenciaExitTableAdapter
+    Dim idEmpleado As Integer = -1
 
     Public Sub CloseAll()
         UserLogin.Show()
@@ -14,6 +15,11 @@ Public Class UserAttendance
     End Sub
 
     Private Sub btnMarkEnter_Click(sender As Object, e As EventArgs) Handles btnMarkEnter.Click
+        AssistanceEnterTable.MarkAssistanceEnter(
+            Me.idEmpleado,
+            DateTime.Now.ToString("yyyy-MM-dd"),
+            DateTime.Now.ToString("HH:mm:ss")
+            )
         MessageBox.Show("Entrada Marcada Exitosamente",
                         "Registro Entrada",
                         MessageBoxButtons.OK,
@@ -21,6 +27,11 @@ Public Class UserAttendance
     End Sub
 
     Private Sub btnMarkExit_Click(sender As Object, e As EventArgs) Handles btnMarkExit.Click
+        AssistanceExitTable.MarkAssistanceExit(
+            Me.idEmpleado,
+            DateTime.Now.ToString("yyyy-MM-dd"),
+            DateTime.Now.ToString("HH:mm:ss")
+            )
         MessageBox.Show("Salida Marcada Exitosamente",
                         "Registro Salida",
                         MessageBoxButtons.OK,
