@@ -10,93 +10,73 @@ Public Class AddDialogHor
     Dim comparacionS As Integer
     Dim comparacionD As Integer
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Function CompareTimes(inicio As ComboBox, fin As ComboBox) As Boolean
+        Dim inicioDate As DateTime
+        Dim finDate As DateTime
 
-        comparacion = StrComp(lunesIni.Text, lunesSal.Text)
-        comparacionM = StrComp(martesIni.Text, martesSal.Text)
-        comparacionX = StrComp(miercolesIni.Text, miercolesSal.Text)
-        comparacionJ = StrComp(juevesIni.Text, juevesSal.Text)
-        comparacionV = StrComp(viernesIni.Text, viernesSal.Text)
-        comparacionS = StrComp(sabadoIni.Text, sabadoSal.Text)
-        comparacionD = StrComp(domingoIni.Text, domingoSal.Text)
+        Try
+            inicioDate = DateTime.Parse(inicio.Text)
+            finDate = DateTime.Parse(fin.Text)
+        Catch ex As Exception
+            MessageBox.Show(
+                "No se escribió un valor válido",
+                "Error", MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
+            Return False
+        End Try
 
-        'Vacio'
-        If (String.IsNullOrEmpty(lunesIni.Text) Or
-            String.IsNullOrEmpty(lunesSal.Text) Or
-            String.IsNullOrEmpty(martesIni.Text) Or
-            String.IsNullOrEmpty(martesSal.Text) Or
-            String.IsNullOrEmpty(miercolesIni.Text) Or
-            String.IsNullOrEmpty(miercolesSal.Text) Or
-            String.IsNullOrEmpty(juevesIni.Text) Or
-            String.IsNullOrEmpty(juevesSal.Text) Or
-            String.IsNullOrEmpty(viernesIni.Text) Or
-            String.IsNullOrEmpty(viernesSal.Text) Or
-            String.IsNullOrEmpty(sabadoIni.Text) Or
-            String.IsNullOrEmpty(sabadoSal.Text) Or
-            String.IsNullOrEmpty(domingoIni.Text) Or
-            String.IsNullOrEmpty(sabadoSal.Text)) Then
+        If inicioDate.CompareTo(finDate) > 0 Then
+            MessageBox.Show(
+                "La Hora de entrada no puede ser mayor a la Hora de salida",
+                "Error", MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
+            Return False
+        End If
+        If inicioDate.CompareTo(finDate) = 0 Then
+            MessageBox.Show(
+                "La Hora de entrada no puede ser igual a la Hora de salida",
+                "Error", MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
+            Return False
+        End If
+        Return True
+    End Function
 
-            MsgBox("No pueden haber datos vacios", MsgBoxStyle.Exclamation, "ERROR")
+    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
 
-        Else
-            'Igual'
-            If (comparacion = 0 Or
-                comparacionM = 0 Or
-                comparacionX = 0 Or
-                comparacionJ = 0 Or
-                comparacionV = 0 Or
-                comparacionS = 0 Or
-                comparacionD = 0) Then
-
-                MsgBox("No pueden haber datos iguales", MsgBoxStyle.Exclamation, "ERROR")
-
-            Else
-                'Mayor'
-                If (comparacion = -1 Or
-                    comparacionM = -1 Or
-                    comparacionX = -1 Or
-                    comparacionJ = -1 Or
-                    comparacionV = -1 Or
-                    comparacionS = -1 Or
-                    comparacionD = -1) Then
-
-                    MsgBox("La entrada no puede ser mayor a la salida", MsgBoxStyle.Exclamation, "ERROR")
-
-                Else
-                    DBHorario.InsertHorario(lunesIni.Text, lunesSal.Text,
-                                          martesIni.Text, martesSal.Text,
-                                          miercolesIni.Text, miercolesSal.Text,
-                                          juevesIni.Text, juevesSal.Text,
-                                          viernesIni.Text, viernesSal.Text,
-                                          sabadoIni.Text, sabadoSal.Text,
-                                          domingoIni.Text, domingoSal.Text)
-                    MsgBox("Guardado")
-
-                End If
-
-
-            End If
-
-
+        If (
+            Not Me.CompareTimes(lunesIni, lunesSal) Or
+            Not Me.CompareTimes(martesIni, martesSal) Or
+            Not Me.CompareTimes(miercolesIni, miercolesSal) Or
+            Not Me.CompareTimes(juevesIni, juevesSal) Or
+            Not Me.CompareTimes(viernesIni, viernesSal) Or
+            Not Me.CompareTimes(sabadoIni, sabadoSal) Or
+            Not Me.CompareTimes(domingoIni, domingoSal)
+            ) Then
+            Return
         End If
 
+        Try
+            DBHorario.InsertHorario(
+                lunesIni.Text, lunesSal.Text,
+                martesIni.Text, martesSal.Text,
+                miercolesIni.Text, miercolesSal.Text,
+                juevesIni.Text, juevesSal.Text,
+                viernesIni.Text, viernesSal.Text,
+                sabadoIni.Text, sabadoSal.Text,
+                domingoIni.Text, domingoSal.Text
+                )
+            MsgBox("Guardado")
+        Catch ex As Exception
+            MessageBox.Show(
+                ex.Message,
+                "Error", MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
+        End Try
+
     End Sub
 
-    Public Sub actualizarRegistro()
-        Dim conexion As String
-        conexion = "Data Source=localhost;Initial Catalog=BDSistemaEyS;Integrated Security=True"
-        Dim sqll As String
-        sqll = "Select * from Horario"
-        Dim adaptador As New SqlClient.SqlDataAdapter(sqll, conexion)
-        Dim obtenerDatos As New DataSet
-        adaptador.Fill(obtenerDatos, "idHorario")
-        HorarioForm.DataGridView1.DataSource = obtenerDatos
-        HorarioForm.DataGridView1.DataMember = "IdHorario"
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        Me.Close()
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
-        HorarioForm.Show()
-    End Sub
-
 End Class
