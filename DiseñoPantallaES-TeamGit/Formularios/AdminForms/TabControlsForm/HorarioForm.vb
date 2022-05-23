@@ -3,63 +3,53 @@
 Public Class HorarioForm
 
     Dim BDHorario As New BDSistemaEySDataSetTableAdapters.HorarioTableAdapter
+    Dim bindingSource As New BindingSource
+    Public selectedID As Integer = -1
 
     Private Sub HorarioForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDSistemaEySDataSet.Horario' table. You can move, or remove it, as needed.
         Me.HorarioTableAdapter.Fill(Me.BDSistemaEySDataSet.Horario)
-
+        Me.DataGridView1.DataSource = Me.bindingSource
+        Me.bindingSource.DataSource = BDHorario.GetData()
     End Sub
 
-    Public Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Public Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         AddDialogHor.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-
-        Dim NumeroDeFilaSeleccionada As Integer
-
-
-        If DataGridView1.SelectedRows.Count > 0 Then
-            NumeroDeFilaSeleccionada = DataGridView1.CurrentRow.Index
-            MessageBox.Show("Selecciona una fila")
-        Else
-
-            Dim IdHor As String
-            Dim resp As VariantType
-
-            resp = (MsgBox("Desea eliminar el registro?", vbQuestion + vbYesNo, "Eliminar"))
-            If (resp = vbYes) Then
-
-                IdHor = Me.DataGridView1.CurrentCell.Value.ToString()
-
-                BDHorario.DeleteHorario(IdHor)
-
-                MsgBox("Registro Correcto")
-                actualizarRegistro()
-
-            End If
-
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        If Me.selectedID < 0 Then
+            MessageBox.Show("Seleccione un Horario",
+                        "Horario no seleccionado",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Asterisk)
+            Return
         End If
+
+        Dim res = MessageBox.Show("¿Desea eliminar el horario (" + Me.selectedID.ToString() + ") ?",
+                        "Eliminar",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question)
+        If res <> DialogResult.Yes Then
+            Return
+        End If
+        Try
+            BDHorario.DeleteHorario(Me.selectedID)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message,
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error)
+        End Try
     End Sub
 
-    Public Sub actualizarRegistro()
-        Dim conexion As String
-        conexion = "Data Source=localhost;Initial Catalog=BDSistemaEyS;Integrated Security=True"
-        Dim sqll As String
-        sqll = "Select * from Horario"
-        Dim adaptador As New SqlClient.SqlDataAdapter(sqll, conexion)
-        Dim obtenerDatos As New DataSet
-        adaptador.Fill(obtenerDatos, "idHorario")
-        DataGridView1.DataSource = obtenerDatos
-        DataGridView1.DataMember = "IdHorario"
-    End Sub
-
-
-    Public Sub updateDatos()
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         UpdateDialogHor.Show()
+    End Sub
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Dim data As BDSistemaEySDataSet.HorarioDataTable = Me.bindingSource.DataSource
+        Me.selectedID = data.Rows().Item(e.RowIndex).Item(0)
+        Console.WriteLine(Me.selectedID)
     End Sub
 End Class
