@@ -11,7 +11,7 @@ Public Class UpdateDialogHor
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         BDHorario.UpdateHorario(lunesIni.Text, lunesSal.Text,
                               martesIni.Text, martesSal.Text,
@@ -21,6 +21,10 @@ Public Class UpdateDialogHor
                               sabadoIni.Text, sabadoSal.Text,
                               domingoIni.Text, domingoSal.Text, id)
         MsgBox("Guardado")
+
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 End Class
