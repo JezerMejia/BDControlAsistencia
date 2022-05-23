@@ -112,30 +112,30 @@ Public Class controlCenter
 
     Private Sub AsistenciaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsistenciaToolStripMenuItem.Click
         asist.Fill(tblasist)
-        VerReporteAsist(tblasist, "DataSetAsistencia", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptAsistenciaEmp.rdlc")
+        VerReporteAsist(tblasist, "DataSetAsistencia", ".\Reportes\RptAsistenciaEmp.rdlc")
 
     End Sub
 
     Private Sub CargoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargoToolStripMenuItem.Click
         carg.Fill(tblcarg)
-        VerReporteCargo(tblcarg, "DataSetCargos", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptCargos.rdlc")
+        VerReporteCargo(tblcarg, "DataSetCargos", ".\Reportes\RptCargos.rdlc")
 
     End Sub
 
     Private Sub EmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem.Click
         emp.Fill(tblemp)
-        VerReporteEmp(tblemp, "DataSetEmp", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptEmpleado.rdlc")
+        VerReporteEmp(tblemp, "DataSetEmp", ".\Reportes\RptEmpleado.rdlc")
 
     End Sub
 
     Private Sub DepartamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartamentoToolStripMenuItem.Click
         dep.Fill(tbldep)
-        VerReporteDep(tblemp, "DataSetDep", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptDepartamento.rdlc")
+        VerReporteDep(tblemp, "DataSetDep", ".\Reportes\RptDepartamento.rdlc")
 
     End Sub
 
     Private Sub VacacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VacacionesToolStripMenuItem.Click
         vac.Fill(tblvac)
-        VerReporteVacaciones(tblvac, "DataSetSolVac", "C:\Users\AXGOEL\Documents\UCA\DBD\BDControlAsistencia\DiseñoPantallaES-TeamGit\Reportes\RptVacaciones.rdlc")
+        VerReporteVacaciones(tblvac, "DataSetSolVac", ".\Reportes\RptVacaciones.rdlc")
     End Sub
 End Class

@@ -281,11 +281,21 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\RptAsistenciaEmp.rdlc" />
-    <EmbeddedResource Include="Reportes\RptCargos.rdlc" />
-    <EmbeddedResource Include="Reportes\RptDepartamento.rdlc" />
-    <EmbeddedResource Include="Reportes\RptEmpleado.rdlc" />
-    <EmbeddedResource Include="Reportes\RptVacaciones.rdlc" />
+    <EmbeddedResource Include="Reportes\RptAsistenciaEmp.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptCargos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptDepartamento.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptEmpleado.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptVacaciones.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\UserForms\UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </EmbeddedResource>
