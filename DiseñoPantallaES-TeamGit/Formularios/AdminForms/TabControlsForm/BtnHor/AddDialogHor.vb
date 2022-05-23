@@ -18,10 +18,6 @@ Public Class AddDialogHor
             inicioDate = DateTime.Parse(inicio.Text)
             finDate = DateTime.Parse(fin.Text)
         Catch ex As Exception
-            MessageBox.Show(
-                "No se escribió un valor válido",
-                "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error)
             Return False
         End Try
 
@@ -53,7 +49,12 @@ Public Class AddDialogHor
             Not Me.CompareTimes(sabadoIni, sabadoSal) Or
             Not Me.CompareTimes(domingoIni, domingoSal)
             ) Then
+            MessageBox.Show(
+                "No se escribió un valor válido",
+                "Error", MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
             Return
+
         End If
 
         Try

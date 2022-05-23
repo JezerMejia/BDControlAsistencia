@@ -137,7 +137,7 @@ Partial Class AddDialogHor
         Me.TableLayoutPanel7.Location = New System.Drawing.Point(10, 24)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 8
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
@@ -153,7 +153,7 @@ Partial Class AddDialogHor
         Me.domingoSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.domingoSal.FormattingEnabled = True
         Me.domingoSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.domingoSal.Location = New System.Drawing.Point(257, 295)
+        Me.domingoSal.Location = New System.Drawing.Point(257, 300)
         Me.domingoSal.Name = "domingoSal"
         Me.domingoSal.Size = New System.Drawing.Size(190, 21)
         Me.domingoSal.TabIndex = 20
@@ -163,7 +163,7 @@ Partial Class AddDialogHor
         Me.domingoIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.domingoIni.FormattingEnabled = True
         Me.domingoIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.domingoIni.Location = New System.Drawing.Point(61, 295)
+        Me.domingoIni.Location = New System.Drawing.Point(61, 300)
         Me.domingoIni.Name = "domingoIni"
         Me.domingoIni.Size = New System.Drawing.Size(190, 21)
         Me.domingoIni.TabIndex = 19
@@ -173,7 +173,7 @@ Partial Class AddDialogHor
         Me.sabadoSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.sabadoSal.FormattingEnabled = True
         Me.sabadoSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.sabadoSal.Location = New System.Drawing.Point(257, 239)
+        Me.sabadoSal.Location = New System.Drawing.Point(257, 249)
         Me.sabadoSal.Name = "sabadoSal"
         Me.sabadoSal.Size = New System.Drawing.Size(190, 21)
         Me.sabadoSal.TabIndex = 18
@@ -183,7 +183,7 @@ Partial Class AddDialogHor
         Me.sabadoIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.sabadoIni.FormattingEnabled = True
         Me.sabadoIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.sabadoIni.Location = New System.Drawing.Point(61, 239)
+        Me.sabadoIni.Location = New System.Drawing.Point(61, 249)
         Me.sabadoIni.Name = "sabadoIni"
         Me.sabadoIni.Size = New System.Drawing.Size(190, 21)
         Me.sabadoIni.TabIndex = 17
@@ -193,7 +193,7 @@ Partial Class AddDialogHor
         Me.viernesSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.viernesSal.FormattingEnabled = True
         Me.viernesSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.viernesSal.Location = New System.Drawing.Point(257, 199)
+        Me.viernesSal.Location = New System.Drawing.Point(257, 209)
         Me.viernesSal.Name = "viernesSal"
         Me.viernesSal.Size = New System.Drawing.Size(190, 21)
         Me.viernesSal.TabIndex = 16
@@ -203,7 +203,7 @@ Partial Class AddDialogHor
         Me.viernesIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.viernesIni.FormattingEnabled = True
         Me.viernesIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.viernesIni.Location = New System.Drawing.Point(61, 199)
+        Me.viernesIni.Location = New System.Drawing.Point(61, 209)
         Me.viernesIni.Name = "viernesIni"
         Me.viernesIni.Size = New System.Drawing.Size(190, 21)
         Me.viernesIni.TabIndex = 15
@@ -213,7 +213,7 @@ Partial Class AddDialogHor
         Me.juevesSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.juevesSal.FormattingEnabled = True
         Me.juevesSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.juevesSal.Location = New System.Drawing.Point(257, 159)
+        Me.juevesSal.Location = New System.Drawing.Point(257, 169)
         Me.juevesSal.Name = "juevesSal"
         Me.juevesSal.Size = New System.Drawing.Size(190, 21)
         Me.juevesSal.TabIndex = 14
@@ -223,7 +223,7 @@ Partial Class AddDialogHor
         Me.juevesIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.juevesIni.FormattingEnabled = True
         Me.juevesIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.juevesIni.Location = New System.Drawing.Point(61, 159)
+        Me.juevesIni.Location = New System.Drawing.Point(61, 169)
         Me.juevesIni.Name = "juevesIni"
         Me.juevesIni.Size = New System.Drawing.Size(190, 21)
         Me.juevesIni.TabIndex = 13
@@ -233,7 +233,7 @@ Partial Class AddDialogHor
         Me.miercolesSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.miercolesSal.FormattingEnabled = True
         Me.miercolesSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.miercolesSal.Location = New System.Drawing.Point(257, 119)
+        Me.miercolesSal.Location = New System.Drawing.Point(257, 129)
         Me.miercolesSal.Name = "miercolesSal"
         Me.miercolesSal.Size = New System.Drawing.Size(190, 21)
         Me.miercolesSal.TabIndex = 12
@@ -243,7 +243,7 @@ Partial Class AddDialogHor
         Me.miercolesIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.miercolesIni.FormattingEnabled = True
         Me.miercolesIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.miercolesIni.Location = New System.Drawing.Point(61, 119)
+        Me.miercolesIni.Location = New System.Drawing.Point(61, 129)
         Me.miercolesIni.Name = "miercolesIni"
         Me.miercolesIni.Size = New System.Drawing.Size(190, 21)
         Me.miercolesIni.TabIndex = 11
@@ -253,7 +253,7 @@ Partial Class AddDialogHor
         Me.martesSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.martesSal.FormattingEnabled = True
         Me.martesSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.martesSal.Location = New System.Drawing.Point(257, 79)
+        Me.martesSal.Location = New System.Drawing.Point(257, 89)
         Me.martesSal.Name = "martesSal"
         Me.martesSal.Size = New System.Drawing.Size(190, 21)
         Me.martesSal.TabIndex = 10
@@ -263,7 +263,7 @@ Partial Class AddDialogHor
         Me.martesIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.martesIni.FormattingEnabled = True
         Me.martesIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.martesIni.Location = New System.Drawing.Point(61, 79)
+        Me.martesIni.Location = New System.Drawing.Point(61, 89)
         Me.martesIni.Name = "martesIni"
         Me.martesIni.Size = New System.Drawing.Size(190, 21)
         Me.martesIni.TabIndex = 9
@@ -273,7 +273,7 @@ Partial Class AddDialogHor
         Me.lunesSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lunesSal.FormattingEnabled = True
         Me.lunesSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.lunesSal.Location = New System.Drawing.Point(257, 39)
+        Me.lunesSal.Location = New System.Drawing.Point(257, 49)
         Me.lunesSal.Name = "lunesSal"
         Me.lunesSal.Size = New System.Drawing.Size(190, 21)
         Me.lunesSal.TabIndex = 8
@@ -282,7 +282,7 @@ Partial Class AddDialogHor
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 43)
+        Me.Label1.Location = New System.Drawing.Point(19, 53)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(36, 13)
         Me.Label1.TabIndex = 0
@@ -292,7 +292,7 @@ Partial Class AddDialogHor
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 83)
+        Me.Label2.Location = New System.Drawing.Point(16, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 1
@@ -302,7 +302,7 @@ Partial Class AddDialogHor
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 123)
+        Me.Label3.Location = New System.Drawing.Point(3, 133)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 13)
         Me.Label3.TabIndex = 2
@@ -312,7 +312,7 @@ Partial Class AddDialogHor
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 163)
+        Me.Label4.Location = New System.Drawing.Point(14, 173)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 13)
         Me.Label4.TabIndex = 3
@@ -322,7 +322,7 @@ Partial Class AddDialogHor
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 203)
+        Me.Label5.Location = New System.Drawing.Point(13, 213)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 13)
         Me.Label5.TabIndex = 4
@@ -332,7 +332,7 @@ Partial Class AddDialogHor
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(11, 243)
+        Me.Label6.Location = New System.Drawing.Point(11, 253)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 5
@@ -342,7 +342,7 @@ Partial Class AddDialogHor
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 299)
+        Me.Label7.Location = New System.Drawing.Point(6, 304)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 13)
         Me.Label7.TabIndex = 6
@@ -353,7 +353,7 @@ Partial Class AddDialogHor
         Me.lunesIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lunesIni.FormattingEnabled = True
         Me.lunesIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.lunesIni.Location = New System.Drawing.Point(61, 39)
+        Me.lunesIni.Location = New System.Drawing.Point(61, 49)
         Me.lunesIni.Name = "lunesIni"
         Me.lunesIni.Size = New System.Drawing.Size(190, 21)
         Me.lunesIni.TabIndex = 7
@@ -362,7 +362,7 @@ Partial Class AddDialogHor
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(134, 17)
+        Me.Label8.Location = New System.Drawing.Point(134, 27)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(44, 13)
         Me.Label8.TabIndex = 21
@@ -372,7 +372,7 @@ Partial Class AddDialogHor
         '
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(340, 17)
+        Me.Label9.Location = New System.Drawing.Point(340, 27)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(36, 13)
         Me.Label9.TabIndex = 22
