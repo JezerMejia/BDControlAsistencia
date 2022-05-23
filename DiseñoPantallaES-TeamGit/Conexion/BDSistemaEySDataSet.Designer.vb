@@ -5697,14 +5697,13 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idHorario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SET IDENTITY_INSERT [dbo].[Horario] ON;"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INSERT INTO [dbo].[Horario] ("&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"[lunesIni"& _ 
-                "cio], [lunesSalida], [martesInicio], [martesSalida], [miercolesInicio], [miercol"& _ 
-                "esSalida], [juevesInicio], [juevesSalida], [viernesInicio], [viernesSalida], [sa"& _ 
-                "badoInicio], [sabadoSalida], [domingoInicio], [domingoSalida]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&")"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES ("&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"@lun"& _ 
-                "esInicio, @lunesSalida, @martesInicio, @martesSalida, @miercolesInicio, @miercol"& _ 
-                "esSalida, @juevesInicio, @juevesSalida, @viernesInicio, @viernesSalida, @sabadoI"& _ 
-                "nicio, @sabadoSalida, @domingoInicio, @domingoSalida"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET IDENTITY_INSERT [d"& _ 
-                "bo].[Horario] OFF;"
+            Me._commandCollection(2).CommandText = "INSERT INTO [dbo].[Horario] ("&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"[lunesInicio], [lunesSalida], [martesInicio], [mar"& _ 
+                "tesSalida], [miercolesInicio], [miercolesSalida], [juevesInicio], [juevesSalida]"& _ 
+                ", [viernesInicio], [viernesSalida], [sabadoInicio], [sabadoSalida], [domingoInic"& _ 
+                "io], [domingoSalida]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&")"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES ("&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"@lunesInicio, @lunesSalida, @martesInicio, @m"& _ 
+                "artesSalida, @miercolesInicio, @miercolesSalida, @juevesInicio, @juevesSalida, @"& _ 
+                "viernesInicio, @viernesSalida, @sabadoInicio, @sabadoSalida, @domingoInicio, @do"& _ 
+                "mingoSalida"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&");"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lunesInicio", Global.System.Data.SqlDbType.Time, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "lunesInicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lunesSalida", Global.System.Data.SqlDbType.Time, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "lunesSalida", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
