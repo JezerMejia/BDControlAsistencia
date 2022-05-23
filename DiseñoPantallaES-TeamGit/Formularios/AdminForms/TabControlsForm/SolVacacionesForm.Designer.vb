@@ -23,7 +23,9 @@ Partial Class SolVacacionesForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.SolVacacionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
+        Me.SolVacacionesTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.SolVacacionesTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdSolVacacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaSolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -31,46 +33,46 @@ Partial Class SolVacacionesForm
         Me.FechaHoraInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaHoraFinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SolVacacionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.SolVacacionesTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.SolVacacionesTableAdapter()
-        Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
         CType(Me.SolVacacionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'SolVacacionesBindingSource
         '
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel4)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel3)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel2)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 450)
-        Me.Panel1.TabIndex = 0
+        Me.SolVacacionesBindingSource.DataMember = "SolVacaciones"
+        Me.SolVacacionesBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SolVacacionesTableAdapter
+        '
+        Me.SolVacacionesTableAdapter.ClearBeforeFill = True
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdSolVacacionesDataGridViewTextBoxColumn, Me.FechaSolDataGridViewTextBoxColumn, Me.DescripcionSolDataGridViewTextBoxColumn, Me.FechaHoraInicioDataGridViewTextBoxColumn, Me.FechaHoraFinDataGridViewTextBoxColumn, Me.IdEmpleadoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.SolVacacionesBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(15, 15)
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 10)
+        Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(770, 385)
-        Me.DataGridView1.TabIndex = 4
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(453, 264)
+        Me.DataGridView1.TabIndex = 7
         '
         'IdSolVacacionesDataGridViewTextBoxColumn
         '
@@ -84,166 +86,114 @@ Partial Class SolVacacionesForm
         Me.FechaSolDataGridViewTextBoxColumn.DataPropertyName = "fechaSol"
         Me.FechaSolDataGridViewTextBoxColumn.HeaderText = "fechaSol"
         Me.FechaSolDataGridViewTextBoxColumn.Name = "FechaSolDataGridViewTextBoxColumn"
+        Me.FechaSolDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DescripcionSolDataGridViewTextBoxColumn
         '
         Me.DescripcionSolDataGridViewTextBoxColumn.DataPropertyName = "descripcionSol"
         Me.DescripcionSolDataGridViewTextBoxColumn.HeaderText = "descripcionSol"
         Me.DescripcionSolDataGridViewTextBoxColumn.Name = "DescripcionSolDataGridViewTextBoxColumn"
+        Me.DescripcionSolDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FechaHoraInicioDataGridViewTextBoxColumn
         '
         Me.FechaHoraInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraInicio"
         Me.FechaHoraInicioDataGridViewTextBoxColumn.HeaderText = "fechaHoraInicio"
         Me.FechaHoraInicioDataGridViewTextBoxColumn.Name = "FechaHoraInicioDataGridViewTextBoxColumn"
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FechaHoraFinDataGridViewTextBoxColumn
         '
         Me.FechaHoraFinDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraFin"
         Me.FechaHoraFinDataGridViewTextBoxColumn.HeaderText = "fechaHoraFin"
         Me.FechaHoraFinDataGridViewTextBoxColumn.Name = "FechaHoraFinDataGridViewTextBoxColumn"
+        Me.FechaHoraFinDataGridViewTextBoxColumn.ReadOnly = True
         '
         'IdEmpleadoDataGridViewTextBoxColumn
         '
         Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
         Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
         Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
-        '
-        'SolVacacionesBindingSource
-        '
-        Me.SolVacacionesBindingSource.DataMember = "SolVacaciones"
-        Me.SolVacacionesBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.ColumnCount = 2
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(785, 15)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 2
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(15, 385)
-        Me.TableLayoutPanel4.TabIndex = 3
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.ColumnCount = 2
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 15)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 2
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(15, 385)
-        Me.TableLayoutPanel3.TabIndex = 2
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(800, 15)
-        Me.TableLayoutPanel2.TabIndex = 1
+        Me.IdEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Button3, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnAdd, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnEdit, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnDelete, 3, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 400)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(10, 274)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 50)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(453, 42)
+        Me.TableLayoutPanel1.TabIndex = 6
         '
-        'Button3
+        'BtnAdd
         '
-        Me.Button3.Location = New System.Drawing.Point(536, 20)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Añadir"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnAdd.Location = New System.Drawing.Point(191, 9)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.BtnAdd.TabIndex = 2
+        Me.BtnAdd.Text = "Añadir"
+        Me.BtnAdd.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BtnEdit
         '
-        Me.Button2.Location = New System.Drawing.Point(621, 20)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Editar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnEdit.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnEdit.Location = New System.Drawing.Point(277, 9)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEdit.TabIndex = 1
+        Me.BtnEdit.Text = "Editar"
+        Me.BtnEdit.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BtnDelete
         '
-        Me.Button1.Location = New System.Drawing.Point(709, 20)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Eliminar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'SolVacacionesTableAdapter
-        '
-        Me.SolVacacionesTableAdapter.ClearBeforeFill = True
+        Me.BtnDelete.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnDelete.Location = New System.Drawing.Point(368, 9)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDelete.TabIndex = 0
+        Me.BtnDelete.Text = "Eliminar"
+        Me.BtnDelete.UseVisualStyleBackColor = True
         '
         'SolVacacionesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(473, 326)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "SolVacacionesForm"
+        Me.Padding = New System.Windows.Forms.Padding(10)
         Me.Text = "SolVacacionesFomr"
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SolVacacionesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents SolVacacionesBindingSource As BindingSource
     Friend WithEvents SolVacacionesTableAdapter As BDSistemaEySDataSetTableAdapters.SolVacacionesTableAdapter
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents IdSolVacacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaSolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionSolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaHoraInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaHoraFinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents BtnAdd As Button
+    Friend WithEvents BtnEdit As Button
+    Friend WithEvents BtnDelete As Button
 End Class

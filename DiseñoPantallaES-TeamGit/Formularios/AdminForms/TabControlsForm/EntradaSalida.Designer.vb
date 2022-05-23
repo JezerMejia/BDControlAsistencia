@@ -49,19 +49,24 @@ Partial Class EntradaSalida
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(10, 10)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(485, 351)
+        Me.Panel1.Size = New System.Drawing.Size(460, 318)
         Me.Panel1.TabIndex = 0
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAsistenciaDataGridViewTextBoxColumn, Me.FechaAsistenciaDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.IdEmpleadoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.AsistenciaBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(485, 307)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(460, 274)
         Me.DataGridView1.TabIndex = 4
         '
         'IdAsistenciaDataGridViewTextBoxColumn
@@ -112,17 +117,17 @@ Partial Class EntradaSalida
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnUpdate, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 307)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 274)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(485, 44)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(460, 44)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'BtnUpdate
         '
         Me.BtnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnUpdate.Location = New System.Drawing.Point(402, 10)
+        Me.BtnUpdate.Location = New System.Drawing.Point(377, 10)
         Me.BtnUpdate.Name = "BtnUpdate"
         Me.BtnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.BtnUpdate.TabIndex = 0
@@ -137,7 +142,7 @@ Partial Class EntradaSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(505, 371)
+        Me.ClientSize = New System.Drawing.Size(480, 338)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "EntradaSalida"
         Me.Padding = New System.Windows.Forms.Padding(10)
