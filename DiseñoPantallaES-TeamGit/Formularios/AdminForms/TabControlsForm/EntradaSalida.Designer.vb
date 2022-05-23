@@ -25,37 +25,31 @@ Partial Class EntradaSalida
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
-        Me.AsistenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AsistenciaTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.AsistenciaTableAdapter()
         Me.IdAsistenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaAsistenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HoraEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HoraSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AsistenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.AsistenciaTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.AsistenciaTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AsistenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel4)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel3)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel2)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(10, 10)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 450)
+        Me.Panel1.Size = New System.Drawing.Size(485, 351)
         Me.Panel1.TabIndex = 0
         '
         'DataGridView1
@@ -65,90 +59,10 @@ Partial Class EntradaSalida
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAsistenciaDataGridViewTextBoxColumn, Me.FechaAsistenciaDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.IdEmpleadoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.AsistenciaBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(15, 15)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(770, 385)
+        Me.DataGridView1.Size = New System.Drawing.Size(485, 307)
         Me.DataGridView1.TabIndex = 4
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.ColumnCount = 2
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(785, 15)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 2
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(15, 385)
-        Me.TableLayoutPanel4.TabIndex = 3
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.ColumnCount = 2
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 15)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 2
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(15, 385)
-        Me.TableLayoutPanel3.TabIndex = 2
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(800, 15)
-        Me.TableLayoutPanel2.TabIndex = 1
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 400)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 50)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(713, 16)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AsistenciaBindingSource
-        '
-        Me.AsistenciaBindingSource.DataMember = "Asistencia"
-        Me.AsistenciaBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
-        'AsistenciaTableAdapter
-        '
-        Me.AsistenciaTableAdapter.ClearBeforeFill = True
         '
         'IdAsistenciaDataGridViewTextBoxColumn
         '
@@ -181,30 +95,66 @@ Partial Class EntradaSalida
         Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
         Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
         '
+        'AsistenciaBindingSource
+        '
+        Me.AsistenciaBindingSource.DataMember = "Asistencia"
+        Me.AsistenciaBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnUpdate, 1, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 307)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(485, 44)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnUpdate.Location = New System.Drawing.Point(402, 10)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.BtnUpdate.TabIndex = 0
+        Me.BtnUpdate.Text = "Actualizar"
+        Me.BtnUpdate.UseVisualStyleBackColor = True
+        '
+        'AsistenciaTableAdapter
+        '
+        Me.AsistenciaTableAdapter.ClearBeforeFill = True
+        '
         'EntradaSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(505, 371)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "EntradaSalida"
+        Me.Padding = New System.Windows.Forms.Padding(10)
         Me.Text = "EntradaSalida"
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AsistenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnUpdate As Button
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents AsistenciaBindingSource As BindingSource
     Friend WithEvents AsistenciaTableAdapter As BDSistemaEySDataSetTableAdapters.AsistenciaTableAdapter
