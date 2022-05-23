@@ -100,6 +100,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\BDSistemaEySDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Conexion\BDSistemaEySDataSet.vb">
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
     </Compile>
@@ -186,11 +191,6 @@
     </Compile>
     <Compile Include="Formularios\AdminForms\TabControlsForm\SolVacacionesForm.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Conexion\BDSistemaEySDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.vb">
       <SubType>Form</SubType>
@@ -299,8 +299,8 @@
     </None>
     <None Include="Conexion\BDSistemaEySDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDSistemaEySDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>BDSistemaEySDataSet.Designer.vb</LastGenOutput>
     </None>
     <None Include="Conexion\BDSistemaEySDataSet.xss">
       <DependentUpon>BDSistemaEySDataSet.xsd</DependentUpon>
