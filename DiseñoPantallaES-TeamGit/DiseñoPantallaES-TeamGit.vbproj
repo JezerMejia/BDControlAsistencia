@@ -156,6 +156,12 @@
     <Compile Include="Formularios\AdminForms\TabControlsForm\BtnEmp\AddDialogEmo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnEmp\UpdateDialogEmp.Designer.vb">
+      <DependentUpon>UpdateDialogEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnEmp\UpdateDialogEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\AdminForms\TabControlsForm\BtnHor\AddDialogHor.Designer.vb">
       <DependentUpon>AddDialogHor.vb</DependentUpon>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnEmp\AddDialogEmo.resx">
       <DependentUpon>AddDialogEmo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnEmp\UpdateDialogEmp.resx">
+      <DependentUpon>UpdateDialogEmp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnHor\AddDialogHor.resx">
       <DependentUpon>AddDialogHor.vb</DependentUpon>
