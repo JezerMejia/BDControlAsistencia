@@ -32,7 +32,7 @@ Public Class HorarioForm
 
                 IdHor = Me.DataGridView1.CurrentCell.Value.ToString()
 
-                BDHorario.EliminarHor(IdHor)
+                BDHorario.DeleteHorario(IdHor)
 
                 MsgBox("Registro Correcto")
                 actualizarRegistro()

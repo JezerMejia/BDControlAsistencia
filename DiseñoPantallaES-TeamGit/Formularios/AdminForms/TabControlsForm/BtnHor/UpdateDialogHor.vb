@@ -13,7 +13,7 @@ Public Class UpdateDialogHor
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        BDHorario.UpdateQuery(lunesIni.Text, lunesSal.Text,
+        BDHorario.UpdateHorario(lunesIni.Text, lunesSal.Text,
                               martesIni.Text, martesSal.Text,
                               miercolesIni.Text, miercolesSal.Text,
                               juevesIni.Text, juevesSal.Text,

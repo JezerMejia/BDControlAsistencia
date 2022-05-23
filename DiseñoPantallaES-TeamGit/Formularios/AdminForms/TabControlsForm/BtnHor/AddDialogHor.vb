@@ -5,7 +5,7 @@ Public Class AddDialogHor
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        DBHorario.InsertarHorario(lunesIni.Text, lunesSal.Text,
+        DBHorario.InsertHorario(lunesIni.Text, lunesSal.Text,
                               martesIni.Text, martesSal.Text,
                               miercolesIni.Text, miercolesSal.Text,
                               juevesIni.Text, juevesSal.Text,
