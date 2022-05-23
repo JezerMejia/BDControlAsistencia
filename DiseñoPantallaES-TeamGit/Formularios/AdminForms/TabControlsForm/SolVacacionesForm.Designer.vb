@@ -25,6 +25,14 @@ Partial Class SolVacacionesForm
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdSolVacacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaSolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionSolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaHoraInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaHoraFinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SolVacacionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
@@ -32,20 +40,12 @@ Partial Class SolVacacionesForm
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
-        Me.SolVacacionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SolVacacionesTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.SolVacacionesTableAdapter()
-        Me.IdSolVacacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaSolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionSolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaHoraInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaHoraFinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SolVacacionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -71,6 +71,53 @@ Partial Class SolVacacionesForm
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(770, 385)
         Me.DataGridView1.TabIndex = 4
+        '
+        'IdSolVacacionesDataGridViewTextBoxColumn
+        '
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.DataPropertyName = "idSolVacaciones"
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.HeaderText = "idSolVacaciones"
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.Name = "IdSolVacacionesDataGridViewTextBoxColumn"
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FechaSolDataGridViewTextBoxColumn
+        '
+        Me.FechaSolDataGridViewTextBoxColumn.DataPropertyName = "fechaSol"
+        Me.FechaSolDataGridViewTextBoxColumn.HeaderText = "fechaSol"
+        Me.FechaSolDataGridViewTextBoxColumn.Name = "FechaSolDataGridViewTextBoxColumn"
+        '
+        'DescripcionSolDataGridViewTextBoxColumn
+        '
+        Me.DescripcionSolDataGridViewTextBoxColumn.DataPropertyName = "descripcionSol"
+        Me.DescripcionSolDataGridViewTextBoxColumn.HeaderText = "descripcionSol"
+        Me.DescripcionSolDataGridViewTextBoxColumn.Name = "DescripcionSolDataGridViewTextBoxColumn"
+        '
+        'FechaHoraInicioDataGridViewTextBoxColumn
+        '
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraInicio"
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.HeaderText = "fechaHoraInicio"
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.Name = "FechaHoraInicioDataGridViewTextBoxColumn"
+        '
+        'FechaHoraFinDataGridViewTextBoxColumn
+        '
+        Me.FechaHoraFinDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraFin"
+        Me.FechaHoraFinDataGridViewTextBoxColumn.HeaderText = "fechaHoraFin"
+        Me.FechaHoraFinDataGridViewTextBoxColumn.Name = "FechaHoraFinDataGridViewTextBoxColumn"
+        '
+        'IdEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
+        '
+        'SolVacacionesBindingSource
+        '
+        Me.SolVacacionesBindingSource.DataMember = "SolVacaciones"
+        Me.SolVacacionesBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TableLayoutPanel4
         '
@@ -139,7 +186,7 @@ Partial Class SolVacacionesForm
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "Añadir"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
@@ -148,7 +195,7 @@ Partial Class SolVacacionesForm
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Editar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
@@ -157,59 +204,12 @@ Partial Class SolVacacionesForm
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Eliminar"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SolVacacionesBindingSource
-        '
-        Me.SolVacacionesBindingSource.DataMember = "SolVacaciones"
-        Me.SolVacacionesBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
         'SolVacacionesTableAdapter
         '
         Me.SolVacacionesTableAdapter.ClearBeforeFill = True
-        '
-        'IdSolVacacionesDataGridViewTextBoxColumn
-        '
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.DataPropertyName = "idSolVacaciones"
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.HeaderText = "idSolVacaciones"
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.Name = "IdSolVacacionesDataGridViewTextBoxColumn"
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaSolDataGridViewTextBoxColumn
-        '
-        Me.FechaSolDataGridViewTextBoxColumn.DataPropertyName = "fechaSol"
-        Me.FechaSolDataGridViewTextBoxColumn.HeaderText = "fechaSol"
-        Me.FechaSolDataGridViewTextBoxColumn.Name = "FechaSolDataGridViewTextBoxColumn"
-        '
-        'DescripcionSolDataGridViewTextBoxColumn
-        '
-        Me.DescripcionSolDataGridViewTextBoxColumn.DataPropertyName = "descripcionSol"
-        Me.DescripcionSolDataGridViewTextBoxColumn.HeaderText = "descripcionSol"
-        Me.DescripcionSolDataGridViewTextBoxColumn.Name = "DescripcionSolDataGridViewTextBoxColumn"
-        '
-        'FechaHoraInicioDataGridViewTextBoxColumn
-        '
-        Me.FechaHoraInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraInicio"
-        Me.FechaHoraInicioDataGridViewTextBoxColumn.HeaderText = "fechaHoraInicio"
-        Me.FechaHoraInicioDataGridViewTextBoxColumn.Name = "FechaHoraInicioDataGridViewTextBoxColumn"
-        '
-        'FechaHoraFinDataGridViewTextBoxColumn
-        '
-        Me.FechaHoraFinDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraFin"
-        Me.FechaHoraFinDataGridViewTextBoxColumn.HeaderText = "fechaHoraFin"
-        Me.FechaHoraFinDataGridViewTextBoxColumn.Name = "FechaHoraFinDataGridViewTextBoxColumn"
-        '
-        'IdEmpleadoDataGridViewTextBoxColumn
-        '
-        Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
-        Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
-        Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
         '
         'SolVacacionesForm
         '
@@ -221,9 +221,9 @@ Partial Class SolVacacionesForm
         Me.Text = "SolVacacionesFomr"
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SolVacacionesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

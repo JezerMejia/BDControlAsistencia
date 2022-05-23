@@ -4,4 +4,8 @@
         Me.SolVacacionesTableAdapter.Fill(Me.BDSistemaEySDataSet.SolVacaciones)
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        AddDialogSolVac.Show()
+    End Sub
 End Class
