@@ -64,11 +64,11 @@ Partial Class AddDialogHor
         Me.TableLayoutPanel5.Controls.Add(Me.BtnSave, 1, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.BtnCancel, 2, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 391)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 380)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 1
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(482, 44)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(482, 45)
         Me.TableLayoutPanel5.TabIndex = 8
         '
         'BtnSave
@@ -101,7 +101,7 @@ Partial Class AddDialogHor
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(482, 391)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(482, 380)
         Me.TableLayoutPanel1.TabIndex = 9
         '
         'TableLayoutPanel7
@@ -134,7 +134,7 @@ Partial Class AddDialogHor
         Me.TableLayoutPanel7.Controls.Add(Me.lunesIni, 1, 1)
         Me.TableLayoutPanel7.Controls.Add(Me.Label8, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Label9, 2, 0)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(10, 24)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(10, 29)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 8
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
@@ -145,7 +145,7 @@ Partial Class AddDialogHor
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(462, 342)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(462, 322)
         Me.TableLayoutPanel7.TabIndex = 10
         '
         'domingoSal
@@ -153,7 +153,7 @@ Partial Class AddDialogHor
         Me.domingoSal.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.domingoSal.FormattingEnabled = True
         Me.domingoSal.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.domingoSal.Location = New System.Drawing.Point(257, 300)
+        Me.domingoSal.Location = New System.Drawing.Point(257, 290)
         Me.domingoSal.Name = "domingoSal"
         Me.domingoSal.Size = New System.Drawing.Size(190, 21)
         Me.domingoSal.TabIndex = 20
@@ -163,7 +163,7 @@ Partial Class AddDialogHor
         Me.domingoIni.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.domingoIni.FormattingEnabled = True
         Me.domingoIni.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"})
-        Me.domingoIni.Location = New System.Drawing.Point(61, 300)
+        Me.domingoIni.Location = New System.Drawing.Point(61, 290)
         Me.domingoIni.Name = "domingoIni"
         Me.domingoIni.Size = New System.Drawing.Size(190, 21)
         Me.domingoIni.TabIndex = 19
@@ -342,7 +342,7 @@ Partial Class AddDialogHor
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 304)
+        Me.Label7.Location = New System.Drawing.Point(6, 294)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 13)
         Me.Label7.TabIndex = 6
@@ -382,7 +382,7 @@ Partial Class AddDialogHor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 435)
+        Me.ClientSize = New System.Drawing.Size(482, 425)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.TableLayoutPanel5)
         Me.MinimumSize = New System.Drawing.Size(480, 464)

@@ -18,44 +18,57 @@ Public Class AddDialogHor
             inicioDate = DateTime.Parse(inicio.Text)
             finDate = DateTime.Parse(fin.Text)
         Catch ex As Exception
+            Throw New Exception("No se pueden dejar datos vacios")
             Return False
         End Try
 
-        If inicioDate.CompareTo(finDate) > 0 Then
-            MessageBox.Show(
-                "La Hora de entrada no puede ser mayor a la Hora de salida",
-                "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error)
-            Return False
-        End If
         If inicioDate.CompareTo(finDate) = 0 Then
-            MessageBox.Show(
-                "La Hora de entrada no puede ser igual a la Hora de salida",
-                "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error)
+            Throw New Exception("No pueden datos iguales")
             Return False
         End If
+
+        If inicioDate.CompareTo(finDate) > 0 Then
+            Throw New Exception("La Hora de entrada no puede ser mayor a la Hora de salida")
+            Return False
+        End If
+
         Return True
     End Function
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
 
-        If (
-            Not Me.CompareTimes(lunesIni, lunesSal) Or
-            Not Me.CompareTimes(martesIni, martesSal) Or
-            Not Me.CompareTimes(miercolesIni, miercolesSal) Or
-            Not Me.CompareTimes(juevesIni, juevesSal) Or
-            Not Me.CompareTimes(viernesIni, viernesSal) Or
-            Not Me.CompareTimes(sabadoIni, sabadoSal) Or
-            Not Me.CompareTimes(domingoIni, domingoSal)
-            ) Then
-            MessageBox.Show(
-                "No se escribió un valor válido",
-                "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error)
+        Try
+            Me.CompareTimes(lunesIni, lunesSal)
+            Me.CompareTimes(martesIni, martesSal)
+            Me.CompareTimes(miercolesIni, miercolesSal)
+            Me.CompareTimes(juevesIni, juevesSal)
+            Me.CompareTimes(viernesIni, viernesSal)
+            Me.CompareTimes(sabadoIni, sabadoSal)
+            Me.CompareTimes(domingoIni, domingoSal)
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
             Return
 
-        End If
+        End Try
+
+        'MessageBox.Show(
+        '    "No se escribió un valor válido",
+        '    "Error", MessageBoxButtons.OK,
+        '    MessageBoxIcon.Error)
+        'Return
+
+        'MessageBox.Show(
+        '    "La Hora de entrada no puede ser mayor a la Hora de salida",
+        '    "Error", MessageBoxButtons.OK,
+        '    MessageBoxIcon.Error)
+
+        'MessageBox.Show(
+        '    "La Hora de entrada no puede ser igual a la Hora de salida",
+        '    "Error", MessageBoxButtons.OK,
+        '    MessageBoxIcon.Error)
 
         Try
             DBHorario.InsertHorario(
