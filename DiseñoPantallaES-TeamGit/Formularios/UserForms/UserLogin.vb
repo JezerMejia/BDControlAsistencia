@@ -40,8 +40,9 @@
             Return
         End If
         Me.Hide()
-        UserAttendance.idEmpleado = Me.txtID.Text
-        UserAttendance.Show()
+        Dim userAtt As New UserAttendance
+        userAtt.idEmpleado = Me.txtID.Text
+        userAtt.Show()
         Me.txtID.Clear()
         Me.txtPin.Clear()
     End Sub

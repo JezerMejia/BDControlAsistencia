@@ -2,6 +2,9 @@
 End Class
 
 Namespace BDSistemaEySDataSetTableAdapters
+    Partial Public Class AsistenciaTableAdapter
+    End Class
+
     Partial Public Class AsistenciaEnterTableAdapter
     End Class
 
