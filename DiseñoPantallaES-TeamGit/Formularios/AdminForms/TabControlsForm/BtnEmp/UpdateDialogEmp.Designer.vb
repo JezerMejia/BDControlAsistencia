@@ -29,6 +29,10 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.horTxt = New System.Windows.Forms.ComboBox()
+        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -36,7 +40,6 @@ Partial Class UpdateDialogEmp
         Me.fechIniTxt = New System.Windows.Forms.TextBox()
         Me.cargoTxt = New System.Windows.Forms.ComboBox()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.cellIdeTxt = New System.Windows.Forms.TextBox()
         Me.depTxt = New System.Windows.Forms.ComboBox()
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -55,28 +58,25 @@ Partial Class UpdateDialogEmp
         Me.snombreTxt = New System.Windows.Forms.TextBox()
         Me.nombreTxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.emailPe = New System.Windows.Forms.Label()
         Me.emailPer = New System.Windows.Forms.TextBox()
         Me.emailEmpre = New System.Windows.Forms.TextBox()
+        Me.idTxt = New System.Windows.Forms.TextBox()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CargoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.CargoTableAdapter()
         Me.DepartamentoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter()
         Me.EmpleadoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter()
-        Me.idTxt = New System.Windows.Forms.TextBox()
-        Me.horTxt = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HorarioTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.HorarioTableAdapter()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
-        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel2
@@ -175,6 +175,38 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(223, 230)
         Me.TableLayoutPanel5.TabIndex = 1
         '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(70, 203)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(44, 13)
+        Me.Label11.TabIndex = 17
+        Me.Label11.Text = "Horario:"
+        '
+        'horTxt
+        '
+        Me.horTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.horTxt.DataSource = Me.HorarioBindingSource
+        Me.horTxt.DisplayMember = "nombreHorario"
+        Me.horTxt.FormattingEnabled = True
+        Me.horTxt.Location = New System.Drawing.Point(120, 199)
+        Me.horTxt.Name = "horTxt"
+        Me.horTxt.Size = New System.Drawing.Size(100, 21)
+        Me.horTxt.TabIndex = 16
+        Me.horTxt.ValueMember = "idHorario"
+        '
+        'HorarioBindingSource
+        '
+        Me.HorarioBindingSource.DataMember = "Horario"
+        Me.HorarioBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label7
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
@@ -240,11 +272,6 @@ Partial Class UpdateDialogEmp
         Me.CargoBindingSource.DataMember = "Cargo"
         Me.CargoBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'cellIdeTxt
         '
         Me.cellIdeTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -274,11 +301,11 @@ Partial Class UpdateDialogEmp
         '
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(65, 12)
+        Me.Label12.Location = New System.Drawing.Point(62, 12)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(49, 13)
+        Me.Label12.Size = New System.Drawing.Size(52, 13)
         Me.Label12.TabIndex = 14
-        Me.Label12.Text = "Telefono"
+        Me.Label12.Text = "Telefono:"
         '
         'telefonoTxt
         '
@@ -329,11 +356,11 @@ Partial Class UpdateDialogEmp
         '
         Me.emailEmpr.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.emailEmpr.AutoSize = True
-        Me.emailEmpr.Location = New System.Drawing.Point(7, 206)
+        Me.emailEmpr.Location = New System.Drawing.Point(4, 206)
         Me.emailEmpr.Name = "emailEmpr"
-        Me.emailEmpr.Size = New System.Drawing.Size(89, 13)
+        Me.emailEmpr.Size = New System.Drawing.Size(92, 13)
         Me.emailEmpr.TabIndex = 19
-        Me.emailEmpr.Text = "Email Empresarial"
+        Me.emailEmpr.Text = "Email Empresarial:"
         '
         'Label6
         '
@@ -435,20 +462,15 @@ Partial Class UpdateDialogEmp
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID:"
         '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "Empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
         'emailPe
         '
         Me.emailPe.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.emailPe.AutoSize = True
-        Me.emailPe.Location = New System.Drawing.Point(21, 175)
+        Me.emailPe.Location = New System.Drawing.Point(18, 175)
         Me.emailPe.Name = "emailPe"
-        Me.emailPe.Size = New System.Drawing.Size(75, 13)
+        Me.emailPe.Size = New System.Drawing.Size(78, 13)
         Me.emailPe.TabIndex = 18
-        Me.emailPe.Text = "Email personal"
+        Me.emailPe.Text = "Email personal:"
         '
         'emailPer
         '
@@ -466,6 +488,21 @@ Partial Class UpdateDialogEmp
         Me.emailEmpre.Size = New System.Drawing.Size(100, 20)
         Me.emailEmpre.TabIndex = 21
         '
+        'idTxt
+        '
+        Me.idTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.idTxt.Enabled = False
+        Me.idTxt.Location = New System.Drawing.Point(102, 4)
+        Me.idTxt.Name = "idTxt"
+        Me.idTxt.ReadOnly = True
+        Me.idTxt.Size = New System.Drawing.Size(100, 20)
+        Me.idTxt.TabIndex = 22
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
         'CargoTableAdapter
         '
         Me.CargoTableAdapter.ClearBeforeFill = True
@@ -477,43 +514,6 @@ Partial Class UpdateDialogEmp
         'EmpleadoTableAdapter
         '
         Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'idTxt
-        '
-        Me.idTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.idTxt.Enabled = False
-        Me.idTxt.Location = New System.Drawing.Point(102, 4)
-        Me.idTxt.Name = "idTxt"
-        Me.idTxt.ReadOnly = True
-        Me.idTxt.Size = New System.Drawing.Size(100, 20)
-        Me.idTxt.TabIndex = 22
-        '
-        'horTxt
-        '
-        Me.horTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.horTxt.DataSource = Me.HorarioBindingSource
-        Me.horTxt.DisplayMember = "nombreHorario"
-        Me.horTxt.FormattingEnabled = True
-        Me.horTxt.Location = New System.Drawing.Point(120, 199)
-        Me.horTxt.Name = "horTxt"
-        Me.horTxt.Size = New System.Drawing.Size(100, 21)
-        Me.horTxt.TabIndex = 16
-        Me.horTxt.ValueMember = "idHorario"
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(70, 203)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(44, 13)
-        Me.Label11.TabIndex = 17
-        Me.Label11.Text = "Horario:"
-        '
-        'HorarioBindingSource
-        '
-        Me.HorarioBindingSource.DataMember = "Horario"
-        Me.HorarioBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
         'HorarioTableAdapter
         '
@@ -533,13 +533,13 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
-        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

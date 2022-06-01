@@ -27,9 +27,7 @@ Partial Class EmpleadoForm
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
-        Me.EmpleadoBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
@@ -39,7 +37,6 @@ Partial Class EmpleadoForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CmbxID = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.EmpleadoBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrimerNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SegundoNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,15 +50,14 @@ Partial Class EmpleadoForm
         Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadoBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -113,20 +109,10 @@ Partial Class EmpleadoForm
         Me.BtnDelete.Text = "Eliminar"
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
-        'EmpleadoBindingSource1
-        '
-        Me.EmpleadoBindingSource1.DataMember = "Empleado"
-        Me.EmpleadoBindingSource1.DataSource = Me.BDSistemaEySDataSet
-        '
         'BDSistemaEySDataSet
         '
         Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
         Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "Empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
         'EmpleadoTableAdapter
         '
@@ -208,12 +194,15 @@ Partial Class EmpleadoForm
         'CmbxID
         '
         Me.CmbxID.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.CmbxID.DataSource = Me.EmpleadoBindingSource
+        Me.CmbxID.DisplayMember = "idEmpleado"
         Me.CmbxID.FormattingEnabled = True
         Me.CmbxID.Location = New System.Drawing.Point(98, 3)
         Me.CmbxID.MinimumSize = New System.Drawing.Size(141, 0)
         Me.CmbxID.Name = "CmbxID"
         Me.CmbxID.Size = New System.Drawing.Size(141, 21)
         Me.CmbxID.TabIndex = 2
+        Me.CmbxID.ValueMember = "idEmpleado"
         '
         'DataGridView1
         '
@@ -223,7 +212,7 @@ Partial Class EmpleadoForm
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpleadoDataGridViewTextBoxColumn, Me.PrimerNombreDataGridViewTextBoxColumn, Me.SegundoNombreDataGridViewTextBoxColumn, Me.PrimerApellidoDataGridViewTextBoxColumn, Me.SegundoApellidoDataGridViewTextBoxColumn, Me.FechaIngresoDataGridViewTextBoxColumn, Me.CedulaEmpleadoDataGridViewTextBoxColumn, Me.emailPersonal, Me.emailEmpresarial, Me.telefonoEmpleado, Me.IdCargoDataGridViewTextBoxColumn, Me.IdDepartamentoDataGridViewTextBoxColumn, Me.IdHorarioDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.EmpleadoBindingSource2
+        Me.DataGridView1.DataSource = Me.EmpleadoBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(10, 76)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(10)
@@ -233,11 +222,6 @@ Partial Class EmpleadoForm
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(466, 205)
         Me.DataGridView1.TabIndex = 6
-        '
-        'EmpleadoBindingSource2
-        '
-        Me.EmpleadoBindingSource2.DataMember = "Empleado"
-        Me.EmpleadoBindingSource2.DataSource = Me.BDSistemaEySDataSet
         '
         'IdEmpleadoDataGridViewTextBoxColumn
         '
@@ -330,6 +314,11 @@ Partial Class EmpleadoForm
         Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
         Me.IdHorarioDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
         'EmpleadoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -342,16 +331,14 @@ Partial Class EmpleadoForm
         Me.Padding = New System.Windows.Forms.Padding(10)
         Me.Text = "EmpleadoForm"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadoBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -361,10 +348,8 @@ Partial Class EmpleadoForm
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnAdd As Button
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
-    Friend WithEvents EmpleadoBindingSource As BindingSource
     Friend WithEvents EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
     Friend WithEvents IdGrupoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpleadoBindingSource1 As BindingSource
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
@@ -373,7 +358,7 @@ Partial Class EmpleadoForm
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents CmbxID As ComboBox
-    Friend WithEvents EmpleadoBindingSource2 As BindingSource
+    Friend WithEvents EmpleadoBindingSource As BindingSource
     Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PrimerNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SegundoNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

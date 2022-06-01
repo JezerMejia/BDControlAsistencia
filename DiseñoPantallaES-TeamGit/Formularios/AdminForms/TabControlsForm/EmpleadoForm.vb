@@ -11,7 +11,7 @@
 
     Private Sub EmpleadoForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDSistemaEySDataSet.Empleado' table. You can move, or remove it, as needed.
-        'Me.EmpleadoTableAdapter.Fill(Me.BDSistemaEySDataSet.Empleado)'
+        Me.EmpleadoTableAdapter.Fill(Me.BDSistemaEySDataSet.Empleado)
         Me.DataGridView1.DataSource = Me.bindingSource
         Me.bindingSource.DataSource = DBEmpleado.GetData()
     End Sub
@@ -91,8 +91,7 @@
         End Try
         Me.UpdateData()
     End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
+    Private Sub CmbxID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbxID.SelectedIndexChanged
+        Me.selectedID = Me.CmbxID.SelectedValue
     End Sub
 End Class
