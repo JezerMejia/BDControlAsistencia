@@ -24,46 +24,42 @@ Partial Class Departamento
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.extension = New System.Windows.Forms.Label()
-        Me.idTxt = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.nombreTxt = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
-        Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DepartamentoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter()
         Me.IdDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExtensionDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.nuevo = New System.Windows.Forms.Button()
+        Me.añadir = New System.Windows.Forms.Button()
+        Me.editar = New System.Windows.Forms.Button()
+        Me.eliminar = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.extension = New System.Windows.Forms.Label()
+        Me.extensionTxt = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.descripcionTxt = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
+        Me.nombreTxt = New System.Windows.Forms.TextBox()
         Me.nombre = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.DepartamentoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.TableLayoutPanel7.SuspendLayout()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel8.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,7 +67,6 @@ Partial Class Departamento
         '
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
@@ -81,41 +76,6 @@ Partial Class Departamento
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(439, 450)
         Me.TableLayoutPanel1.TabIndex = 6
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.15106!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.84894!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button2, 1, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(105, 403)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(228, 44)
-        Me.TableLayoutPanel2.TabIndex = 7
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.Location = New System.Drawing.Point(7, 6)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 32)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.Location = New System.Drawing.Point(121, 6)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 32)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel3
         '
@@ -154,6 +114,41 @@ Partial Class Departamento
         Me.DataGridView1.Size = New System.Drawing.Size(388, 94)
         Me.DataGridView1.TabIndex = 12
         '
+        'IdDepartamentoDataGridViewTextBoxColumn
+        '
+        Me.IdDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "idDepartamento"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "idDepartamento"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.Name = "IdDepartamentoDataGridViewTextBoxColumn"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDepartamentoDataGridViewTextBoxColumn
+        '
+        Me.NombreDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "nombreDepartamento"
+        Me.NombreDepartamentoDataGridViewTextBoxColumn.HeaderText = "nombreDepartamento"
+        Me.NombreDepartamentoDataGridViewTextBoxColumn.Name = "NombreDepartamentoDataGridViewTextBoxColumn"
+        '
+        'DescripcionDepartamentoDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "descripcionDepartamento"
+        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.HeaderText = "descripcionDepartamento"
+        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.Name = "DescripcionDepartamentoDataGridViewTextBoxColumn"
+        '
+        'ExtensionDepartamentoDataGridViewTextBoxColumn
+        '
+        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "extensionDepartamento"
+        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.HeaderText = "extensionDepartamento"
+        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.Name = "ExtensionDepartamentoDataGridViewTextBoxColumn"
+        '
+        'DepartamentoBindingSource
+        '
+        Me.DepartamentoBindingSource.DataMember = "Departamento"
+        Me.DepartamentoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'TableLayoutPanel4
         '
         Me.TableLayoutPanel4.ColumnCount = 5
@@ -162,10 +157,10 @@ Partial Class Departamento
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.Button3, 1, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button4, 2, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button5, 3, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.Button6, 4, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.nuevo, 1, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.añadir, 2, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.editar, 3, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.eliminar, 4, 1)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(23, 168)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
@@ -175,41 +170,41 @@ Partial Class Departamento
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(388, 49)
         Me.TableLayoutPanel4.TabIndex = 8
         '
-        'Button3
+        'nuevo
         '
-        Me.Button3.Location = New System.Drawing.Point(147, 20)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(55, 23)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Nuevo"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.nuevo.Location = New System.Drawing.Point(147, 20)
+        Me.nuevo.Name = "nuevo"
+        Me.nuevo.Size = New System.Drawing.Size(55, 23)
+        Me.nuevo.TabIndex = 0
+        Me.nuevo.Text = "Nuevo"
+        Me.nuevo.UseVisualStyleBackColor = True
         '
-        'Button4
+        'añadir
         '
-        Me.Button4.Location = New System.Drawing.Point(208, 20)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(55, 23)
-        Me.Button4.TabIndex = 1
-        Me.Button4.Text = "Añadir"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.añadir.Location = New System.Drawing.Point(208, 20)
+        Me.añadir.Name = "añadir"
+        Me.añadir.Size = New System.Drawing.Size(55, 23)
+        Me.añadir.TabIndex = 1
+        Me.añadir.Text = "Añadir"
+        Me.añadir.UseVisualStyleBackColor = True
         '
-        'Button5
+        'editar
         '
-        Me.Button5.Location = New System.Drawing.Point(269, 20)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(55, 23)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Editar"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.editar.Location = New System.Drawing.Point(269, 20)
+        Me.editar.Name = "editar"
+        Me.editar.Size = New System.Drawing.Size(55, 23)
+        Me.editar.TabIndex = 2
+        Me.editar.Text = "Editar"
+        Me.editar.UseVisualStyleBackColor = True
         '
-        'Button6
+        'eliminar
         '
-        Me.Button6.Location = New System.Drawing.Point(330, 20)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(55, 23)
-        Me.Button6.TabIndex = 3
-        Me.Button6.Text = "Eliminar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.eliminar.Location = New System.Drawing.Point(330, 20)
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.Size = New System.Drawing.Size(55, 23)
+        Me.eliminar.TabIndex = 3
+        Me.eliminar.Text = "Eliminar"
+        Me.eliminar.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel5
         '
@@ -217,7 +212,7 @@ Partial Class Departamento
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.72619!))
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.27381!))
         Me.TableLayoutPanel5.Controls.Add(Me.extension, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.idTxt, 1, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.extensionTxt, 1, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(23, 58)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
@@ -236,13 +231,13 @@ Partial Class Departamento
         Me.extension.TabIndex = 0
         Me.extension.Text = "Extension:"
         '
-        'idTxt
+        'extensionTxt
         '
-        Me.idTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.idTxt.Location = New System.Drawing.Point(87, 14)
-        Me.idTxt.Name = "idTxt"
-        Me.idTxt.Size = New System.Drawing.Size(114, 20)
-        Me.idTxt.TabIndex = 7
+        Me.extensionTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.extensionTxt.Location = New System.Drawing.Point(87, 14)
+        Me.extensionTxt.Name = "extensionTxt"
+        Me.extensionTxt.Size = New System.Drawing.Size(114, 20)
+        Me.extensionTxt.TabIndex = 7
         '
         'TableLayoutPanel6
         '
@@ -250,7 +245,7 @@ Partial Class Departamento
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.13542!))
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.86459!))
         Me.TableLayoutPanel6.Controls.Add(Me.Label2, 0, 0)
-        Me.TableLayoutPanel6.Controls.Add(Me.nombreTxt, 1, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.descripcionTxt, 1, 0)
         Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel6.Location = New System.Drawing.Point(23, 113)
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
@@ -269,21 +264,21 @@ Partial Class Departamento
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Descripcion:"
         '
-        'nombreTxt
+        'descripcionTxt
         '
-        Me.nombreTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.nombreTxt.Location = New System.Drawing.Point(88, 3)
-        Me.nombreTxt.Multiline = True
-        Me.nombreTxt.Name = "nombreTxt"
-        Me.nombreTxt.Size = New System.Drawing.Size(203, 43)
-        Me.nombreTxt.TabIndex = 8
+        Me.descripcionTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.descripcionTxt.Location = New System.Drawing.Point(88, 3)
+        Me.descripcionTxt.Multiline = True
+        Me.descripcionTxt.Name = "descripcionTxt"
+        Me.descripcionTxt.Size = New System.Drawing.Size(203, 43)
+        Me.descripcionTxt.TabIndex = 8
         '
         'TableLayoutPanel7
         '
         Me.TableLayoutPanel7.ColumnCount = 3
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.5567!))
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.4433!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Button7, 2, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.TextBox1, 1, 0)
@@ -318,56 +313,17 @@ Partial Class Departamento
         'TextBox1
         '
         Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(63, 14)
+        Me.TextBox1.Location = New System.Drawing.Point(62, 14)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(215, 20)
         Me.TextBox1.TabIndex = 1
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DepartamentoBindingSource
-        '
-        Me.DepartamentoBindingSource.DataMember = "Departamento"
-        Me.DepartamentoBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
-        'DepartamentoTableAdapter
-        '
-        Me.DepartamentoTableAdapter.ClearBeforeFill = True
-        '
-        'IdDepartamentoDataGridViewTextBoxColumn
-        '
-        Me.IdDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "idDepartamento"
-        Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "idDepartamento"
-        Me.IdDepartamentoDataGridViewTextBoxColumn.Name = "IdDepartamentoDataGridViewTextBoxColumn"
-        Me.IdDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDepartamentoDataGridViewTextBoxColumn
-        '
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "nombreDepartamento"
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.HeaderText = "nombreDepartamento"
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.Name = "NombreDepartamentoDataGridViewTextBoxColumn"
-        '
-        'DescripcionDepartamentoDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "descripcionDepartamento"
-        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.HeaderText = "descripcionDepartamento"
-        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.Name = "DescripcionDepartamentoDataGridViewTextBoxColumn"
-        '
-        'ExtensionDepartamentoDataGridViewTextBoxColumn
-        '
-        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "extensionDepartamento"
-        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.HeaderText = "extensionDepartamento"
-        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.Name = "ExtensionDepartamentoDataGridViewTextBoxColumn"
         '
         'TableLayoutPanel8
         '
         Me.TableLayoutPanel8.ColumnCount = 2
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.64948!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.35052!))
-        Me.TableLayoutPanel8.Controls.Add(Me.TextBox2, 1, 0)
+        Me.TableLayoutPanel8.Controls.Add(Me.nombreTxt, 1, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.nombre, 0, 0)
         Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel8.Location = New System.Drawing.Point(23, 3)
@@ -377,23 +333,27 @@ Partial Class Departamento
         Me.TableLayoutPanel8.Size = New System.Drawing.Size(388, 49)
         Me.TableLayoutPanel8.TabIndex = 13
         '
+        'nombreTxt
+        '
+        Me.nombreTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.nombreTxt.Location = New System.Drawing.Point(86, 14)
+        Me.nombreTxt.Name = "nombreTxt"
+        Me.nombreTxt.Size = New System.Drawing.Size(114, 20)
+        Me.nombreTxt.TabIndex = 8
+        '
         'nombre
         '
         Me.nombre.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.nombre.AutoSize = True
-        Me.nombre.Location = New System.Drawing.Point(34, 18)
+        Me.nombre.Location = New System.Drawing.Point(33, 18)
         Me.nombre.Name = "nombre"
         Me.nombre.Size = New System.Drawing.Size(47, 13)
         Me.nombre.TabIndex = 1
         Me.nombre.Text = "Nombre:"
         '
-        'TextBox2
+        'DepartamentoTableAdapter
         '
-        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.TextBox2.Location = New System.Drawing.Point(87, 14)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(114, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.DepartamentoTableAdapter.ClearBeforeFill = True
         '
         'Departamento
         '
@@ -405,9 +365,10 @@ Partial Class Departamento
         Me.Name = "Departamento"
         Me.Text = "Departamento"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
@@ -415,8 +376,6 @@ Partial Class Departamento
         Me.TableLayoutPanel6.PerformLayout()
         Me.TableLayoutPanel7.ResumeLayout(False)
         Me.TableLayoutPanel7.PerformLayout()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel8.ResumeLayout(False)
         Me.TableLayoutPanel8.PerformLayout()
         Me.ResumeLayout(False)
@@ -424,22 +383,19 @@ Partial Class Departamento
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents nuevo As Button
+    Friend WithEvents añadir As Button
+    Friend WithEvents editar As Button
+    Friend WithEvents eliminar As Button
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents extension As Label
-    Friend WithEvents idTxt As TextBox
+    Friend WithEvents extensionTxt As TextBox
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Label2 As Label
-    Friend WithEvents nombreTxt As TextBox
+    Friend WithEvents descripcionTxt As TextBox
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Button7 As Button
@@ -452,6 +408,6 @@ Partial Class Departamento
     Friend WithEvents DescripcionDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExtensionDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents nombreTxt As TextBox
     Friend WithEvents nombre As Label
 End Class
