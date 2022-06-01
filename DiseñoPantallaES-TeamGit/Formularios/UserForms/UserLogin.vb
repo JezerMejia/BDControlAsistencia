@@ -36,6 +36,23 @@
     End Function
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+
+        If String.IsNullOrWhiteSpace(txtID.Text) Or String.IsNullOrWhiteSpace(txtPin.Text) Then
+            MessageBox.Show(
+                "No puede haber datos vacios",
+                "Advertencia", MessageBoxButtons.OK,
+                MessageBoxIcon.Warning)
+            Return
+        End If
+
+        If IsNumeric(txtID.Text) = False Then
+            MessageBox.Show(
+                "Solo se pueden ingresar ID numerico",
+                "Advertencia", MessageBoxButtons.OK,
+                MessageBoxIcon.Warning)
+            Return
+        End If
+
         If Not Me.DoLogin() Then
             Return
         End If
