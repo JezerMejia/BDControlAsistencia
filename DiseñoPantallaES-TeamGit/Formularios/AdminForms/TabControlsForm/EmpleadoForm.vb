@@ -5,7 +5,8 @@
     Public selectedID As Integer = -1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-        AddDialogEmp.Show()
+        Dim addDialog As New AddDialogEmp(Me)
+        addDialog.Show()
     End Sub
 
     Private Sub EmpleadoForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,6 +27,9 @@
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Dim data As BDSistemaEySDataSet.EmpleadoDataTable = Me.bindingSource.DataSource
+        If (e.RowIndex < 0) Then
+            Return
+        End If
         Me.selectedID = data.Rows().Item(e.RowIndex).Item(0)
         Me.CmbxID.Text = Me.selectedID
     End Sub
@@ -52,8 +56,9 @@
                         MessageBoxIcon.Asterisk)
             Return
         End If
-        UpdateDialogEmp.selectedID = Me.selectedID
-        UpdateDialogEmp.Show()
+        Dim updateDialog As New UpdateDialogEmp(Me)
+        updateDialog.selectedID = Me.selectedID
+        updateDialog.Show()
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click

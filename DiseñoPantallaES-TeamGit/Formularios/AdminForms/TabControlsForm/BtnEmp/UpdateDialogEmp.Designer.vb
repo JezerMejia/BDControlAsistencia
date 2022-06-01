@@ -29,12 +29,10 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.horTxt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.fechIniTxt = New System.Windows.Forms.TextBox()
         Me.cargoTxt = New System.Windows.Forms.ComboBox()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -42,7 +40,10 @@ Partial Class UpdateDialogEmp
         Me.cellIdeTxt = New System.Windows.Forms.TextBox()
         Me.depTxt = New System.Windows.Forms.ComboBox()
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.telefonoTxt = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.emailEmpr = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -54,17 +55,18 @@ Partial Class UpdateDialogEmp
         Me.snombreTxt = New System.Windows.Forms.TextBox()
         Me.nombreTxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CargoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.CargoTableAdapter()
-        Me.DepartamentoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter()
-        Me.idTxt = New System.Windows.Forms.ComboBox()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.emailPe = New System.Windows.Forms.Label()
-        Me.emailEmpr = New System.Windows.Forms.Label()
         Me.emailPer = New System.Windows.Forms.TextBox()
         Me.emailEmpre = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.telefonoTxt = New System.Windows.Forms.TextBox()
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CargoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.CargoTableAdapter()
+        Me.DepartamentoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter()
         Me.EmpleadoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter()
+        Me.idTxt = New System.Windows.Forms.TextBox()
+        Me.horTxt = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HorarioTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.HorarioTableAdapter()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -74,6 +76,7 @@ Partial Class UpdateDialogEmp
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel2
@@ -148,12 +151,12 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel5.ColumnCount = 2
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.Controls.Add(Me.horTxt, 1, 5)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label11, 0, 5)
+        Me.TableLayoutPanel5.Controls.Add(Me.horTxt, 0, 5)
         Me.TableLayoutPanel5.Controls.Add(Me.Label7, 0, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.Label8, 0, 2)
         Me.TableLayoutPanel5.Controls.Add(Me.Label9, 0, 3)
         Me.TableLayoutPanel5.Controls.Add(Me.Label10, 0, 4)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label11, 0, 5)
         Me.TableLayoutPanel5.Controls.Add(Me.fechIniTxt, 1, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.cargoTxt, 1, 3)
         Me.TableLayoutPanel5.Controls.Add(Me.cellIdeTxt, 1, 2)
@@ -171,14 +174,6 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(223, 230)
         Me.TableLayoutPanel5.TabIndex = 1
-        '
-        'horTxt
-        '
-        Me.horTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.horTxt.Location = New System.Drawing.Point(120, 200)
-        Me.horTxt.Name = "horTxt"
-        Me.horTxt.Size = New System.Drawing.Size(100, 20)
-        Me.horTxt.TabIndex = 13
         '
         'Label7
         '
@@ -219,16 +214,6 @@ Partial Class UpdateDialogEmp
         Me.Label10.Size = New System.Drawing.Size(77, 13)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Departamento:"
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(70, 203)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(44, 13)
-        Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Horario:"
         '
         'fechIniTxt
         '
@@ -285,6 +270,24 @@ Partial Class UpdateDialogEmp
         Me.DepartamentoBindingSource.DataMember = "Departamento"
         Me.DepartamentoBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(65, 12)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(49, 13)
+        Me.Label12.TabIndex = 14
+        Me.Label12.Text = "Telefono"
+        '
+        'telefonoTxt
+        '
+        Me.telefonoTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.telefonoTxt.Location = New System.Drawing.Point(120, 9)
+        Me.telefonoTxt.Name = "telefonoTxt"
+        Me.telefonoTxt.Size = New System.Drawing.Size(100, 20)
+        Me.telefonoTxt.TabIndex = 15
+        '
         'TableLayoutPanel4
         '
         Me.TableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -303,10 +306,10 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel4.Controls.Add(Me.snombreTxt, 1, 2)
         Me.TableLayoutPanel4.Controls.Add(Me.nombreTxt, 1, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.idTxt, 1, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.emailPe, 0, 6)
         Me.TableLayoutPanel4.Controls.Add(Me.emailPer, 1, 6)
         Me.TableLayoutPanel4.Controls.Add(Me.emailEmpre, 1, 7)
+        Me.TableLayoutPanel4.Controls.Add(Me.idTxt, 1, 0)
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(8, 3)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 8
@@ -318,8 +321,19 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.49938!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50187!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50187!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(212, 230)
         Me.TableLayoutPanel4.TabIndex = 0
+        '
+        'emailEmpr
+        '
+        Me.emailEmpr.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.emailEmpr.AutoSize = True
+        Me.emailEmpr.Location = New System.Drawing.Point(7, 206)
+        Me.emailEmpr.Name = "emailEmpr"
+        Me.emailEmpr.Size = New System.Drawing.Size(89, 13)
+        Me.emailEmpr.TabIndex = 19
+        Me.emailEmpr.Text = "Email Empresarial"
         '
         'Label6
         '
@@ -421,24 +435,10 @@ Partial Class UpdateDialogEmp
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID:"
         '
-        'CargoTableAdapter
+        'EmpleadoBindingSource
         '
-        Me.CargoTableAdapter.ClearBeforeFill = True
-        '
-        'DepartamentoTableAdapter
-        '
-        Me.DepartamentoTableAdapter.ClearBeforeFill = True
-        '
-        'idTxt
-        '
-        Me.idTxt.DataSource = Me.EmpleadoBindingSource
-        Me.idTxt.DisplayMember = "idEmpleado"
-        Me.idTxt.FormattingEnabled = True
-        Me.idTxt.Location = New System.Drawing.Point(102, 3)
-        Me.idTxt.Name = "idTxt"
-        Me.idTxt.Size = New System.Drawing.Size(107, 21)
-        Me.idTxt.TabIndex = 17
-        Me.idTxt.ValueMember = "idEmpleado"
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
         'emailPe
         '
@@ -449,16 +449,6 @@ Partial Class UpdateDialogEmp
         Me.emailPe.Size = New System.Drawing.Size(75, 13)
         Me.emailPe.TabIndex = 18
         Me.emailPe.Text = "Email personal"
-        '
-        'emailEmpr
-        '
-        Me.emailEmpr.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.emailEmpr.AutoSize = True
-        Me.emailEmpr.Location = New System.Drawing.Point(7, 206)
-        Me.emailEmpr.Name = "emailEmpr"
-        Me.emailEmpr.Size = New System.Drawing.Size(89, 13)
-        Me.emailEmpr.TabIndex = 19
-        Me.emailEmpr.Text = "Email Empresarial"
         '
         'emailPer
         '
@@ -476,32 +466,58 @@ Partial Class UpdateDialogEmp
         Me.emailEmpre.Size = New System.Drawing.Size(100, 20)
         Me.emailEmpre.TabIndex = 21
         '
-        'Label12
+        'CargoTableAdapter
         '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(65, 12)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(49, 13)
-        Me.Label12.TabIndex = 14
-        Me.Label12.Text = "Telefono"
+        Me.CargoTableAdapter.ClearBeforeFill = True
         '
-        'telefonoTxt
+        'DepartamentoTableAdapter
         '
-        Me.telefonoTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.telefonoTxt.Location = New System.Drawing.Point(120, 9)
-        Me.telefonoTxt.Name = "telefonoTxt"
-        Me.telefonoTxt.Size = New System.Drawing.Size(100, 20)
-        Me.telefonoTxt.TabIndex = 15
-        '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "Empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.DepartamentoTableAdapter.ClearBeforeFill = True
         '
         'EmpleadoTableAdapter
         '
         Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'idTxt
+        '
+        Me.idTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.idTxt.Enabled = False
+        Me.idTxt.Location = New System.Drawing.Point(102, 4)
+        Me.idTxt.Name = "idTxt"
+        Me.idTxt.ReadOnly = True
+        Me.idTxt.Size = New System.Drawing.Size(100, 20)
+        Me.idTxt.TabIndex = 22
+        '
+        'horTxt
+        '
+        Me.horTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.horTxt.DataSource = Me.HorarioBindingSource
+        Me.horTxt.DisplayMember = "nombreHorario"
+        Me.horTxt.FormattingEnabled = True
+        Me.horTxt.Location = New System.Drawing.Point(120, 199)
+        Me.horTxt.Name = "horTxt"
+        Me.horTxt.Size = New System.Drawing.Size(100, 21)
+        Me.horTxt.TabIndex = 16
+        Me.horTxt.ValueMember = "idHorario"
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(70, 203)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(44, 13)
+        Me.Label11.TabIndex = 17
+        Me.Label11.Text = "Horario:"
+        '
+        'HorarioBindingSource
+        '
+        Me.HorarioBindingSource.DataMember = "Horario"
+        Me.HorarioBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'HorarioTableAdapter
+        '
+        Me.HorarioTableAdapter.ClearBeforeFill = True
         '
         'UpdateDialogEmp
         '
@@ -523,6 +539,7 @@ Partial Class UpdateDialogEmp
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -538,9 +555,7 @@ Partial Class UpdateDialogEmp
     Friend WithEvents Label9 As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents horTxt As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents fechIniTxt As TextBox
     Friend WithEvents cargoTxt As ComboBox
     Friend WithEvents cellIdeTxt As TextBox
@@ -560,7 +575,6 @@ Partial Class UpdateDialogEmp
     Friend WithEvents CargoTableAdapter As BDSistemaEySDataSetTableAdapters.CargoTableAdapter
     Friend WithEvents DepartamentoBindingSource As BindingSource
     Friend WithEvents DepartamentoTableAdapter As BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter
-    Friend WithEvents idTxt As ComboBox
     Friend WithEvents Label12 As Label
     Friend WithEvents telefonoTxt As TextBox
     Friend WithEvents emailEmpr As Label
@@ -569,4 +583,9 @@ Partial Class UpdateDialogEmp
     Friend WithEvents emailEmpre As TextBox
     Friend WithEvents EmpleadoBindingSource As BindingSource
     Friend WithEvents EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
+    Friend WithEvents idTxt As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents horTxt As ComboBox
+    Friend WithEvents HorarioBindingSource As BindingSource
+    Friend WithEvents HorarioTableAdapter As BDSistemaEySDataSetTableAdapters.HorarioTableAdapter
 End Class

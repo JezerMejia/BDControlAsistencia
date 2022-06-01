@@ -2,6 +2,16 @@
 
     Dim BDEmpleado As New BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
 
+    Dim parent As EmpleadoForm
+
+    Public Sub New(parent As EmpleadoForm)
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        Me.parent = parent
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim idEmp As Integer = Convert.ToInt32(idTxt.Text)
@@ -20,7 +30,7 @@
                     MessageBoxIcon.Error)
         End Try
 
-        EmpleadoForm.UpdateData()
+        Me.parent.UpdateData()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
