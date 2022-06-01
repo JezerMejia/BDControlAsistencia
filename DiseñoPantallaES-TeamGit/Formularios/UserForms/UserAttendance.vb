@@ -13,10 +13,24 @@ Public Class UserAttendance
         Me.CloseAll()
     End Sub
 
-    Private Sub btnMarkEnter_Click(sender As Object, e As EventArgs) Handles btnMarkEnter.Click
-        btnMarkEnter.Enabled = False
-        btnMarkExit.Enabled = True
+    Private Sub UpdateData()
+        Me.btnMarkEnter.Enabled = True
+        Me.btnMarkExit.Enabled = True
 
+        Dim existsEnter = AssistanceDataSet.DoesExistEnter(DateTime.Now.Date, Me.idEmpleado)
+        Dim existsExit = AssistanceDataSet.DoesExistExit(DateTime.Now.Date, Me.idEmpleado)
+
+        If (existsEnter) Then
+            Me.btnMarkEnter.Enabled = False
+        Else
+            Me.btnMarkExit.Enabled = False
+        End If
+        If (existsExit) Then
+            Me.btnMarkExit.Enabled = False
+        End If
+    End Sub
+
+    Private Sub btnMarkEnter_Click(sender As Object, e As EventArgs) Handles btnMarkEnter.Click
         AssistanceDataSet.MarkAssistanceEnter(
             Me.idEmpleado,
             DateTime.Now.ToString("yyyy-MM-dd"),
@@ -30,9 +44,6 @@ Public Class UserAttendance
     End Sub
 
     Private Sub btnMarkExit_Click(sender As Object, e As EventArgs) Handles btnMarkExit.Click
-        btnMarkEnter.Enabled = True
-        btnMarkExit.Enabled = False
-
         AssistanceDataSet.MarkAssistanceExit(
             Me.idEmpleado,
             DateTime.Now.ToString("yyyy-MM-dd"),
@@ -50,11 +61,10 @@ Public Class UserAttendance
     End Sub
 
     Private Sub UserAttendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnMarkEnter.Enabled = True
-        btnMarkExit.Enabled = False
+        Me.UpdateData()
     End Sub
 
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
-
+    Private Sub UserAttendance_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        UserLogin.Show()
     End Sub
 End Class
