@@ -13,8 +13,14 @@ Public Class HorarioForm
         Me.bindingSource.DataSource = BDHorario.GetData()
     End Sub
 
+    Public Sub UpdateData()
+        Me.DataGridView1.DataSource = Me.bindingSource
+        Me.bindingSource.DataSource = BDHorario.GetData()
+    End Sub
+
     Public Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-        AddDialogHor.Show()
+        Dim addDialog As New AddDialogHor(Me)
+        addDialog.Show()
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
@@ -41,14 +47,20 @@ Public Class HorarioForm
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error)
         End Try
+        Me.UpdateData()
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        UpdateDialogHor.Show()
+        Dim updateDialog As New UpdateDialogHor(Me)
+        updateDialog.selectedID = Me.selectedID
+        updateDialog.Show()
     End Sub
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Dim data As BDSistemaEySDataSet.HorarioDataTable = Me.bindingSource.DataSource
+        If (e.RowIndex < 0) Then
+            Return
+        End If
         Me.selectedID = data.Rows().Item(e.RowIndex).Item(0)
         Console.WriteLine(Me.selectedID)
     End Sub

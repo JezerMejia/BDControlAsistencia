@@ -374,7 +374,7 @@ Partial Class UpdateDialogHor
         Me.GuardarBtn.Location = New System.Drawing.Point(249, 13)
         Me.GuardarBtn.Name = "GuardarBtn"
         Me.GuardarBtn.Size = New System.Drawing.Size(100, 32)
-        Me.GuardarBtn.TabIndex = 0
+        Me.GuardarBtn.TabIndex = 21
         Me.GuardarBtn.Text = "Guardar"
         Me.GuardarBtn.UseVisualStyleBackColor = True
         '
@@ -384,7 +384,7 @@ Partial Class UpdateDialogHor
         Me.Button2.Location = New System.Drawing.Point(355, 13)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 32)
-        Me.Button2.TabIndex = 1
+        Me.Button2.TabIndex = 22
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -409,7 +409,7 @@ Partial Class UpdateDialogHor
         Me.TxtName.Location = New System.Drawing.Point(57, 7)
         Me.TxtName.Name = "TxtName"
         Me.TxtName.Size = New System.Drawing.Size(138, 20)
-        Me.TxtName.TabIndex = 3
+        Me.TxtName.TabIndex = 1
         '
         'Label10
         '

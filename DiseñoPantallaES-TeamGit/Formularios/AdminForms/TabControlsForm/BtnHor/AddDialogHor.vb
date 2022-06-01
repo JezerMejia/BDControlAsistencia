@@ -2,39 +2,55 @@
 
 Public Class AddDialogHor
     Dim DBHorario As New BDSistemaEySDataSetTableAdapters.HorarioTableAdapter
-    Dim comparacion As Integer
-    Dim comparacionM As Integer
-    Dim comparacionX As Integer
-    Dim comparacionJ As Integer
-    Dim comparacionV As Integer
-    Dim comparacionS As Integer
-    Dim comparacionD As Integer
 
-    Private Function CompareTimes(inicio As ComboBox, fin As ComboBox) As Boolean
+    Dim parent As HorarioForm
+
+    Public Sub New(parent As HorarioForm)
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        Me.parent = parent
+    End Sub
+
+    Private Sub CompareTimes(inicio As ComboBox, fin As ComboBox)
         Dim inicioDate As DateTime
         Dim finDate As DateTime
+
+        Dim inicioEmpty = String.IsNullOrWhiteSpace(inicio.Text)
+        Dim finEmpty = String.IsNullOrWhiteSpace(fin.Text)
+
+        If (inicioEmpty And finEmpty) Then
+            Return
+        End If
+
+        If (inicioEmpty And Not finEmpty Or
+            finEmpty And Not inicioEmpty) Then
+            Throw New Exception("Debes de ingresar ambas fechas")
+        End If
 
         Try
             inicioDate = DateTime.Parse(inicio.Text)
             finDate = DateTime.Parse(fin.Text)
         Catch ex As Exception
-            Throw New Exception("No se pueden dejar datos vacios")
-            Return False
+            Throw New Exception("Las fechas son inválidas")
         End Try
 
         If inicioDate.CompareTo(finDate) = 0 Then
-            Throw New Exception("No pueden datos iguales")
-            Return False
+            Throw New Exception("No pueden haber datos iguales")
         End If
 
         If inicioDate.CompareTo(finDate) > 0 Then
             Throw New Exception("La Hora de entrada no puede ser mayor a la Hora de salida")
-            Return False
         End If
+    End Sub
 
-        Return True
+    Public Function StringToNull(str As String) As String
+        If String.IsNullOrWhiteSpace(str) Then
+            Return Nothing
+        End If
+        Return str
     End Function
-
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
 
         If String.IsNullOrWhiteSpace(Me.TxtName.Text) Then
@@ -54,39 +70,15 @@ Public Class AddDialogHor
             Me.CompareTimes(sabadoIni, sabadoSal)
             Me.CompareTimes(domingoIni, domingoSal)
 
-        Catch ex As Exception
-
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-            Return
-        End Try
-
-        'MessageBox.Show(
-        '    "No se escribió un valor válido",
-        '    "Error", MessageBoxButtons.OK,
-        '    MessageBoxIcon.Error)
-        'Return
-
-        'MessageBox.Show(
-        '    "La Hora de entrada no puede ser mayor a la Hora de salida",
-        '    "Error", MessageBoxButtons.OK,
-        '    MessageBoxIcon.Error)
-
-        'MessageBox.Show(
-        '    "La Hora de entrada no puede ser igual a la Hora de salida",
-        '    "Error", MessageBoxButtons.OK,
-        '    MessageBoxIcon.Error)
-
-        Try
             DBHorario.InsertHorario(
                 TxtName.Text,
-                lunesIni.Text, lunesSal.Text,
-                martesIni.Text, martesSal.Text,
-                miercolesIni.Text, miercolesSal.Text,
-                juevesIni.Text, juevesSal.Text,
-                viernesIni.Text, viernesSal.Text,
-                sabadoIni.Text, sabadoSal.Text,
-                domingoIni.Text, domingoSal.Text
+                StringToNull(lunesIni.Text), StringToNull(lunesSal.Text),
+                StringToNull(martesIni.Text), StringToNull(martesSal.Text),
+                StringToNull(miercolesIni.Text), StringToNull(miercolesSal.Text),
+                StringToNull(juevesIni.Text), StringToNull(juevesSal.Text),
+                StringToNull(viernesIni.Text), StringToNull(viernesSal.Text),
+                StringToNull(sabadoIni.Text), StringToNull(sabadoSal.Text),
+                StringToNull(domingoIni.Text), StringToNull(domingoSal.Text)
                 )
             MsgBox("Guardado")
         Catch ex As Exception
@@ -95,7 +87,7 @@ Public Class AddDialogHor
                 "Error", MessageBoxButtons.OK,
                 MessageBoxIcon.Error)
         End Try
-
+        Me.parent.UpdateData()
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
