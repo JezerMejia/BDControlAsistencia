@@ -25,7 +25,15 @@ Partial Class HorarioForm
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.HorarioTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.HorarioTableAdapter()
         Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreHorario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LunesInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LunesSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MartesInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,13 +48,6 @@ Partial Class HorarioForm
         Me.SabadoSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DomingoInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DomingoSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnDelete = New System.Windows.Forms.Button()
-        Me.BtnEdit = New System.Windows.Forms.Button()
-        Me.BtnAdd = New System.Windows.Forms.Button()
-        Me.HorarioTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.HorarioTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HorarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,7 +71,7 @@ Partial Class HorarioForm
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdHorarioDataGridViewTextBoxColumn, Me.LunesInicioDataGridViewTextBoxColumn, Me.LunesSalidaDataGridViewTextBoxColumn, Me.MartesInicioDataGridViewTextBoxColumn, Me.MartesSalidaDataGridViewTextBoxColumn, Me.MiercolesInicioDataGridViewTextBoxColumn, Me.MiercolesSalidaDataGridViewTextBoxColumn, Me.JuevesInicioDataGridViewTextBoxColumn, Me.JuevesSalidaDataGridViewTextBoxColumn, Me.ViernesInicioDataGridViewTextBoxColumn, Me.ViernesSalidaDataGridViewTextBoxColumn, Me.SabadoInicioDataGridViewTextBoxColumn, Me.SabadoSalidaDataGridViewTextBoxColumn, Me.DomingoInicioDataGridViewTextBoxColumn, Me.DomingoSalidaDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdHorarioDataGridViewTextBoxColumn, Me.nombreHorario, Me.LunesInicioDataGridViewTextBoxColumn, Me.LunesSalidaDataGridViewTextBoxColumn, Me.MartesInicioDataGridViewTextBoxColumn, Me.MartesSalidaDataGridViewTextBoxColumn, Me.MiercolesInicioDataGridViewTextBoxColumn, Me.MiercolesSalidaDataGridViewTextBoxColumn, Me.JuevesInicioDataGridViewTextBoxColumn, Me.JuevesSalidaDataGridViewTextBoxColumn, Me.ViernesInicioDataGridViewTextBoxColumn, Me.ViernesSalidaDataGridViewTextBoxColumn, Me.SabadoInicioDataGridViewTextBoxColumn, Me.SabadoSalidaDataGridViewTextBoxColumn, Me.DomingoInicioDataGridViewTextBoxColumn, Me.DomingoSalidaDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.HorarioBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
@@ -81,12 +82,82 @@ Partial Class HorarioForm
         Me.DataGridView1.Size = New System.Drawing.Size(476, 314)
         Me.DataGridView1.TabIndex = 6
         '
+        'HorarioBindingSource
+        '
+        Me.HorarioBindingSource.DataMember = "Horario"
+        Me.HorarioBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnDelete, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnEdit, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnAdd, 1, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 314)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(476, 42)
+        Me.TableLayoutPanel1.TabIndex = 3
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnDelete.Location = New System.Drawing.Point(393, 9)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDelete.TabIndex = 0
+        Me.BtnDelete.Text = "Eliminar"
+        Me.BtnDelete.UseVisualStyleBackColor = True
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnEdit.Location = New System.Drawing.Point(303, 9)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEdit.TabIndex = 1
+        Me.BtnEdit.Text = "Editar"
+        Me.BtnEdit.UseVisualStyleBackColor = True
+        '
+        'BtnAdd
+        '
+        Me.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnAdd.Location = New System.Drawing.Point(216, 9)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.BtnAdd.TabIndex = 2
+        Me.BtnAdd.Text = "Añadir"
+        Me.BtnAdd.UseVisualStyleBackColor = True
+        '
+        'HorarioTableAdapter
+        '
+        Me.HorarioTableAdapter.ClearBeforeFill = True
+        '
         'IdHorarioDataGridViewTextBoxColumn
         '
         Me.IdHorarioDataGridViewTextBoxColumn.DataPropertyName = "idHorario"
         Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "idHorario"
         Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
         Me.IdHorarioDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'nombreHorario
+        '
+        Me.nombreHorario.DataPropertyName = "nombreHorario"
+        Me.nombreHorario.HeaderText = "nombreHorario"
+        Me.nombreHorario.Name = "nombreHorario"
+        Me.nombreHorario.ReadOnly = True
         '
         'LunesInicioDataGridViewTextBoxColumn
         '
@@ -186,69 +257,6 @@ Partial Class HorarioForm
         Me.DomingoSalidaDataGridViewTextBoxColumn.Name = "DomingoSalidaDataGridViewTextBoxColumn"
         Me.DomingoSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'HorarioBindingSource
-        '
-        Me.HorarioBindingSource.DataMember = "Horario"
-        Me.HorarioBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnDelete, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnEdit, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnAdd, 1, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 314)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(476, 42)
-        Me.TableLayoutPanel1.TabIndex = 3
-        '
-        'BtnDelete
-        '
-        Me.BtnDelete.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnDelete.Location = New System.Drawing.Point(393, 9)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(75, 23)
-        Me.BtnDelete.TabIndex = 0
-        Me.BtnDelete.Text = "Eliminar"
-        Me.BtnDelete.UseVisualStyleBackColor = True
-        '
-        'BtnEdit
-        '
-        Me.BtnEdit.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEdit.Location = New System.Drawing.Point(303, 9)
-        Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
-        Me.BtnEdit.TabIndex = 1
-        Me.BtnEdit.Text = "Editar"
-        Me.BtnEdit.UseVisualStyleBackColor = True
-        '
-        'BtnAdd
-        '
-        Me.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnAdd.Location = New System.Drawing.Point(216, 9)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAdd.TabIndex = 2
-        Me.BtnAdd.Text = "Añadir"
-        Me.BtnAdd.UseVisualStyleBackColor = True
-        '
-        'HorarioTableAdapter
-        '
-        Me.HorarioTableAdapter.ClearBeforeFill = True
-        '
         'HorarioForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -277,6 +285,7 @@ Partial Class HorarioForm
     Friend WithEvents HorarioBindingSource As BindingSource
     Friend WithEvents HorarioTableAdapter As BDSistemaEySDataSetTableAdapters.HorarioTableAdapter
     Friend WithEvents IdHorarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents nombreHorario As DataGridViewTextBoxColumn
     Friend WithEvents LunesInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LunesSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MartesInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

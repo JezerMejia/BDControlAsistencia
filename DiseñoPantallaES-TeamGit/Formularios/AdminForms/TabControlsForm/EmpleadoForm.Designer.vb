@@ -39,6 +39,7 @@ Partial Class EmpleadoForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CmbxID = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.EmpleadoBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrimerNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SegundoNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,6 +47,9 @@ Partial Class EmpleadoForm
         Me.SegundoApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaIngresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CedulaEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.emailPersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.emailEmpresarial = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.telefonoEmpleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdDepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,6 +61,7 @@ Partial Class EmpleadoForm
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -217,8 +222,8 @@ Partial Class EmpleadoForm
         Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpleadoDataGridViewTextBoxColumn, Me.PrimerNombreDataGridViewTextBoxColumn, Me.SegundoNombreDataGridViewTextBoxColumn, Me.PrimerApellidoDataGridViewTextBoxColumn, Me.SegundoApellidoDataGridViewTextBoxColumn, Me.FechaIngresoDataGridViewTextBoxColumn, Me.CedulaEmpleadoDataGridViewTextBoxColumn, Me.IdCargoDataGridViewTextBoxColumn, Me.IdDepartamentoDataGridViewTextBoxColumn, Me.IdHorarioDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.EmpleadoBindingSource1
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpleadoDataGridViewTextBoxColumn, Me.PrimerNombreDataGridViewTextBoxColumn, Me.SegundoNombreDataGridViewTextBoxColumn, Me.PrimerApellidoDataGridViewTextBoxColumn, Me.SegundoApellidoDataGridViewTextBoxColumn, Me.FechaIngresoDataGridViewTextBoxColumn, Me.CedulaEmpleadoDataGridViewTextBoxColumn, Me.emailPersonal, Me.emailEmpresarial, Me.telefonoEmpleado, Me.IdCargoDataGridViewTextBoxColumn, Me.IdDepartamentoDataGridViewTextBoxColumn, Me.IdHorarioDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.EmpleadoBindingSource2
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(10, 76)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(10)
@@ -228,6 +233,11 @@ Partial Class EmpleadoForm
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(466, 205)
         Me.DataGridView1.TabIndex = 6
+        '
+        'EmpleadoBindingSource2
+        '
+        Me.EmpleadoBindingSource2.DataMember = "Empleado"
+        Me.EmpleadoBindingSource2.DataSource = Me.BDSistemaEySDataSet
         '
         'IdEmpleadoDataGridViewTextBoxColumn
         '
@@ -241,54 +251,84 @@ Partial Class EmpleadoForm
         Me.PrimerNombreDataGridViewTextBoxColumn.DataPropertyName = "primerNombre"
         Me.PrimerNombreDataGridViewTextBoxColumn.HeaderText = "primerNombre"
         Me.PrimerNombreDataGridViewTextBoxColumn.Name = "PrimerNombreDataGridViewTextBoxColumn"
+        Me.PrimerNombreDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SegundoNombreDataGridViewTextBoxColumn
         '
         Me.SegundoNombreDataGridViewTextBoxColumn.DataPropertyName = "segundoNombre"
         Me.SegundoNombreDataGridViewTextBoxColumn.HeaderText = "segundoNombre"
         Me.SegundoNombreDataGridViewTextBoxColumn.Name = "SegundoNombreDataGridViewTextBoxColumn"
+        Me.SegundoNombreDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PrimerApellidoDataGridViewTextBoxColumn
         '
         Me.PrimerApellidoDataGridViewTextBoxColumn.DataPropertyName = "primerApellido"
         Me.PrimerApellidoDataGridViewTextBoxColumn.HeaderText = "primerApellido"
         Me.PrimerApellidoDataGridViewTextBoxColumn.Name = "PrimerApellidoDataGridViewTextBoxColumn"
+        Me.PrimerApellidoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SegundoApellidoDataGridViewTextBoxColumn
         '
         Me.SegundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "segundoApellido"
         Me.SegundoApellidoDataGridViewTextBoxColumn.HeaderText = "segundoApellido"
         Me.SegundoApellidoDataGridViewTextBoxColumn.Name = "SegundoApellidoDataGridViewTextBoxColumn"
+        Me.SegundoApellidoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FechaIngresoDataGridViewTextBoxColumn
         '
         Me.FechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "fechaIngreso"
         Me.FechaIngresoDataGridViewTextBoxColumn.HeaderText = "fechaIngreso"
         Me.FechaIngresoDataGridViewTextBoxColumn.Name = "FechaIngresoDataGridViewTextBoxColumn"
+        Me.FechaIngresoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'CedulaEmpleadoDataGridViewTextBoxColumn
         '
         Me.CedulaEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "cedulaEmpleado"
         Me.CedulaEmpleadoDataGridViewTextBoxColumn.HeaderText = "cedulaEmpleado"
         Me.CedulaEmpleadoDataGridViewTextBoxColumn.Name = "CedulaEmpleadoDataGridViewTextBoxColumn"
+        Me.CedulaEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'emailPersonal
+        '
+        Me.emailPersonal.DataPropertyName = "emailPersonal"
+        Me.emailPersonal.HeaderText = "emailPersonal"
+        Me.emailPersonal.Name = "emailPersonal"
+        Me.emailPersonal.ReadOnly = True
+        '
+        'emailEmpresarial
+        '
+        Me.emailEmpresarial.DataPropertyName = "emailEmpresarial"
+        Me.emailEmpresarial.HeaderText = "emailEmpresarial"
+        Me.emailEmpresarial.Name = "emailEmpresarial"
+        Me.emailEmpresarial.ReadOnly = True
+        '
+        'telefonoEmpleado
+        '
+        Me.telefonoEmpleado.DataPropertyName = "telefonoEmpleado"
+        Me.telefonoEmpleado.HeaderText = "telefonoEmpleado"
+        Me.telefonoEmpleado.Name = "telefonoEmpleado"
+        Me.telefonoEmpleado.ReadOnly = True
         '
         'IdCargoDataGridViewTextBoxColumn
         '
         Me.IdCargoDataGridViewTextBoxColumn.DataPropertyName = "idCargo"
         Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "idCargo"
         Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
+        Me.IdCargoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'IdDepartamentoDataGridViewTextBoxColumn
         '
         Me.IdDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "idDepartamento"
         Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "idDepartamento"
         Me.IdDepartamentoDataGridViewTextBoxColumn.Name = "IdDepartamentoDataGridViewTextBoxColumn"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'IdHorarioDataGridViewTextBoxColumn
         '
         Me.IdHorarioDataGridViewTextBoxColumn.DataPropertyName = "idHorario"
         Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "idHorario"
         Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
+        Me.IdHorarioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'EmpleadoForm
         '
@@ -311,6 +351,7 @@ Partial Class EmpleadoForm
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -326,6 +367,13 @@ Partial Class EmpleadoForm
     Friend WithEvents EmpleadoBindingSource1 As BindingSource
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CmbxID As ComboBox
+    Friend WithEvents EmpleadoBindingSource2 As BindingSource
     Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PrimerNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SegundoNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -333,13 +381,10 @@ Partial Class EmpleadoForm
     Friend WithEvents SegundoApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaIngresoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CedulaEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents emailPersonal As DataGridViewTextBoxColumn
+    Friend WithEvents emailEmpresarial As DataGridViewTextBoxColumn
+    Friend WithEvents telefonoEmpleado As DataGridViewTextBoxColumn
     Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdHorarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TxtSearch As TextBox
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents CmbxID As ComboBox
 End Class
