@@ -180,6 +180,30 @@
     <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\AddDialogSolVac.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFIni.Designer.vb">
+      <DependentUpon>CalendarioFIni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFIni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFSal.Designer.vb">
+      <DependentUpon>CalendarioFSal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFSal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFSol.Designer.vb">
+      <DependentUpon>CalendarioFSol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFSol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\UpdateDialogSolVac.Designer.vb">
+      <DependentUpon>UpdateDialogSolVac.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\UpdateDialogSolVac.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\AdminForms\TabControlsForm\EmpleadoForm.Designer.vb">
       <DependentUpon>EmpleadoForm.vb</DependentUpon>
     </Compile>
@@ -277,6 +301,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\AddDialogSolVac.resx">
       <DependentUpon>AddDialogSolVac.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFIni.resx">
+      <DependentUpon>CalendarioFIni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFSal.resx">
+      <DependentUpon>CalendarioFSal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\Calendarios\CalendarioFSol.resx">
+      <DependentUpon>CalendarioFSol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\BtnSolVac\UpdateDialogSolVac.resx">
+      <DependentUpon>UpdateDialogSolVac.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdminForms\TabControlsForm\EmpleadoForm.resx">
       <DependentUpon>EmpleadoForm.vb</DependentUpon>
