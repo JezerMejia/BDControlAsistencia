@@ -56,7 +56,7 @@ Partial Class AddDialogEmp
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(302, 380)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(234, 380)
         Me.TableLayoutPanel1.TabIndex = 4
         '
         'TableLayoutPanel2
@@ -71,13 +71,13 @@ Partial Class AddDialogEmp
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(296, 44)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(228, 44)
         Me.TableLayoutPanel2.TabIndex = 7
         '
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.Location = New System.Drawing.Point(24, 6)
+        Me.Button1.Location = New System.Drawing.Point(7, 6)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 32)
         Me.Button1.TabIndex = 0
@@ -87,7 +87,7 @@ Partial Class AddDialogEmp
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.Location = New System.Drawing.Point(172, 6)
+        Me.Button2.Location = New System.Drawing.Point(121, 6)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 32)
         Me.Button2.TabIndex = 1
@@ -112,7 +112,7 @@ Partial Class AddDialogEmp
         Me.TableLayoutPanel3.Controls.Add(Me.apellidoTxt, 1, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.segApellidoTxt, 1, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.passwordTxt, 1, 5)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(29, 28)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 28)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 6
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
@@ -121,7 +121,7 @@ Partial Class AddDialogEmp
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(243, 274)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(228, 274)
         Me.TableLayoutPanel3.TabIndex = 8
         '
         'id
@@ -236,7 +236,7 @@ Partial Class AddDialogEmp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(322, 400)
+        Me.ClientSize = New System.Drawing.Size(254, 400)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(270, 398)
         Me.Name = "AddDialogEmp"
