@@ -50,9 +50,13 @@ Partial Class AddDialogHor
         Me.lunesIni = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TxtName = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel7.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel5
@@ -94,13 +98,15 @@ Partial Class AddDialogHor
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel7, 0, 0)
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel7, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(482, 380)
         Me.TableLayoutPanel1.TabIndex = 9
         '
@@ -134,7 +140,7 @@ Partial Class AddDialogHor
         Me.TableLayoutPanel7.Controls.Add(Me.lunesIni, 1, 1)
         Me.TableLayoutPanel7.Controls.Add(Me.Label8, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Label9, 2, 0)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(10, 29)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(10, 49)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 8
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
@@ -378,6 +384,39 @@ Partial Class AddDialogHor
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "Salida"
         '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label10, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TxtName, 1, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(141, 3)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(200, 34)
+        Me.TableLayoutPanel2.TabIndex = 11
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 10)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(47, 13)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Nombre:"
+        '
+        'TxtName
+        '
+        Me.TxtName.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TxtName.Location = New System.Drawing.Point(59, 7)
+        Me.TxtName.Name = "TxtName"
+        Me.TxtName.Size = New System.Drawing.Size(138, 20)
+        Me.TxtName.TabIndex = 2
+        '
         'AddDialogHor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -392,6 +431,8 @@ Partial Class AddDialogHor
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel7.ResumeLayout(False)
         Me.TableLayoutPanel7.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -424,4 +465,7 @@ Partial Class AddDialogHor
     Friend WithEvents lunesIni As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TxtName As TextBox
 End Class

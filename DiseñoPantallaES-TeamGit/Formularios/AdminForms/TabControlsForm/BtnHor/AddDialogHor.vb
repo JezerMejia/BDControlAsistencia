@@ -37,6 +37,14 @@ Public Class AddDialogHor
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
 
+        If String.IsNullOrWhiteSpace(Me.TxtName.Text) Then
+            MessageBox.Show(
+                "Ingrese un nombre",
+                "Advertencia", MessageBoxButtons.OK,
+                MessageBoxIcon.Warning)
+            Return
+        End If
+
         Try
             Me.CompareTimes(lunesIni, lunesSal)
             Me.CompareTimes(martesIni, martesSal)
@@ -51,7 +59,6 @@ Public Class AddDialogHor
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             Return
-
         End Try
 
         'MessageBox.Show(
@@ -72,6 +79,7 @@ Public Class AddDialogHor
 
         Try
             DBHorario.InsertHorario(
+                TxtName.Text,
                 lunesIni.Text, lunesSal.Text,
                 martesIni.Text, martesSal.Text,
                 miercolesIni.Text, miercolesSal.Text,
