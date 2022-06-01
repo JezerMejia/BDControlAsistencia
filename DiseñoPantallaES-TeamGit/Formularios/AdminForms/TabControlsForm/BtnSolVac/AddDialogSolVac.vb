@@ -2,7 +2,7 @@
 
     Dim BDEmpleado As New BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
 
-    Private Sub ComboBox1_Click(sender As Object, e As EventArgs) Handles ComboBox1.Click
+    Private Sub ComboBox1_Click(sender As Object, e As EventArgs)
         Try
             BDEmpleado.GetData()
         Catch ex As Exception
