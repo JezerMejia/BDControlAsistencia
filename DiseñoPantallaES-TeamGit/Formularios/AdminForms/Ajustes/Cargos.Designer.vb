@@ -45,7 +45,7 @@ Partial Class Cargos
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.searchTxt = New System.Windows.Forms.TextBox()
         Me.CargoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.CargoTableAdapter()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -276,7 +276,7 @@ Partial Class Cargos
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Button7, 2, 0)
-        Me.TableLayoutPanel7.Controls.Add(Me.TextBox1, 1, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.searchTxt, 1, 0)
         Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel7.Location = New System.Drawing.Point(23, 232)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
@@ -305,13 +305,13 @@ Partial Class Cargos
         Me.Button7.Text = "Actualizar"
         Me.Button7.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'searchTxt
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(62, 21)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.searchTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.searchTxt.Location = New System.Drawing.Point(62, 21)
+        Me.searchTxt.Name = "searchTxt"
+        Me.searchTxt.Size = New System.Drawing.Size(215, 20)
+        Me.searchTxt.TabIndex = 1
         '
         'CargoTableAdapter
         '
@@ -358,7 +358,7 @@ Partial Class Cargos
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Button7 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents searchTxt As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents CargoBindingSource As BindingSource

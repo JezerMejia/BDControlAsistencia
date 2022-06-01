@@ -46,7 +46,7 @@ Partial Class Departamento
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.buscarTxt = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
         Me.nombreTxt = New System.Windows.Forms.TextBox()
         Me.nombre = New System.Windows.Forms.Label()
@@ -281,7 +281,7 @@ Partial Class Departamento
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Button7, 2, 0)
-        Me.TableLayoutPanel7.Controls.Add(Me.TextBox1, 1, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.buscarTxt, 1, 0)
         Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel7.Location = New System.Drawing.Point(23, 223)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
@@ -310,13 +310,13 @@ Partial Class Departamento
         Me.Button7.Text = "Actualizar"
         Me.Button7.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'buscarTxt
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(62, 14)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.buscarTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.buscarTxt.Location = New System.Drawing.Point(62, 14)
+        Me.buscarTxt.Name = "buscarTxt"
+        Me.buscarTxt.Size = New System.Drawing.Size(215, 20)
+        Me.buscarTxt.TabIndex = 1
         '
         'TableLayoutPanel8
         '
@@ -399,7 +399,7 @@ Partial Class Departamento
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Button7 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents buscarTxt As TextBox
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents DepartamentoBindingSource As BindingSource
     Friend WithEvents DepartamentoTableAdapter As BDSistemaEySDataSetTableAdapters.DepartamentoTableAdapter

@@ -102,4 +102,34 @@
 
         Me.UpdateData()
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles buscarTxt.TextChanged
+        Me.bindingSource.DataSource = BDDep.GetData()
+
+        If String.IsNullOrWhiteSpace(Me.buscarTxt.Text) Then
+            Me.bindingSource.Filter = ""
+            Return
+        End If
+
+        Try
+
+            Me.bindingSource.Filter =
+            "CONVERT(idDepartamento, 'System.String') Like '%" + Me.buscarTxt.Text + "%' OR " +
+            "nombreDepartamento Like '%" + Me.buscarTxt.Text + "%' OR " +
+            "descripcionDepartamento Like '%" + Me.buscarTxt.Text + "%' OR " +
+            "extensionDepartamento Like '%" + Me.buscarTxt.Text + "%'"
+
+            Me.DataGridView1.DataSource = bindingSource
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message,
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
+
+    End Sub
 End Class

@@ -14,7 +14,7 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) 
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -113,5 +113,30 @@
         End Try
 
         Me.UpdateData()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles searchTxt.TextChanged
+
+        Me.bindingSource.DataSource = BDCargo.GetData()
+
+        If String.IsNullOrWhiteSpace(Me.searchTxt.Text) Then
+            Me.bindingSource.Filter = ""
+            Return
+        End If
+
+        Try
+
+            Me.bindingSource.Filter =
+            "CONVERT(idCargo, 'System.String') Like '%" + Me.searchTxt.Text + "%' OR " +
+            "nombreCargo Like '%" + Me.searchTxt.Text + "%' OR " +
+            "descripcionCargo Like '%" + Me.searchTxt.Text + "%'"
+
+            Me.DataGridView1.DataSource = bindingSource
+        Catch ex As Exception
+            MessageBox.Show(ex.Message,
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class
