@@ -17,3 +17,8 @@ Namespace BDSistemaEySDataSetTableAdapters
     Partial Public Class HorarioTableAdapter
     End Class
 End Namespace
+
+Namespace BDSistemaEySDataSetTableAdapters
+    Partial Public Class HorarioTableAdapter
+    End Class
+End Namespace
