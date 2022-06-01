@@ -22,6 +22,7 @@ Partial Class AddDialogSolVac
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -37,9 +38,14 @@ Partial Class AddDialogSolVac
         Me.apellidoTxt = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -191,11 +197,14 @@ Partial Class AddDialogSolVac
         '
         'ComboBox1
         '
+        Me.ComboBox1.DataSource = Me.EmpleadoBindingSource
+        Me.ComboBox1.DisplayMember = "primerNombre"
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(157, 62)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 11
+        Me.ComboBox1.ValueMember = "idEmpleado"
         '
         'RichTextBox1
         '
@@ -204,6 +213,20 @@ Partial Class AddDialogSolVac
         Me.RichTextBox1.Size = New System.Drawing.Size(130, 55)
         Me.RichTextBox1.TabIndex = 12
         Me.RichTextBox1.Text = ""
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
         '
         'AddDialogSolVac
         '
@@ -217,6 +240,8 @@ Partial Class AddDialogSolVac
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -236,4 +261,7 @@ Partial Class AddDialogSolVac
     Friend WithEvents apellidoTxt As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
+    Friend WithEvents EmpleadoBindingSource As BindingSource
+    Friend WithEvents EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
 End Class
