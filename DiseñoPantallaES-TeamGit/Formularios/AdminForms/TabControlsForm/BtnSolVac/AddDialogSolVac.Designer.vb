@@ -23,53 +23,45 @@ Partial Class AddDialogSolVac
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.EmpleadoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GuardarBtn = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.CalendarFS = New System.Windows.Forms.Button()
+        Me.fechsolTxt = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.idEmpTxt = New System.Windows.Forms.ComboBox()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.fechIni = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.fechFin = New System.Windows.Forms.TextBox()
+        Me.descripcion = New System.Windows.Forms.TextBox()
         Me.BdSistemaEySDataSet1 = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.BdSistemaEySDataSet2 = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
-        Me.EmpleadoBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel6.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
         CType(Me.BdSistemaEySDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdSistemaEySDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel7.SuspendLayout()
-        Me.TableLayoutPanel6.SuspendLayout()
-        Me.TableLayoutPanel5.SuspendLayout()
-        Me.TableLayoutPanel4.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "Empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
         'BDSistemaEySDataSet
         '
@@ -133,202 +125,6 @@ Partial Class AddDialogSolVac
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'BdSistemaEySDataSet1
-        '
-        Me.BdSistemaEySDataSet1.DataSetName = "BDSistemaEySDataSet"
-        Me.BdSistemaEySDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BdSistemaEySDataSet2
-        '
-        Me.BdSistemaEySDataSet2.DataSetName = "BDSistemaEySDataSet"
-        Me.BdSistemaEySDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EmpleadoBindingSource1
-        '
-        Me.EmpleadoBindingSource1.DataMember = "Empleado"
-        Me.EmpleadoBindingSource1.DataSource = Me.BDSistemaEySDataSet
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(142, 275)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(234, 64)
-        Me.TextBox1.TabIndex = 9
-        '
-        'TableLayoutPanel7
-        '
-        Me.TableLayoutPanel7.ColumnCount = 2
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel7.Controls.Add(Me.Button5, 1, 0)
-        Me.TableLayoutPanel7.Controls.Add(Me.TextBox5, 0, 0)
-        Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(142, 207)
-        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
-        Me.TableLayoutPanel7.RowCount = 1
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(313, 62)
-        Me.TableLayoutPanel7.TabIndex = 8
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 1
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(159, 3)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 0
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel6
-        '
-        Me.TableLayoutPanel6.ColumnCount = 2
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel6.Controls.Add(Me.Button4, 1, 0)
-        Me.TableLayoutPanel6.Controls.Add(Me.TextBox4, 0, 0)
-        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(142, 139)
-        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
-        Me.TableLayoutPanel6.RowCount = 1
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(313, 62)
-        Me.TableLayoutPanel6.TabIndex = 7
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 1
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(159, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 0
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.ColumnCount = 2
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Controls.Add(Me.Button3, 1, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.ComboBox1, 0, 0)
-        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(142, 71)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 1
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(313, 62)
-        Me.TableLayoutPanel5.TabIndex = 6
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DataSource = Me.EmpleadoBindingSource1
-        Me.ComboBox1.DisplayMember = "primerNombre"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(3, 3)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 1
-        Me.ComboBox1.ValueMember = "idEmpleado"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(159, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.ColumnCount = 2
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.Button1, 1, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.TextBox2, 0, 0)
-        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(142, 3)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 1
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(313, 62)
-        Me.TableLayoutPanel4.TabIndex = 5
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(159, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(36, 272)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Descripcion"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(36, 204)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Fecha Fin"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(36, 136)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Fecha Inicio"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 68)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "IdEmpleado"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Fecha Solicitud"
-        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -345,7 +141,7 @@ Partial Class AddDialogSolVac
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel5, 2, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel6, 2, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel7, 2, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox1, 2, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.descripcion, 2, 4)
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 43)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 5
@@ -357,6 +153,192 @@ Partial Class AddDialogSolVac
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(458, 342)
         Me.TableLayoutPanel3.TabIndex = 13
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(36, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Fecha Solicitud"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(36, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "IdEmpleado"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(36, 136)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Fecha Inicio"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(36, 204)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Fecha Fin"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(36, 272)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 13)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Descripcion"
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 2
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.CalendarFS, 1, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.fechsolTxt, 0, 0)
+        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(142, 3)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 1
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(313, 62)
+        Me.TableLayoutPanel4.TabIndex = 5
+        '
+        'CalendarFS
+        '
+        Me.CalendarFS.Location = New System.Drawing.Point(159, 3)
+        Me.CalendarFS.Name = "CalendarFS"
+        Me.CalendarFS.Size = New System.Drawing.Size(75, 23)
+        Me.CalendarFS.TabIndex = 0
+        Me.CalendarFS.Text = "Button1"
+        Me.CalendarFS.UseVisualStyleBackColor = True
+        '
+        'fechsolTxt
+        '
+        Me.fechsolTxt.Location = New System.Drawing.Point(3, 3)
+        Me.fechsolTxt.Name = "fechsolTxt"
+        Me.fechsolTxt.Size = New System.Drawing.Size(100, 20)
+        Me.fechsolTxt.TabIndex = 1
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 2
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.idEmpTxt, 0, 0)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(142, 71)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 1
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(313, 62)
+        Me.TableLayoutPanel5.TabIndex = 6
+        '
+        'idEmpTxt
+        '
+        Me.idEmpTxt.DataSource = Me.EmpleadoBindingSource
+        Me.idEmpTxt.DisplayMember = "idEmpleado"
+        Me.idEmpTxt.FormattingEnabled = True
+        Me.idEmpTxt.Location = New System.Drawing.Point(3, 3)
+        Me.idEmpTxt.Name = "idEmpTxt"
+        Me.idEmpTxt.Size = New System.Drawing.Size(121, 21)
+        Me.idEmpTxt.TabIndex = 1
+        Me.idEmpTxt.ValueMember = "idEmpleado"
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'TableLayoutPanel6
+        '
+        Me.TableLayoutPanel6.ColumnCount = 2
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel6.Controls.Add(Me.Button4, 1, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.fechIni, 0, 0)
+        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(142, 139)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        Me.TableLayoutPanel6.RowCount = 1
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(313, 62)
+        Me.TableLayoutPanel6.TabIndex = 7
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(159, 3)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 0
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'fechIni
+        '
+        Me.fechIni.Location = New System.Drawing.Point(3, 3)
+        Me.fechIni.Name = "fechIni"
+        Me.fechIni.Size = New System.Drawing.Size(100, 20)
+        Me.fechIni.TabIndex = 1
+        '
+        'TableLayoutPanel7
+        '
+        Me.TableLayoutPanel7.ColumnCount = 2
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel7.Controls.Add(Me.Button5, 1, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.fechFin, 0, 0)
+        Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(142, 207)
+        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        Me.TableLayoutPanel7.RowCount = 1
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(313, 62)
+        Me.TableLayoutPanel7.TabIndex = 8
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(159, 3)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 0
+        Me.Button5.Text = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'fechFin
+        '
+        Me.fechFin.Location = New System.Drawing.Point(3, 3)
+        Me.fechFin.Name = "fechFin"
+        Me.fechFin.Size = New System.Drawing.Size(100, 20)
+        Me.fechFin.TabIndex = 1
+        '
+        'descripcion
+        '
+        Me.descripcion.Location = New System.Drawing.Point(142, 275)
+        Me.descripcion.Multiline = True
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.Size = New System.Drawing.Size(234, 64)
+        Me.descripcion.TabIndex = 9
+        '
+        'BdSistemaEySDataSet1
+        '
+        Me.BdSistemaEySDataSet1.DataSetName = "BDSistemaEySDataSet"
+        Me.BdSistemaEySDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BdSistemaEySDataSet2
+        '
+        Me.BdSistemaEySDataSet2.DataSetName = "BDSistemaEySDataSet"
+        Me.BdSistemaEySDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'AddDialogSolVac
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -366,27 +348,25 @@ Partial Class AddDialogSolVac
         Me.MinimumSize = New System.Drawing.Size(480, 464)
         Me.Name = "AddDialogSolVac"
         Me.Text = "AddDialogSolVac"
-        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
-        CType(Me.BdSistemaEySDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdSistemaEySDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel7.ResumeLayout(False)
-        Me.TableLayoutPanel7.PerformLayout()
-        Me.TableLayoutPanel6.ResumeLayout(False)
-        Me.TableLayoutPanel6.PerformLayout()
-        Me.TableLayoutPanel5.ResumeLayout(False)
-        Me.TableLayoutPanel4.ResumeLayout(False)
-        Me.TableLayoutPanel4.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.TableLayoutPanel4.PerformLayout()
+        Me.TableLayoutPanel5.ResumeLayout(False)
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel6.ResumeLayout(False)
+        Me.TableLayoutPanel6.PerformLayout()
+        Me.TableLayoutPanel7.ResumeLayout(False)
+        Me.TableLayoutPanel7.PerformLayout()
+        CType(Me.BdSistemaEySDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdSistemaEySDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
-    Friend WithEvents EmpleadoBindingSource As BindingSource
     Friend WithEvents EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.EmpleadoTableAdapter
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
@@ -394,7 +374,6 @@ Partial Class AddDialogSolVac
     Friend WithEvents Button2 As Button
     Friend WithEvents BdSistemaEySDataSet1 As BDSistemaEySDataSet
     Friend WithEvents BdSistemaEySDataSet2 As BDSistemaEySDataSet
-    Friend WithEvents EmpleadoBindingSource1 As BindingSource
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -402,16 +381,16 @@ Partial Class AddDialogSolVac
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents CalendarFS As Button
+    Friend WithEvents fechsolTxt As TextBox
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents idEmpTxt As ComboBox
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents Button4 As Button
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents fechIni As TextBox
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents fechFin As TextBox
+    Friend WithEvents descripcion As TextBox
+    Friend WithEvents EmpleadoBindingSource As BindingSource
 End Class
