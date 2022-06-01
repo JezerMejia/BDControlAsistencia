@@ -51,8 +51,8 @@ Partial Class UpdateDialogHor
         Me.GuardarBtn = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.TxtName = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel7.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -89,7 +89,7 @@ Partial Class UpdateDialogHor
         Me.TableLayoutPanel7.Controls.Add(Me.lunesIni, 1, 1)
         Me.TableLayoutPanel7.Controls.Add(Me.Label8, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.Label9, 2, 0)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(4, 52)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(3, 52)
         Me.TableLayoutPanel7.MinimumSize = New System.Drawing.Size(462, 342)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 8
@@ -349,7 +349,7 @@ Partial Class UpdateDialogHor
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(471, 471)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(464, 471)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -365,13 +365,13 @@ Partial Class UpdateDialogHor
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(465, 59)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(458, 59)
         Me.TableLayoutPanel2.TabIndex = 12
         '
         'GuardarBtn
         '
         Me.GuardarBtn.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.GuardarBtn.Location = New System.Drawing.Point(256, 13)
+        Me.GuardarBtn.Location = New System.Drawing.Point(249, 13)
         Me.GuardarBtn.Name = "GuardarBtn"
         Me.GuardarBtn.Size = New System.Drawing.Size(100, 32)
         Me.GuardarBtn.TabIndex = 0
@@ -381,7 +381,7 @@ Partial Class UpdateDialogHor
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.Location = New System.Drawing.Point(362, 13)
+        Me.Button2.Location = New System.Drawing.Point(355, 13)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 32)
         Me.Button2.TabIndex = 1
@@ -396,12 +396,20 @@ Partial Class UpdateDialogHor
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.TxtName, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label10, 0, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(135, 3)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(132, 3)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(200, 34)
         Me.TableLayoutPanel3.TabIndex = 13
+        '
+        'TxtName
+        '
+        Me.TxtName.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TxtName.Location = New System.Drawing.Point(57, 7)
+        Me.TxtName.Name = "TxtName"
+        Me.TxtName.Size = New System.Drawing.Size(138, 20)
+        Me.TxtName.TabIndex = 3
         '
         'Label10
         '
@@ -413,19 +421,11 @@ Partial Class UpdateDialogHor
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "Nombre:"
         '
-        'TxtName
-        '
-        Me.TxtName.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.TxtName.Location = New System.Drawing.Point(57, 7)
-        Me.TxtName.Name = "TxtName"
-        Me.TxtName.Size = New System.Drawing.Size(138, 20)
-        Me.TxtName.TabIndex = 3
-        '
         'UpdateDialogHor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(471, 471)
+        Me.ClientSize = New System.Drawing.Size(464, 471)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(480, 464)
         Me.Name = "UpdateDialogHor"
