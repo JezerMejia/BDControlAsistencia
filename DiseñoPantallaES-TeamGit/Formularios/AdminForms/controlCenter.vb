@@ -138,4 +138,12 @@ Public Class controlCenter
         vac.Fill(tblvac)
         VerReporteVacaciones(tblvac, "DataSetSolVac", ".\Reportes\RptVacaciones.rdlc")
     End Sub
+
+    Private Sub CargosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargosToolStripMenuItem.Click
+        Cargos.Show()
+    End Sub
+
+    Private Sub DepartamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartamentosToolStripMenuItem.Click
+        Departamento.Show()
+    End Sub
 End Class

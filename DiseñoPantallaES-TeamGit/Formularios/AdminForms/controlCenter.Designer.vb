@@ -39,6 +39,9 @@ Partial Class controlCenter
         Me.CargoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VacacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -62,7 +65,7 @@ Partial Class controlCenter
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchviosToolStripMenuItem, Me.TablasToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchviosToolStripMenuItem, Me.TablasToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AjustesToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
@@ -158,6 +161,25 @@ Partial Class controlCenter
         Me.VacacionesToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.VacacionesToolStripMenuItem.Text = "Vacaciones"
         '
+        'AjustesToolStripMenuItem
+        '
+        Me.AjustesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargosToolStripMenuItem, Me.DepartamentosToolStripMenuItem})
+        Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
+        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(68, 22)
+        Me.AjustesToolStripMenuItem.Text = "Ajustes"
+        '
+        'CargosToolStripMenuItem
+        '
+        Me.CargosToolStripMenuItem.Name = "CargosToolStripMenuItem"
+        Me.CargosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CargosToolStripMenuItem.Text = "Cargos"
+        '
+        'DepartamentosToolStripMenuItem
+        '
+        Me.DepartamentosToolStripMenuItem.Name = "DepartamentosToolStripMenuItem"
+        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentosToolStripMenuItem.Text = "Departamentos"
+        '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManualDeUsuarioToolStripMenuItem})
@@ -176,7 +198,7 @@ Partial Class controlCenter
         Me.TabPage1.Controls.Add(Me.TableLayoutPanel1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(645, 343)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inicio"
@@ -278,4 +300,7 @@ Partial Class controlCenter
     Friend WithEvents EmpleadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DepartamentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VacacionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CargosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DepartamentosToolStripMenuItem As ToolStripMenuItem
 End Class

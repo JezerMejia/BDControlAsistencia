@@ -114,6 +114,18 @@
     <Compile Include="Formularios\AdminForms\AdminLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\AdminForms\Ajustes\Cargos.Designer.vb">
+      <DependentUpon>Cargos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\Ajustes\Cargos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\Ajustes\Departamento.Designer.vb">
+      <DependentUpon>Departamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdminForms\Ajustes\Departamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\AdminForms\controlCenter.Designer.vb">
       <DependentUpon>controlCenter.vb</DependentUpon>
     </Compile>
@@ -268,6 +280,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Formularios\AdminForms\AdminLogin.resx">
       <DependentUpon>AdminLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\Ajustes\Cargos.resx">
+      <DependentUpon>Cargos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdminForms\Ajustes\Departamento.resx">
+      <DependentUpon>Departamento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AdminForms\controlCenter.resx">
       <DependentUpon>controlCenter.vb</DependentUpon>
