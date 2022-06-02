@@ -18,10 +18,10 @@
         Me.Close()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles AñadirBtn.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
 
         Try
-            BDCargo.InsertCargo(nombreTxt.Text, descripcionTxt.Text)
+            BDCargo.InsertCargo(TxtName.Text, TxtDescription.Text)
             MsgBox("Guardado")
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error",
@@ -38,7 +38,7 @@
         Me.bindingSource.DataSource = BDCargo.GetData()
     End Sub
 
-    Private Sub EliminarBtn_Click(sender As Object, e As EventArgs) Handles EliminarBtn.Click
+    Private Sub EliminarBtn_Click(sender As Object, e As EventArgs) Handles BtnRemove.Click
         If Me.selectedID < 0 Then
             MessageBox.Show("Seleccione un cargo",
                         "Cargo no seleccionado",
@@ -71,22 +71,18 @@
             Return
         End If
 
-        Dim filas As Integer = DataGridView1.CurrentRow.Index
+        Dim filas As Integer = e.RowIndex
         Me.selectedID = DataGridView1.Item(0, filas).Value
-        Me.nombreTxt.Text = DataGridView1.Item(1, filas).Value
-        Me.descripcionTxt.Text = DataGridView1.Item(2, filas).Value
-
+        Me.TxtName.Text = DataGridView1.Item(1, filas).Value
+        Me.TxtDescription.Text = DataGridView1.Item(2, filas).Value
     End Sub
 
-    Private Sub nuevoBtn_Click(sender As Object, e As EventArgs) Handles nuevoBtn.Click
-
-        nombreTxt.Text = ""
-        descripcionTxt.Text = ""
-
+    Private Sub BtnNew_Clicked(sender As Object, e As EventArgs) Handles BtnNew.Click
+        TxtName.Text = ""
+        TxtDescription.Text = ""
     End Sub
 
-    Private Sub EditarBtn_Click(sender As Object, e As EventArgs) Handles EditarBtn.Click
-
+    Private Sub BtnEdit_Clicked(sender As Object, e As EventArgs) Handles BtnEdit.Click
         If Me.selectedID < 0 Then
             MessageBox.Show("Seleccione un cargo",
                         "Cargo no seleccionado",
@@ -95,7 +91,7 @@
             Return
         End If
 
-        If String.IsNullOrWhiteSpace(nombreTxt.Text) Or String.IsNullOrWhiteSpace(descripcionTxt.Text) Then
+        If String.IsNullOrWhiteSpace(TxtName.Text) Or String.IsNullOrWhiteSpace(TxtDescription.Text) Then
             MessageBox.Show(
                 "No puede haber datos vacios",
                 "Advertencia", MessageBoxButtons.OK,
@@ -104,7 +100,10 @@
         End If
 
         Try
-            BDCargo.UpdateCargo(nombreTxt.Text, descripcionTxt.Text, Me.selectedID)
+            BDCargo.UpdateCargo(
+                TxtName.Text, TxtDescription.Text,
+                Me.selectedID
+                )
             MsgBox("Editado")
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error",
@@ -115,21 +114,18 @@
         Me.UpdateData()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles searchTxt.TextChanged
-
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles TxtSearch.TextChanged
         Me.bindingSource.DataSource = BDCargo.GetData()
-
-        If String.IsNullOrWhiteSpace(Me.searchTxt.Text) Then
+        If String.IsNullOrWhiteSpace(Me.TxtSearch.Text) Then
             Me.bindingSource.Filter = ""
             Return
         End If
 
         Try
-
             Me.bindingSource.Filter =
-            "CONVERT(idCargo, 'System.String') Like '%" + Me.searchTxt.Text + "%' OR " +
-            "nombreCargo Like '%" + Me.searchTxt.Text + "%' OR " +
-            "descripcionCargo Like '%" + Me.searchTxt.Text + "%'"
+            "CONVERT(idCargo, 'System.String') Like '%" + Me.TxtSearch.Text + "%' OR " +
+            "nombreCargo Like '%" + Me.TxtSearch.Text + "%' OR " +
+            "descripcionCargo Like '%" + Me.TxtSearch.Text + "%'"
 
             Me.DataGridView1.DataSource = bindingSource
         Catch ex As Exception
@@ -138,5 +134,9 @@
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Me.UpdateData()
     End Sub
 End Class
