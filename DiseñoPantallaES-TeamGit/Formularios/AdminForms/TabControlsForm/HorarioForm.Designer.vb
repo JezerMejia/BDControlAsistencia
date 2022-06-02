@@ -148,112 +148,112 @@ Partial Class HorarioForm
         'IdHorarioDataGridViewTextBoxColumn
         '
         Me.IdHorarioDataGridViewTextBoxColumn.DataPropertyName = "idHorario"
-        Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "idHorario"
+        Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "ID"
         Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
         Me.IdHorarioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'nombreHorario
         '
         Me.nombreHorario.DataPropertyName = "nombreHorario"
-        Me.nombreHorario.HeaderText = "nombreHorario"
+        Me.nombreHorario.HeaderText = "Nombre"
         Me.nombreHorario.Name = "nombreHorario"
         Me.nombreHorario.ReadOnly = True
         '
         'LunesInicioDataGridViewTextBoxColumn
         '
         Me.LunesInicioDataGridViewTextBoxColumn.DataPropertyName = "lunesInicio"
-        Me.LunesInicioDataGridViewTextBoxColumn.HeaderText = "lunesInicio"
+        Me.LunesInicioDataGridViewTextBoxColumn.HeaderText = "Lunes Inicio"
         Me.LunesInicioDataGridViewTextBoxColumn.Name = "LunesInicioDataGridViewTextBoxColumn"
         Me.LunesInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'LunesSalidaDataGridViewTextBoxColumn
         '
         Me.LunesSalidaDataGridViewTextBoxColumn.DataPropertyName = "lunesSalida"
-        Me.LunesSalidaDataGridViewTextBoxColumn.HeaderText = "lunesSalida"
+        Me.LunesSalidaDataGridViewTextBoxColumn.HeaderText = "Lunes Salida"
         Me.LunesSalidaDataGridViewTextBoxColumn.Name = "LunesSalidaDataGridViewTextBoxColumn"
         Me.LunesSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'MartesInicioDataGridViewTextBoxColumn
         '
         Me.MartesInicioDataGridViewTextBoxColumn.DataPropertyName = "martesInicio"
-        Me.MartesInicioDataGridViewTextBoxColumn.HeaderText = "martesInicio"
+        Me.MartesInicioDataGridViewTextBoxColumn.HeaderText = "Martes Inicio"
         Me.MartesInicioDataGridViewTextBoxColumn.Name = "MartesInicioDataGridViewTextBoxColumn"
         Me.MartesInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'MartesSalidaDataGridViewTextBoxColumn
         '
         Me.MartesSalidaDataGridViewTextBoxColumn.DataPropertyName = "martesSalida"
-        Me.MartesSalidaDataGridViewTextBoxColumn.HeaderText = "martesSalida"
+        Me.MartesSalidaDataGridViewTextBoxColumn.HeaderText = "Martes Salida"
         Me.MartesSalidaDataGridViewTextBoxColumn.Name = "MartesSalidaDataGridViewTextBoxColumn"
         Me.MartesSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'MiercolesInicioDataGridViewTextBoxColumn
         '
         Me.MiercolesInicioDataGridViewTextBoxColumn.DataPropertyName = "miercolesInicio"
-        Me.MiercolesInicioDataGridViewTextBoxColumn.HeaderText = "miercolesInicio"
+        Me.MiercolesInicioDataGridViewTextBoxColumn.HeaderText = "Miércoles Inicio"
         Me.MiercolesInicioDataGridViewTextBoxColumn.Name = "MiercolesInicioDataGridViewTextBoxColumn"
         Me.MiercolesInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'MiercolesSalidaDataGridViewTextBoxColumn
         '
         Me.MiercolesSalidaDataGridViewTextBoxColumn.DataPropertyName = "miercolesSalida"
-        Me.MiercolesSalidaDataGridViewTextBoxColumn.HeaderText = "miercolesSalida"
+        Me.MiercolesSalidaDataGridViewTextBoxColumn.HeaderText = "Miércoles Salida"
         Me.MiercolesSalidaDataGridViewTextBoxColumn.Name = "MiercolesSalidaDataGridViewTextBoxColumn"
         Me.MiercolesSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'JuevesInicioDataGridViewTextBoxColumn
         '
         Me.JuevesInicioDataGridViewTextBoxColumn.DataPropertyName = "juevesInicio"
-        Me.JuevesInicioDataGridViewTextBoxColumn.HeaderText = "juevesInicio"
+        Me.JuevesInicioDataGridViewTextBoxColumn.HeaderText = "Jueves Inicio"
         Me.JuevesInicioDataGridViewTextBoxColumn.Name = "JuevesInicioDataGridViewTextBoxColumn"
         Me.JuevesInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'JuevesSalidaDataGridViewTextBoxColumn
         '
         Me.JuevesSalidaDataGridViewTextBoxColumn.DataPropertyName = "juevesSalida"
-        Me.JuevesSalidaDataGridViewTextBoxColumn.HeaderText = "juevesSalida"
+        Me.JuevesSalidaDataGridViewTextBoxColumn.HeaderText = "Jueves Salida"
         Me.JuevesSalidaDataGridViewTextBoxColumn.Name = "JuevesSalidaDataGridViewTextBoxColumn"
         Me.JuevesSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ViernesInicioDataGridViewTextBoxColumn
         '
         Me.ViernesInicioDataGridViewTextBoxColumn.DataPropertyName = "viernesInicio"
-        Me.ViernesInicioDataGridViewTextBoxColumn.HeaderText = "viernesInicio"
+        Me.ViernesInicioDataGridViewTextBoxColumn.HeaderText = "Viernes Inicio"
         Me.ViernesInicioDataGridViewTextBoxColumn.Name = "ViernesInicioDataGridViewTextBoxColumn"
         Me.ViernesInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ViernesSalidaDataGridViewTextBoxColumn
         '
         Me.ViernesSalidaDataGridViewTextBoxColumn.DataPropertyName = "viernesSalida"
-        Me.ViernesSalidaDataGridViewTextBoxColumn.HeaderText = "viernesSalida"
+        Me.ViernesSalidaDataGridViewTextBoxColumn.HeaderText = "Viernes Salida"
         Me.ViernesSalidaDataGridViewTextBoxColumn.Name = "ViernesSalidaDataGridViewTextBoxColumn"
         Me.ViernesSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SabadoInicioDataGridViewTextBoxColumn
         '
         Me.SabadoInicioDataGridViewTextBoxColumn.DataPropertyName = "sabadoInicio"
-        Me.SabadoInicioDataGridViewTextBoxColumn.HeaderText = "sabadoInicio"
+        Me.SabadoInicioDataGridViewTextBoxColumn.HeaderText = "Sábado Inicio"
         Me.SabadoInicioDataGridViewTextBoxColumn.Name = "SabadoInicioDataGridViewTextBoxColumn"
         Me.SabadoInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SabadoSalidaDataGridViewTextBoxColumn
         '
         Me.SabadoSalidaDataGridViewTextBoxColumn.DataPropertyName = "sabadoSalida"
-        Me.SabadoSalidaDataGridViewTextBoxColumn.HeaderText = "sabadoSalida"
+        Me.SabadoSalidaDataGridViewTextBoxColumn.HeaderText = "Sábado Salida"
         Me.SabadoSalidaDataGridViewTextBoxColumn.Name = "SabadoSalidaDataGridViewTextBoxColumn"
         Me.SabadoSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DomingoInicioDataGridViewTextBoxColumn
         '
         Me.DomingoInicioDataGridViewTextBoxColumn.DataPropertyName = "domingoInicio"
-        Me.DomingoInicioDataGridViewTextBoxColumn.HeaderText = "domingoInicio"
+        Me.DomingoInicioDataGridViewTextBoxColumn.HeaderText = "Domingo Inicio"
         Me.DomingoInicioDataGridViewTextBoxColumn.Name = "DomingoInicioDataGridViewTextBoxColumn"
         Me.DomingoInicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DomingoSalidaDataGridViewTextBoxColumn
         '
         Me.DomingoSalidaDataGridViewTextBoxColumn.DataPropertyName = "domingoSalida"
-        Me.DomingoSalidaDataGridViewTextBoxColumn.HeaderText = "domingoSalida"
+        Me.DomingoSalidaDataGridViewTextBoxColumn.HeaderText = "Domingo Salida"
         Me.DomingoSalidaDataGridViewTextBoxColumn.Name = "DomingoSalidaDataGridViewTextBoxColumn"
         Me.DomingoSalidaDataGridViewTextBoxColumn.ReadOnly = True
         '

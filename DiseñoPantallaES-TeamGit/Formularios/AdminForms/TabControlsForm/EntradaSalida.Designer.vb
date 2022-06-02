@@ -25,21 +25,25 @@ Partial Class EntradaSalida
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdAsistenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaAsistenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AsistenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.AsistenciaTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.AsistenciaTableAdapter()
+        Me.VwAsistenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VwAsistenciaTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.vwAsistenciaTableAdapter()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaAsistenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IDEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AsistenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.VwAsistenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -58,8 +62,8 @@ Partial Class EntradaSalida
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAsistenciaDataGridViewTextBoxColumn, Me.FechaAsistenciaDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.IdEmpleadoDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.AsistenciaBindingSource
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.FechaAsistenciaDataGridViewTextBoxColumn, Me.EntradaDataGridViewTextBoxColumn, Me.SalidaDataGridViewTextBoxColumn, Me.IDEmpleadoDataGridViewTextBoxColumn, Me.EmpleadoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.VwAsistenciaBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.MultiSelect = False
@@ -68,37 +72,6 @@ Partial Class EntradaSalida
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(460, 274)
         Me.DataGridView1.TabIndex = 4
-        '
-        'IdAsistenciaDataGridViewTextBoxColumn
-        '
-        Me.IdAsistenciaDataGridViewTextBoxColumn.DataPropertyName = "idAsistencia"
-        Me.IdAsistenciaDataGridViewTextBoxColumn.HeaderText = "idAsistencia"
-        Me.IdAsistenciaDataGridViewTextBoxColumn.Name = "IdAsistenciaDataGridViewTextBoxColumn"
-        Me.IdAsistenciaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaAsistenciaDataGridViewTextBoxColumn
-        '
-        Me.FechaAsistenciaDataGridViewTextBoxColumn.DataPropertyName = "fechaAsistencia"
-        Me.FechaAsistenciaDataGridViewTextBoxColumn.HeaderText = "fechaAsistencia"
-        Me.FechaAsistenciaDataGridViewTextBoxColumn.Name = "FechaAsistenciaDataGridViewTextBoxColumn"
-        '
-        'HoraEntradaDataGridViewTextBoxColumn
-        '
-        Me.HoraEntradaDataGridViewTextBoxColumn.DataPropertyName = "HoraEntrada"
-        Me.HoraEntradaDataGridViewTextBoxColumn.HeaderText = "HoraEntrada"
-        Me.HoraEntradaDataGridViewTextBoxColumn.Name = "HoraEntradaDataGridViewTextBoxColumn"
-        '
-        'HoraSalidaDataGridViewTextBoxColumn
-        '
-        Me.HoraSalidaDataGridViewTextBoxColumn.DataPropertyName = "HoraSalida"
-        Me.HoraSalidaDataGridViewTextBoxColumn.HeaderText = "HoraSalida"
-        Me.HoraSalidaDataGridViewTextBoxColumn.Name = "HoraSalidaDataGridViewTextBoxColumn"
-        '
-        'IdEmpleadoDataGridViewTextBoxColumn
-        '
-        Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
-        Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
-        Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
         '
         'AsistenciaBindingSource
         '
@@ -138,6 +111,57 @@ Partial Class EntradaSalida
         '
         Me.AsistenciaTableAdapter.ClearBeforeFill = True
         '
+        'VwAsistenciaBindingSource
+        '
+        Me.VwAsistenciaBindingSource.DataMember = "vwAsistencia"
+        Me.VwAsistenciaBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'VwAsistenciaTableAdapter
+        '
+        Me.VwAsistenciaTableAdapter.ClearBeforeFill = True
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FechaAsistenciaDataGridViewTextBoxColumn
+        '
+        Me.FechaAsistenciaDataGridViewTextBoxColumn.DataPropertyName = "Fecha Asistencia"
+        Me.FechaAsistenciaDataGridViewTextBoxColumn.HeaderText = "Fecha Asistencia"
+        Me.FechaAsistenciaDataGridViewTextBoxColumn.Name = "FechaAsistenciaDataGridViewTextBoxColumn"
+        Me.FechaAsistenciaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EntradaDataGridViewTextBoxColumn
+        '
+        Me.EntradaDataGridViewTextBoxColumn.DataPropertyName = "Entrada"
+        Me.EntradaDataGridViewTextBoxColumn.HeaderText = "Entrada"
+        Me.EntradaDataGridViewTextBoxColumn.Name = "EntradaDataGridViewTextBoxColumn"
+        Me.EntradaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SalidaDataGridViewTextBoxColumn
+        '
+        Me.SalidaDataGridViewTextBoxColumn.DataPropertyName = "Salida"
+        Me.SalidaDataGridViewTextBoxColumn.HeaderText = "Salida"
+        Me.SalidaDataGridViewTextBoxColumn.Name = "SalidaDataGridViewTextBoxColumn"
+        Me.SalidaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'IDEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.IDEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "ID Empleado"
+        Me.IDEmpleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado"
+        Me.IDEmpleadoDataGridViewTextBoxColumn.Name = "IDEmpleadoDataGridViewTextBoxColumn"
+        Me.IDEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EmpleadoDataGridViewTextBoxColumn
+        '
+        Me.EmpleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado"
+        Me.EmpleadoDataGridViewTextBoxColumn.HeaderText = "Empleado"
+        Me.EmpleadoDataGridViewTextBoxColumn.Name = "EmpleadoDataGridViewTextBoxColumn"
+        Me.EmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'EntradaSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -152,6 +176,7 @@ Partial Class EntradaSalida
         CType(Me.AsistenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.VwAsistenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -163,9 +188,12 @@ Partial Class EntradaSalida
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents AsistenciaBindingSource As BindingSource
     Friend WithEvents AsistenciaTableAdapter As BDSistemaEySDataSetTableAdapters.AsistenciaTableAdapter
-    Friend WithEvents IdAsistenciaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents VwAsistenciaBindingSource As BindingSource
+    Friend WithEvents VwAsistenciaTableAdapter As BDSistemaEySDataSetTableAdapters.vwAsistenciaTableAdapter
+    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaAsistenciaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents HoraEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents HoraSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IDEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

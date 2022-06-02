@@ -27,16 +27,16 @@ Partial Class SolVacacionesForm
         Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.SolVacacionesTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.SolVacacionesTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.IdSolVacacionesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaSolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionSolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaHoraInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaHoraFinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BtnAdd = New System.Windows.Forms.Button()
-        Me.BtnEdit = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
         CType(Me.SolVacacionesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,48 +73,6 @@ Partial Class SolVacacionesForm
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(453, 264)
         Me.DataGridView1.TabIndex = 7
-        '
-        'IdSolVacacionesDataGridViewTextBoxColumn
-        '
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.DataPropertyName = "idSolVacaciones"
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.HeaderText = "idSolVacaciones"
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.Name = "IdSolVacacionesDataGridViewTextBoxColumn"
-        Me.IdSolVacacionesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaSolDataGridViewTextBoxColumn
-        '
-        Me.FechaSolDataGridViewTextBoxColumn.DataPropertyName = "fechaSol"
-        Me.FechaSolDataGridViewTextBoxColumn.HeaderText = "fechaSol"
-        Me.FechaSolDataGridViewTextBoxColumn.Name = "FechaSolDataGridViewTextBoxColumn"
-        Me.FechaSolDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DescripcionSolDataGridViewTextBoxColumn
-        '
-        Me.DescripcionSolDataGridViewTextBoxColumn.DataPropertyName = "descripcionSol"
-        Me.DescripcionSolDataGridViewTextBoxColumn.HeaderText = "descripcionSol"
-        Me.DescripcionSolDataGridViewTextBoxColumn.Name = "DescripcionSolDataGridViewTextBoxColumn"
-        Me.DescripcionSolDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaHoraInicioDataGridViewTextBoxColumn
-        '
-        Me.FechaHoraInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraInicio"
-        Me.FechaHoraInicioDataGridViewTextBoxColumn.HeaderText = "fechaHoraInicio"
-        Me.FechaHoraInicioDataGridViewTextBoxColumn.Name = "FechaHoraInicioDataGridViewTextBoxColumn"
-        Me.FechaHoraInicioDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaHoraFinDataGridViewTextBoxColumn
-        '
-        Me.FechaHoraFinDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraFin"
-        Me.FechaHoraFinDataGridViewTextBoxColumn.HeaderText = "fechaHoraFin"
-        Me.FechaHoraFinDataGridViewTextBoxColumn.Name = "FechaHoraFinDataGridViewTextBoxColumn"
-        Me.FechaHoraFinDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'IdEmpleadoDataGridViewTextBoxColumn
-        '
-        Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
-        Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
-        Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
-        Me.IdEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'TableLayoutPanel1
         '
@@ -165,6 +123,48 @@ Partial Class SolVacacionesForm
         Me.BtnDelete.Text = "Eliminar"
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
+        'IdSolVacacionesDataGridViewTextBoxColumn
+        '
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.DataPropertyName = "idSolVacaciones"
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.Name = "IdSolVacacionesDataGridViewTextBoxColumn"
+        Me.IdSolVacacionesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FechaSolDataGridViewTextBoxColumn
+        '
+        Me.FechaSolDataGridViewTextBoxColumn.DataPropertyName = "fechaSol"
+        Me.FechaSolDataGridViewTextBoxColumn.HeaderText = "Fecha de Solicitud"
+        Me.FechaSolDataGridViewTextBoxColumn.Name = "FechaSolDataGridViewTextBoxColumn"
+        Me.FechaSolDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescripcionSolDataGridViewTextBoxColumn
+        '
+        Me.DescripcionSolDataGridViewTextBoxColumn.DataPropertyName = "descripcionSol"
+        Me.DescripcionSolDataGridViewTextBoxColumn.HeaderText = "Descripción"
+        Me.DescripcionSolDataGridViewTextBoxColumn.Name = "DescripcionSolDataGridViewTextBoxColumn"
+        Me.DescripcionSolDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FechaHoraInicioDataGridViewTextBoxColumn
+        '
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraInicio"
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.HeaderText = "Inicio"
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.Name = "FechaHoraInicioDataGridViewTextBoxColumn"
+        Me.FechaHoraInicioDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FechaHoraFinDataGridViewTextBoxColumn
+        '
+        Me.FechaHoraFinDataGridViewTextBoxColumn.DataPropertyName = "fechaHoraFin"
+        Me.FechaHoraFinDataGridViewTextBoxColumn.HeaderText = "Fin"
+        Me.FechaHoraFinDataGridViewTextBoxColumn.Name = "FechaHoraFinDataGridViewTextBoxColumn"
+        Me.FechaHoraFinDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'IdEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'SolVacacionesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -186,14 +186,14 @@ Partial Class SolVacacionesForm
     Friend WithEvents SolVacacionesBindingSource As BindingSource
     Friend WithEvents SolVacacionesTableAdapter As BDSistemaEySDataSetTableAdapters.SolVacacionesTableAdapter
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents BtnAdd As Button
+    Friend WithEvents BtnEdit As Button
+    Friend WithEvents BtnDelete As Button
     Friend WithEvents IdSolVacacionesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaSolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionSolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaHoraInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaHoraFinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents BtnAdd As Button
-    Friend WithEvents BtnEdit As Button
-    Friend WithEvents BtnDelete As Button
 End Class

@@ -10,6 +10,8 @@
     End Sub
 
     Private Sub EmpleadoForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.vwEmpleado' Puede moverla o quitarla según sea necesario.
+        Me.VwEmpleadoTableAdapter.Fill(Me.BDSistemaEySDataSet.vwEmpleado)
         'TODO: This line of code loads data into the 'BDSistemaEySDataSet.Empleado' table. You can move, or remove it, as needed.
         Me.EmpleadoTableAdapter.Fill(Me.BDSistemaEySDataSet.Empleado)
         Me.DataGridView1.DataSource = Me.bindingSource
