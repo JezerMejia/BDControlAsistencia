@@ -219,7 +219,7 @@ Partial Class AddDialogSolVac
         Me.CalendarFS.Name = "CalendarFS"
         Me.CalendarFS.Size = New System.Drawing.Size(75, 23)
         Me.CalendarFS.TabIndex = 0
-        Me.CalendarFS.Text = "Button1"
+        Me.CalendarFS.Text = "Calendario"
         Me.CalendarFS.UseVisualStyleBackColor = True
         '
         'fechsolTxt
@@ -280,7 +280,7 @@ Partial Class AddDialogSolVac
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 0
-        Me.Button4.Text = "Button4"
+        Me.Button4.Text = "Calendario"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'fechIni
@@ -311,7 +311,7 @@ Partial Class AddDialogSolVac
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 0
-        Me.Button5.Text = "Button5"
+        Me.Button5.Text = "Calendario"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'fechFin
