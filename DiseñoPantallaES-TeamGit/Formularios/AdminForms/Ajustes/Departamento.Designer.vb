@@ -355,28 +355,28 @@ Partial Class Departamento
         'IdDepartamentoDataGridViewTextBoxColumn
         '
         Me.IdDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "idDepartamento"
-        Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "idDepartamento"
+        Me.IdDepartamentoDataGridViewTextBoxColumn.HeaderText = "ID"
         Me.IdDepartamentoDataGridViewTextBoxColumn.Name = "IdDepartamentoDataGridViewTextBoxColumn"
         Me.IdDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'NombreDepartamentoDataGridViewTextBoxColumn
         '
         Me.NombreDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "nombreDepartamento"
-        Me.NombreDepartamentoDataGridViewTextBoxColumn.HeaderText = "nombreDepartamento"
+        Me.NombreDepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento"
         Me.NombreDepartamentoDataGridViewTextBoxColumn.Name = "NombreDepartamentoDataGridViewTextBoxColumn"
         Me.NombreDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DescripcionDepartamentoDataGridViewTextBoxColumn
         '
         Me.DescripcionDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "descripcionDepartamento"
-        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.HeaderText = "descripcionDepartamento"
+        Me.DescripcionDepartamentoDataGridViewTextBoxColumn.HeaderText = "Descripción"
         Me.DescripcionDepartamentoDataGridViewTextBoxColumn.Name = "DescripcionDepartamentoDataGridViewTextBoxColumn"
         Me.DescripcionDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ExtensionDepartamentoDataGridViewTextBoxColumn
         '
         Me.ExtensionDepartamentoDataGridViewTextBoxColumn.DataPropertyName = "extensionDepartamento"
-        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.HeaderText = "extensionDepartamento"
+        Me.ExtensionDepartamentoDataGridViewTextBoxColumn.HeaderText = "Extensión"
         Me.ExtensionDepartamentoDataGridViewTextBoxColumn.Name = "ExtensionDepartamentoDataGridViewTextBoxColumn"
         Me.ExtensionDepartamentoDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -430,11 +430,11 @@ Partial Class Departamento
     Friend WithEvents Button7 As Button
     Friend WithEvents TxtSearch As TextBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
+    Friend WithEvents TxtExtension As TextBox
+    Friend WithEvents Label4 As Label
     Friend WithEvents IdDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExtensionDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
-    Friend WithEvents TxtExtension As TextBox
-    Friend WithEvents Label4 As Label
 End Class

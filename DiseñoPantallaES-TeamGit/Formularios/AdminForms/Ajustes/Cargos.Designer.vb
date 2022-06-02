@@ -42,12 +42,12 @@ Partial Class Cargos
         Me.Button7 = New System.Windows.Forms.Button()
         Me.TxtSearch = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSet()
         Me.CargoTableAdapter = New DiseñoPantallaES_TeamGit.BDSistemaEySDataSetTableAdapters.CargoTableAdapter()
+        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
@@ -300,27 +300,6 @@ Partial Class Cargos
         Me.DataGridView1.Size = New System.Drawing.Size(413, 188)
         Me.DataGridView1.TabIndex = 15
         '
-        'IdCargoDataGridViewTextBoxColumn
-        '
-        Me.IdCargoDataGridViewTextBoxColumn.DataPropertyName = "idCargo"
-        Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "idCargo"
-        Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
-        Me.IdCargoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreCargoDataGridViewTextBoxColumn
-        '
-        Me.NombreCargoDataGridViewTextBoxColumn.DataPropertyName = "nombreCargo"
-        Me.NombreCargoDataGridViewTextBoxColumn.HeaderText = "nombreCargo"
-        Me.NombreCargoDataGridViewTextBoxColumn.Name = "NombreCargoDataGridViewTextBoxColumn"
-        Me.NombreCargoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DescripcionCargoDataGridViewTextBoxColumn
-        '
-        Me.DescripcionCargoDataGridViewTextBoxColumn.DataPropertyName = "descripcionCargo"
-        Me.DescripcionCargoDataGridViewTextBoxColumn.HeaderText = "descripcionCargo"
-        Me.DescripcionCargoDataGridViewTextBoxColumn.Name = "DescripcionCargoDataGridViewTextBoxColumn"
-        Me.DescripcionCargoDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'CargoBindingSource
         '
         Me.CargoBindingSource.DataMember = "Cargo"
@@ -334,6 +313,27 @@ Partial Class Cargos
         'CargoTableAdapter
         '
         Me.CargoTableAdapter.ClearBeforeFill = True
+        '
+        'IdCargoDataGridViewTextBoxColumn
+        '
+        Me.IdCargoDataGridViewTextBoxColumn.DataPropertyName = "idCargo"
+        Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
+        Me.IdCargoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreCargoDataGridViewTextBoxColumn
+        '
+        Me.NombreCargoDataGridViewTextBoxColumn.DataPropertyName = "nombreCargo"
+        Me.NombreCargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
+        Me.NombreCargoDataGridViewTextBoxColumn.Name = "NombreCargoDataGridViewTextBoxColumn"
+        Me.NombreCargoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescripcionCargoDataGridViewTextBoxColumn
+        '
+        Me.DescripcionCargoDataGridViewTextBoxColumn.DataPropertyName = "descripcionCargo"
+        Me.DescripcionCargoDataGridViewTextBoxColumn.HeaderText = "Descripción"
+        Me.DescripcionCargoDataGridViewTextBoxColumn.Name = "DescripcionCargoDataGridViewTextBoxColumn"
+        Me.DescripcionCargoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Cargos
         '
@@ -380,11 +380,11 @@ Partial Class Cargos
     Friend WithEvents BtnRemove As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DescripcionCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Button7 As Button
     Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripcionCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
