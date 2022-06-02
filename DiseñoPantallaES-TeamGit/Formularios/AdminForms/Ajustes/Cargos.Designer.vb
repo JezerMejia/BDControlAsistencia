@@ -92,7 +92,7 @@ Partial Class Cargos
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(414, 170)
-        Me.TableLayoutPanel3.TabIndex = 8
+        Me.TableLayoutPanel3.TabIndex = 1
         '
         'TableLayoutPanel4
         '
@@ -112,7 +112,7 @@ Partial Class Cargos
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(408, 34)
-        Me.TableLayoutPanel4.TabIndex = 8
+        Me.TableLayoutPanel4.TabIndex = 3
         '
         'BtnNew
         '
@@ -120,7 +120,7 @@ Partial Class Cargos
         Me.BtnNew.Location = New System.Drawing.Point(149, 5)
         Me.BtnNew.Name = "BtnNew"
         Me.BtnNew.Size = New System.Drawing.Size(55, 23)
-        Me.BtnNew.TabIndex = 0
+        Me.BtnNew.TabIndex = 3
         Me.BtnNew.Text = "Nuevo"
         Me.BtnNew.UseVisualStyleBackColor = True
         '
@@ -130,7 +130,7 @@ Partial Class Cargos
         Me.BtnAdd.Location = New System.Drawing.Point(215, 5)
         Me.BtnAdd.Name = "BtnAdd"
         Me.BtnAdd.Size = New System.Drawing.Size(55, 23)
-        Me.BtnAdd.TabIndex = 1
+        Me.BtnAdd.TabIndex = 4
         Me.BtnAdd.Text = "Añadir"
         Me.BtnAdd.UseVisualStyleBackColor = True
         '
@@ -140,7 +140,7 @@ Partial Class Cargos
         Me.BtnEdit.Location = New System.Drawing.Point(281, 5)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(55, 23)
-        Me.BtnEdit.TabIndex = 2
+        Me.BtnEdit.TabIndex = 5
         Me.BtnEdit.Text = "Editar"
         Me.BtnEdit.UseVisualStyleBackColor = True
         '
@@ -150,7 +150,7 @@ Partial Class Cargos
         Me.BtnRemove.Location = New System.Drawing.Point(347, 5)
         Me.BtnRemove.Name = "BtnRemove"
         Me.BtnRemove.Size = New System.Drawing.Size(55, 23)
-        Me.BtnRemove.TabIndex = 3
+        Me.BtnRemove.TabIndex = 6
         Me.BtnRemove.Text = "Eliminar"
         Me.BtnRemove.UseVisualStyleBackColor = True
         '
@@ -166,7 +166,7 @@ Partial Class Cargos
         Me.TableLayoutPanel5.RowCount = 1
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.Size = New System.Drawing.Size(408, 44)
-        Me.TableLayoutPanel5.TabIndex = 9
+        Me.TableLayoutPanel5.TabIndex = 1
         '
         'TxtName
         '
@@ -174,7 +174,7 @@ Partial Class Cargos
         Me.TxtName.Location = New System.Drawing.Point(91, 12)
         Me.TxtName.Name = "TxtName"
         Me.TxtName.Size = New System.Drawing.Size(114, 20)
-        Me.TxtName.TabIndex = 7
+        Me.TxtName.TabIndex = 1
         '
         'label3
         '
@@ -199,7 +199,7 @@ Partial Class Cargos
         Me.TableLayoutPanel6.RowCount = 1
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel6.Size = New System.Drawing.Size(408, 74)
-        Me.TableLayoutPanel6.TabIndex = 10
+        Me.TableLayoutPanel6.TabIndex = 2
         '
         'Label2
         '
@@ -218,7 +218,7 @@ Partial Class Cargos
         Me.TxtDescription.Multiline = True
         Me.TxtDescription.Name = "TxtDescription"
         Me.TxtDescription.Size = New System.Drawing.Size(203, 49)
-        Me.TxtDescription.TabIndex = 8
+        Me.TxtDescription.TabIndex = 2
         '
         'TableLayoutPanel2
         '
@@ -234,7 +234,7 @@ Partial Class Cargos
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.87096!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(433, 248)
-        Me.TableLayoutPanel2.TabIndex = 9
+        Me.TableLayoutPanel2.TabIndex = 2
         '
         'TableLayoutPanel7
         '
@@ -251,7 +251,7 @@ Partial Class Cargos
         Me.TableLayoutPanel7.RowCount = 1
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel7.Size = New System.Drawing.Size(427, 34)
-        Me.TableLayoutPanel7.TabIndex = 16
+        Me.TableLayoutPanel7.TabIndex = 4
         '
         'Label1
         '
@@ -269,7 +269,7 @@ Partial Class Cargos
         Me.Button7.Location = New System.Drawing.Point(338, 7)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(75, 19)
-        Me.Button7.TabIndex = 2
+        Me.Button7.TabIndex = 8
         Me.Button7.Text = "Actualizar"
         Me.Button7.UseVisualStyleBackColor = True
         '
@@ -279,7 +279,7 @@ Partial Class Cargos
         Me.TxtSearch.Location = New System.Drawing.Point(55, 7)
         Me.TxtSearch.Name = "TxtSearch"
         Me.TxtSearch.Size = New System.Drawing.Size(215, 20)
-        Me.TxtSearch.TabIndex = 1
+        Me.TxtSearch.TabIndex = 7
         '
         'DataGridView1
         '

@@ -19,8 +19,13 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-
         Try
+            If (String.IsNullOrWhiteSpace(TxtName.Text)) Then
+                Throw New Exception("Ingrese un nombre")
+            End If
+            If (String.IsNullOrWhiteSpace(TxtDescription.Text)) Then
+                Throw New Exception("Ingrese una descripción")
+            End If
             BDCargo.InsertCargo(TxtName.Text, TxtDescription.Text)
             MsgBox("Guardado")
         Catch ex As Exception
@@ -91,15 +96,13 @@
             Return
         End If
 
-        If String.IsNullOrWhiteSpace(TxtName.Text) Or String.IsNullOrWhiteSpace(TxtDescription.Text) Then
-            MessageBox.Show(
-                "No puede haber datos vacios",
-                "Advertencia", MessageBoxButtons.OK,
-                MessageBoxIcon.Warning)
-            Return
-        End If
-
         Try
+            If (String.IsNullOrWhiteSpace(TxtName.Text)) Then
+                Throw New Exception("Ingrese un nombre")
+            End If
+            If (String.IsNullOrWhiteSpace(TxtDescription.Text)) Then
+                Throw New Exception("Ingrese una descripción")
+            End If
             BDCargo.UpdateCargo(
                 TxtName.Text, TxtDescription.Text,
                 Me.selectedID

@@ -10,15 +10,28 @@
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles nuevo.Click
-        nombreTxt.Text = ""
-        extensionTxt.Text = ""
-        descripcionTxt.Text = ""
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnNew.Click
+        TxtName.Text = ""
+        TxtExtension.Text = ""
+        TxtDescription.Text = ""
     End Sub
 
-    Private Sub añadir_Click(sender As Object, e As EventArgs) Handles añadir.Click
+    Private Sub BtnAdd_Clicked(sender As Object, e As EventArgs) Handles BtnAdd.Click
         Try
-            BDDep.InsertDepartamento(nombre.Text, descripcionTxt.Text, extensionTxt.Text)
+            If (String.IsNullOrWhiteSpace(TxtName.Text)) Then
+                Throw New Exception("Ingrese un nombre")
+            End If
+            If (String.IsNullOrWhiteSpace(TxtDescription.Text)) Then
+                Throw New Exception("Ingrese una descripción")
+            End If
+            If (String.IsNullOrWhiteSpace(TxtExtension.Text)) Then
+                Throw New Exception("Ingrese una extensión")
+            End If
+            BDDep.InsertDepartamento(
+                TxtName.Text,
+                TxtDescription.Text,
+                TxtExtension.Text
+                )
             MsgBox("Guardado")
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error",
@@ -34,7 +47,7 @@
         Me.bindingSource.DataSource = BDDep.GetData()
     End Sub
 
-    Private Sub eliminar_Click(sender As Object, e As EventArgs) Handles eliminar.Click
+    Private Sub BtnRemove_Clicked(sender As Object, e As EventArgs) Handles BtnRemove.Click
         If Me.selectedID < 0 Then
             MessageBox.Show("Seleccione un departamento",
                         "Departamento no seleccionado",
@@ -68,13 +81,12 @@
 
         Dim filas As Integer = DataGridView1.CurrentRow.Index
         Me.selectedID = DataGridView1.Item(0, filas).Value
-        Me.nombreTxt.Text = DataGridView1.Item(1, filas).Value
-        Me.descripcionTxt.Text = DataGridView1.Item(2, filas).Value
-        Me.extensionTxt.Text = DataGridView1.Item(3, filas).Value
-
+        Me.TxtName.Text = DataGridView1.Item(1, filas).Value
+        Me.TxtDescription.Text = DataGridView1.Item(2, filas).Value
+        Me.TxtExtension.Text = DataGridView1.Item(3, filas).Value
     End Sub
 
-    Private Sub editar_Click(sender As Object, e As EventArgs) Handles editar.Click
+    Private Sub editar_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         If Me.selectedID < 0 Then
             MessageBox.Show("Seleccione un departamento",
                         "Departamento no seleccionado",
@@ -83,16 +95,21 @@
             Return
         End If
 
-        If String.IsNullOrWhiteSpace(nombreTxt.Text) Or String.IsNullOrWhiteSpace(descripcionTxt.Text) Then
-            MessageBox.Show(
-                "No puede haber datos vacios",
-                "Advertencia", MessageBoxButtons.OK,
-                MessageBoxIcon.Warning)
-            Return
-        End If
-
         Try
-            BDDep.UpdateDepartamento(nombreTxt.Text, descripcionTxt.Text, extensionTxt.Text, Me.selectedID)
+            If (String.IsNullOrWhiteSpace(TxtName.Text)) Then
+                Throw New Exception("Ingrese un nombre")
+            End If
+            If (String.IsNullOrWhiteSpace(TxtDescription.Text)) Then
+                Throw New Exception("Ingrese una descripción")
+            End If
+            If (String.IsNullOrWhiteSpace(TxtExtension.Text)) Then
+                Throw New Exception("Ingrese una extensión")
+            End If
+            BDDep.UpdateDepartamento(
+                TxtName.Text,
+                TxtDescription.Text,
+                TxtExtension.Text,
+                Me.selectedID)
             MsgBox("Editado")
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error",
@@ -103,33 +120,26 @@
         Me.UpdateData()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles buscarTxt.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtSearch.TextChanged
         Me.bindingSource.DataSource = BDDep.GetData()
-
-        If String.IsNullOrWhiteSpace(Me.buscarTxt.Text) Then
+        If String.IsNullOrWhiteSpace(Me.TxtSearch.Text) Then
             Me.bindingSource.Filter = ""
             Return
         End If
-
         Try
 
             Me.bindingSource.Filter =
-            "CONVERT(idDepartamento, 'System.String') Like '%" + Me.buscarTxt.Text + "%' OR " +
-            "nombreDepartamento Like '%" + Me.buscarTxt.Text + "%' OR " +
-            "descripcionDepartamento Like '%" + Me.buscarTxt.Text + "%' OR " +
-            "extensionDepartamento Like '%" + Me.buscarTxt.Text + "%'"
+            "CONVERT(idDepartamento, 'System.String') Like '%" + Me.TxtSearch.Text + "%' OR " +
+            "nombreDepartamento Like '%" + Me.TxtSearch.Text + "%' OR " +
+            "descripcionDepartamento Like '%" + Me.TxtSearch.Text + "%' OR " +
+            "extensionDepartamento Like '%" + Me.TxtSearch.Text + "%'"
 
             Me.DataGridView1.DataSource = bindingSource
-
         Catch ex As Exception
             MessageBox.Show(ex.Message,
                         "Error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error)
         End Try
-    End Sub
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
-
     End Sub
 End Class
